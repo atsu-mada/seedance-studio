@@ -1,4 +1,6 @@
 > [!NOTE]
+> **seedance-studio — an agent skill for Seedance 2.5 prompts (Claude Code / Codex).** Install from [`seedance-studio/`](seedance-studio/README.md).
+>
 > **Fork notice.** This is a modified fork maintained by [atsu-mada](https://github.com/atsu-mada) (ATSUFUMI KASHIMA) of [Emily2040/seedance-2.0](https://github.com/Emily2040/seedance-2.0) by Emily / Iamemily2050. All original work and the MIT license remain credited to Emily2040.
 > The upstream skill below is unchanged. The fork adds [`seedance-studio/`](seedance-studio/README.md): a consolidated single-entrypoint derivative (v7.2.0, based on upstream v6.1.0) with an HTML knowledge base, Seedance 2.5 guidance, and extra providers. See [`seedance-studio/CHANGELOG.md`](seedance-studio/CHANGELOG.md). It is not an official upstream release.
 
