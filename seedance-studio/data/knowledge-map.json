@@ -1,0 +1,1795 @@
+{
+  "schema_version": 1,
+  "skill_name": "seedance-studio",
+  "topics": [
+    {
+      "id": "knowledge-index",
+      "path": "references/index.html",
+      "anchor": "knowledge-index",
+      "legacy_sections": [
+        "HTML knowledge index",
+        "# Seedance Studio",
+        "## v7.0.0 Breaking Consolidation",
+        "## Table of Contents",
+        "## Capability Sections",
+        "## Integrated Reference Sections",
+        "## Integrated Native-Language Docs"
+      ],
+      "source_refs": [
+        "migration-contract"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-2d-anime-grammar",
+      "path": "references/2d-anime-grammar.html",
+      "anchor": "reference-2d-anime-grammar",
+      "legacy_sections": [
+        "### Reference section: references/2d-anime-grammar.md",
+        "### 2D / Anime Grammar — direct the medium, not a camera rig",
+        "#### Core rule [field]",
+        "#### Layer grammar [field]",
+        "#### Motion grammar [field]",
+        "#### Camera in 2D [field]",
+        "#### Light and color [field]",
+        "#### Sound for 2D [heuristic]",
+        "#### Style safety [field]",
+        "#### Failure → fix [field]",
+        "#### Sequence Boundary [heuristic]"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-agent-compatibility",
+      "path": "references/agent-compatibility.html",
+      "anchor": "reference-agent-compatibility",
+      "legacy_sections": [
+        "### Reference section: references/agent-compatibility.md",
+        "### Agent Compatibility",
+        "#### Current Agent-Skill Shape",
+        "#### Compatibility Rules",
+        "#### Cross-Agent Matrix",
+        "#### Cross-Client Notes",
+        "#### Source Signals",
+        "#### Do Not Claim"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-allocation-model",
+      "path": "references/allocation-model.html",
+      "anchor": "reference-allocation-model",
+      "legacy_sections": [
+        "### Reference section: references/allocation-model.md",
+        "### Allocation Model — decide where the prompt spends its budget",
+        "#### The premise [field]",
+        "#### The three spends",
+        "#### Allocation method [heuristic]",
+        "#### Worked allocations [field]",
+        "#### Trade table [field]",
+        "#### Pre-write checklist [heuristic]"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-anti-slop-lexicon",
+      "path": "references/anti-slop-lexicon.html",
+      "anchor": "reference-anti-slop-lexicon",
+      "legacy_sections": [
+        "### Reference section: references/anti-slop-lexicon.md",
+        "### Anti-Slop Lexicon",
+        "#### The Six Slop Classes",
+        "#### Replacement Table",
+        "#### Tag Salad Repair",
+        "#### Negation Rule"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-api-status",
+      "path": "references/api-status.html",
+      "anchor": "reference-api-status",
+      "legacy_sections": [
+        "### Reference section: references/api-status.md",
+        "### Seedance 2.x API and Platform Status",
+        "#### Seedance 2.5 Update *(verified 2026-09-04)*",
+        "#### Confirmed From Public Sources",
+        "#### Overseas API Status — Copyright Suspension *(recorded 2026-06-13)*",
+        "#### Platform Safeguards — Now Live *(recorded 2026-06-14)*",
+        "#### Resolution — Model vs Surface *(recorded 2026-06-14)*",
+        "#### fal — Authorized Provider, Global *(added 2026-06-10; fields, resolution, and pricing re-verified 2026-06-11)*",
+        "#### Seedance 2.0 Mini *(recorded 2026-06-20)*",
+        "#### Additional Provider/Router Surfaces *(recorded 2026-06-20)*",
+        "#### China-Facing Provider Search *(recorded 2026-06-20)*",
+        "#### Operational Wording",
+        "#### Model Naming Rule",
+        "#### Claim Boundaries",
+        "#### Known Limit Categories",
+        "#### Real-Person, Portrait, and Voice Rule",
+        "#### Primary Sources To Recheck"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-api-workflow",
+      "path": "references/api-workflow.html",
+      "anchor": "reference-api-workflow",
+      "legacy_sections": [
+        "### Reference section: references/api-workflow.md",
+        "### API Workflow",
+        "#### Surface Gate",
+        "#### Async Task Lifecycle",
+        "#### Request Checklist",
+        "#### Provider Notes",
+        "#### Error and Risk Playbook",
+        "#### Production Readiness"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-aspect-ratio-delivery",
+      "path": "references/aspect-ratio-delivery.html",
+      "anchor": "reference-aspect-ratio-delivery",
+      "legacy_sections": [
+        "### Reference section: references/aspect-ratio-delivery.md",
+        "### Aspect Ratio And Delivery Surfaces",
+        "#### Separate Creative Frame From Delivery Container",
+        "#### Common Ratios",
+        "#### Campaign Version Matrix",
+        "#### Prompt Framing Rules",
+        "#### Delivery Caveat"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-audio-guide",
+      "path": "references/audio-guide.html",
+      "anchor": "reference-audio-guide",
+      "legacy_sections": [
+        "### Reference section: references/audio-guide.md",
+        "### Audio Guide",
+        "#### Dialogue",
+        "#### Audio reference mapping",
+        "#### Multi-character dialogue",
+        "#### Sound layer syntax",
+        "#### Beat-sync syntax",
+        "#### Audio as clock",
+        "#### Troubleshooting",
+        "#### Post Handoff Boundary"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0",
+        "V3",
+        "S1"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-audio-post-delivery",
+      "path": "references/audio-post-delivery.html",
+      "anchor": "reference-audio-post-delivery",
+      "legacy_sections": [
+        "### Reference section: references/audio-post-delivery.md",
+        "### Audio Post And Delivery",
+        "#### Prompt-Level Audio",
+        "#### Post-Level Audio Deliverables",
+        "#### Audio Planning Template",
+        "#### Sync And Loudness Checks",
+        "#### Common Repairs"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-antislop",
+      "path": "references/capabilities/seedance-antislop.html",
+      "anchor": "capability-seedance-antislop",
+      "legacy_sections": [
+        "#### seedance-antislop",
+        "### Intent",
+        "### Visibility Test",
+        "### The Six Slop Classes",
+        "### Rewrite Pass",
+        "### Do Not Over-Correct",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-audio",
+      "path": "references/capabilities/seedance-audio.html",
+      "anchor": "capability-seedance-audio",
+      "legacy_sections": [
+        "#### seedance-audio",
+        "### Intent",
+        "### Core Rules",
+        "### Sound Layer Pattern",
+        "### Multi-Character Dialogue",
+        "### Failure Fixes",
+        "### Sequence State",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-camera",
+      "path": "references/capabilities/seedance-camera.html",
+      "anchor": "capability-seedance-camera",
+      "legacy_sections": [
+        "#### seedance-camera",
+        "### Intent",
+        "### Camera Contract",
+        "### Lens and Framing Anchors",
+        "### Move Selection",
+        "### Continuity Rules",
+        "### Conflict Rule",
+        "### Sequence State",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0",
+        "V4"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-characters",
+      "path": "references/capabilities/seedance-characters.html",
+      "anchor": "capability-seedance-characters",
+      "legacy_sections": [
+        "#### seedance-characters",
+        "### Intent",
+        "### Character Contract",
+        "### Multi-Character Blocking",
+        "### Three-Tier Action Hierarchy",
+        "### Hand and Face Stability",
+        "### Likeness Rule",
+        "### Sequence State",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-continuation",
+      "path": "references/capabilities/seedance-continuation.html",
+      "anchor": "capability-seedance-continuation",
+      "legacy_sections": [
+        "#### seedance-continuation",
+        "### Required Input Gate",
+        "### Continuation Types",
+        "### Canon Rule",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-copyright",
+      "path": "references/capabilities/seedance-copyright.html",
+      "anchor": "capability-seedance-copyright",
+      "legacy_sections": [
+        "#### seedance-copyright",
+        "### Intent",
+        "### Rewrite Principle",
+        "### Authorization Gate",
+        "### Safe Replacement Example",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-examples-ja",
+      "path": "references/capabilities/seedance-examples-ja.html",
+      "anchor": "capability-seedance-examples-ja",
+      "legacy_sections": [
+        "#### seedance-examples-ja",
+        "### Intent",
+        "### Example Labels",
+        "### Safe Example Patterns",
+        "### Rewrite Pattern",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-examples-ko",
+      "path": "references/capabilities/seedance-examples-ko.html",
+      "anchor": "capability-seedance-examples-ko",
+      "legacy_sections": [
+        "#### seedance-examples-ko",
+        "### Intent",
+        "### Example Labels",
+        "### Safe Example Patterns",
+        "### Rewrite Pattern",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-examples-zh",
+      "path": "references/capabilities/seedance-examples-zh.html",
+      "anchor": "capability-seedance-examples-zh",
+      "legacy_sections": [
+        "#### seedance-examples-zh",
+        "### Intent",
+        "### Example Labels",
+        "### Safe Example Patterns",
+        "### Rewrite Pattern",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-filter",
+      "path": "references/capabilities/seedance-filter.html",
+      "anchor": "capability-seedance-filter",
+      "legacy_sections": [
+        "#### seedance-filter",
+        "### Intent",
+        "### Boundary — read before anything else",
+        "### Repair Method",
+        "### Safer Rewrite Patterns",
+        "### Boundary Rule",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-interview-short",
+      "path": "references/capabilities/seedance-interview-short.html",
+      "anchor": "capability-seedance-interview-short",
+      "legacy_sections": [
+        "#### seedance-interview-short",
+        "### Intent",
+        "### Process",
+        "### Compact Brief Pattern",
+        "### Routing Rule",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-interview",
+      "path": "references/capabilities/seedance-interview.html",
+      "anchor": "capability-seedance-interview",
+      "legacy_sections": [
+        "#### seedance-interview",
+        "### Intent",
+        "### Question Quality Rules",
+        "### Priority Question Pool",
+        "### Feeling-to-Film Translation",
+        "### Direct the Scene, Don't Decorate It",
+        "### Propose, Then Adjust",
+        "### Process",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-lighting",
+      "path": "references/capabilities/seedance-lighting.html",
+      "anchor": "capability-seedance-lighting",
+      "legacy_sections": [
+        "#### seedance-lighting",
+        "### Intent",
+        "### Lighting Contract",
+        "### Source Selection",
+        "### Color and Atmosphere",
+        "### Failure Fixes",
+        "### Sequence State",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-motion",
+      "path": "references/capabilities/seedance-motion.html",
+      "anchor": "capability-seedance-motion",
+      "legacy_sections": [
+        "#### seedance-motion",
+        "### Intent",
+        "### Motion Contract",
+        "### Physics-Forward Pattern",
+        "### Timing Pattern",
+        "### Reference Motion Rules",
+        "### Stability Rules",
+        "### Sequence State",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0",
+        "V4"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-pipeline",
+      "path": "references/capabilities/seedance-pipeline.html",
+      "anchor": "capability-seedance-pipeline",
+      "legacy_sections": [
+        "#### seedance-pipeline",
+        "### Intent",
+        "### Status Rule",
+        "### Workflow Split",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-prompt-short",
+      "path": "references/capabilities/seedance-prompt-short.html",
+      "anchor": "capability-seedance-prompt-short",
+      "legacy_sections": [
+        "#### seedance-prompt-short",
+        "### Intent",
+        "### Compression Priority",
+        "### Compact Templates",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-prompt",
+      "path": "references/capabilities/seedance-prompt.html",
+      "anchor": "capability-seedance-prompt",
+      "legacy_sections": [
+        "#### seedance-prompt",
+        "### Intent",
+        "### Director Formula",
+        "### Mode Gate",
+        "### Sequence Boundary",
+        "### Prompt Build Process",
+        "### Compression Rules",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-recipes",
+      "path": "references/capabilities/seedance-recipes.html",
+      "anchor": "capability-seedance-recipes",
+      "legacy_sections": [
+        "#### seedance-recipes",
+        "### Intent",
+        "### Recipe Families",
+        "### Prompt Skeletons",
+        "### Selection Rule",
+        "### Sequence State",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-sequence",
+      "path": "references/capabilities/seedance-sequence.html",
+      "anchor": "capability-seedance-sequence",
+      "legacy_sections": [
+        "#### seedance-sequence",
+        "### Intent",
+        "### Sequence Classifier",
+        "### Build Process",
+        "### Sequence Map Fields",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-style",
+      "path": "references/capabilities/seedance-style.html",
+      "anchor": "capability-seedance-style",
+      "legacy_sections": [
+        "#### seedance-style",
+        "### Intent",
+        "### Style Safety Rule",
+        "### Layered Style Method",
+        "### Hybrid Style Rule",
+        "### Source-Look Lock",
+        "### Sequence State",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-troubleshoot",
+      "path": "references/capabilities/seedance-troubleshoot.html",
+      "anchor": "capability-seedance-troubleshoot",
+      "legacy_sections": [
+        "#### seedance-troubleshoot",
+        "### Intent",
+        "### Diagnostic Tree",
+        "### Repair Process",
+        "### Conservative Retry Pattern",
+        "### Escalation Rules",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-vfx",
+      "path": "references/capabilities/seedance-vfx.html",
+      "anchor": "capability-seedance-vfx",
+      "legacy_sections": [
+        "#### seedance-vfx",
+        "### Intent",
+        "### Effects Contract",
+        "### VFX Integration Rules",
+        "### Timing and Dissipation",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-vocab-en",
+      "path": "references/capabilities/seedance-vocab-en.html",
+      "anchor": "capability-seedance-vocab-en",
+      "legacy_sections": [
+        "#### seedance-vocab-en",
+        "### Intent",
+        "### Usage Rule",
+        "### De-Slop Pass",
+        "### Filter-Aware Wording",
+        "### Compact Pattern",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-vocab-es",
+      "path": "references/capabilities/seedance-vocab-es.html",
+      "anchor": "capability-seedance-vocab-es",
+      "legacy_sections": [
+        "#### seedance-vocab-es",
+        "### Intent",
+        "### Usage Rule",
+        "### Compact Pattern",
+        "### De-Slop Rule",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-vocab-ja",
+      "path": "references/capabilities/seedance-vocab-ja.html",
+      "anchor": "capability-seedance-vocab-ja",
+      "legacy_sections": [
+        "#### seedance-vocab-ja",
+        "### Intent",
+        "### Usage Rule",
+        "### Compact Pattern",
+        "### De-Slop Rule",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-vocab-ko",
+      "path": "references/capabilities/seedance-vocab-ko.html",
+      "anchor": "capability-seedance-vocab-ko",
+      "legacy_sections": [
+        "#### seedance-vocab-ko",
+        "### Intent",
+        "### Usage Rule",
+        "### Compact Pattern",
+        "### De-Slop Rule",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-vocab-ru",
+      "path": "references/capabilities/seedance-vocab-ru.html",
+      "anchor": "capability-seedance-vocab-ru",
+      "legacy_sections": [
+        "#### seedance-vocab-ru",
+        "### Intent",
+        "### Usage Rule",
+        "### Compact Pattern",
+        "### De-Slop Rule",
+        "### Dialogue Rule",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "capability-seedance-vocab-zh",
+      "path": "references/capabilities/seedance-vocab-zh.html",
+      "anchor": "capability-seedance-vocab-zh",
+      "legacy_sections": [
+        "#### seedance-vocab-zh",
+        "### Intent",
+        "### Usage Rule",
+        "### Compact Pattern",
+        "### De-Slop Rule",
+        "### Output Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-capability-map",
+      "path": "references/capability-map.html",
+      "anchor": "reference-capability-map",
+      "legacy_sections": [
+        "### Reference section: references/capability-map.md",
+        "### Capability Map — design into strengths, around limits",
+        "#### Design INTO these",
+        "#### Design AROUND these",
+        "#### Competitive Context *(2026-06-14)*"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-cinematography-shot-language",
+      "path": "references/cinematography-shot-language.html",
+      "anchor": "reference-cinematography-shot-language",
+      "legacy_sections": [
+        "### Reference section: references/cinematography-shot-language.md",
+        "### Cinematography Shot Language",
+        "#### Shot Contract",
+        "#### Shot Size Use",
+        "#### Camera Movement Grammar",
+        "#### Blocking and Coverage",
+        "#### Professional Avoid List"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0",
+        "V3"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-color-pipeline-aces",
+      "path": "references/color-pipeline-aces.html",
+      "anchor": "reference-color-pipeline-aces",
+      "legacy_sections": [
+        "### Reference section: references/color-pipeline-aces.md",
+        "### Color Pipeline And ACES Notes",
+        "#### Honest Boundary",
+        "#### Prompt-Level Color Intent",
+        "#### Post Metadata To Track",
+        "#### ACES-Friendly Handoff",
+        "#### Color Failure Repairs"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-community-source-methodology",
+      "path": "references/community-source-methodology.html",
+      "anchor": "reference-community-source-methodology",
+      "legacy_sections": [
+        "### Reference section: references/community-source-methodology.md",
+        "### Community Source Methodology",
+        "#### Allowed Extraction",
+        "#### Disallowed Extraction",
+        "#### Corpus Labels",
+        "#### Transformation Rule",
+        "#### Sequence Example Rule"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-continuation-handoff",
+      "path": "references/continuation-handoff.html",
+      "anchor": "reference-continuation-handoff",
+      "legacy_sections": [
+        "### Reference section: references/continuation-handoff.md",
+        "### Continuation Handoff",
+        "#### Source Gate",
+        "#### Handoff Record",
+        "#### Seamless Versus Next Shot",
+        "#### Completed And Reserved Beats",
+        "#### Exact Reference Tags",
+        "#### Acceptance Rule"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-continuity-qc",
+      "path": "references/continuity-qc.html",
+      "anchor": "reference-continuity-qc",
+      "legacy_sections": [
+        "### Reference section: references/continuity-qc.md",
+        "### Continuity QC",
+        "#### Hard-Fail Without Explanation",
+        "#### Warn Unless Declared",
+        "#### Boundary Check"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-delivery-qc",
+      "path": "references/delivery-qc.html",
+      "anchor": "reference-delivery-qc",
+      "legacy_sections": [
+        "### Reference section: references/delivery-qc.md",
+        "### Delivery And QC",
+        "#### Delivery Preflight",
+        "#### Naming Pattern",
+        "#### Client Review Packet",
+        "#### QC Failure Routing",
+        "#### Done Definition"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-dense-storyboard-mode",
+      "path": "references/dense-storyboard-mode.html",
+      "anchor": "reference-dense-storyboard-mode",
+      "legacy_sections": [
+        "### Reference section: references/dense-storyboard-mode.md",
+        "### Dense Storyboard Mode",
+        "#### Classifier",
+        "#### Dense Multishot Rules",
+        "#### Continuous Take Rules",
+        "#### 2D Animation",
+        "#### Endpoint Discipline"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-directing-engine",
+      "path": "references/directing-engine.html",
+      "anchor": "reference-directing-engine",
+      "legacy_sections": [
+        "### Reference section: references/directing-engine.md",
+        "### Directing Engine",
+        "#### Why \"cinematic\" is not a decision",
+        "#### Step 1 - The Director's Read",
+        "#### Step 2 - The Coherence Principle",
+        "#### Step 3 - Scene-Type Coverage",
+        "#### Step 4 - Directing the Performance",
+        "#### Step 5 - Lighting and Color as Emotion",
+        "#### Step 6 - The Director's Voice",
+        "#### Step 7 - The Coherence Test",
+        "#### Step 8 - The Long-Form Directorial Spine",
+        "#### Step 9 - Decision Procedure",
+        "#### Worked Example - A Single Scene",
+        "#### Worked Example - A Three-Clip Spine",
+        "#### Worked Examples by Genre",
+        "##### Product / commercial reveal",
+        "##### Music video beat",
+        "##### Horror / suspense",
+        "##### Anime / 2D power-up",
+        "##### Action / pursuit",
+        "##### Comedy pratfall",
+        "##### UGC / caught real moment",
+        "##### Transformation / VFX brand reveal",
+        "##### Establishing / landscape",
+        "##### Beauty / cosmetics",
+        "##### Food / culinary",
+        "##### Automotive / commercial",
+        "##### High fashion / editorial",
+        "##### Fashion runway",
+        "##### Real estate / property tour",
+        "##### Talking-head pitch (口播)",
+        "##### Sports / hype",
+        "##### Fitness / workout",
+        "##### Travel / cinematic vlog",
+        "##### Dialogue-driven two-hander",
+        "##### Short drama (短剧)",
+        "##### Romance",
+        "##### Noir / detective",
+        "##### Fantasy / epic",
+        "##### Sci-fi",
+        "##### Nostalgia / vintage memory",
+        "##### 3D / CG animation",
+        "##### Stop-motion / claymation",
+        "##### Kids / children's content",
+        "##### Documentary interview",
+        "##### Nature / wildlife",
+        "##### Pet / animal portrait",
+        "##### Time-lapse / hyperlapse",
+        "#### Anti-Slop for Direction"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-eval-rubric",
+      "path": "references/eval-rubric.html",
+      "anchor": "reference-eval-rubric",
+      "legacy_sections": [
+        "### Reference section: references/eval-rubric.md",
+        "### Eval Rubric",
+        "#### V6 Sequence Rubric"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-event-density",
+      "path": "references/event-density.html",
+      "anchor": "reference-event-density",
+      "legacy_sections": [
+        "### Reference section: references/event-density.md",
+        "### Event Density",
+        "#### Density Rule",
+        "#### Beat Buckets",
+        "#### Scope Firewall",
+        "#### Splitting Triggers"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-examples-by-mode",
+      "path": "references/examples-by-mode.html",
+      "anchor": "reference-examples-by-mode",
+      "legacy_sections": [
+        "### Reference section: references/examples-by-mode.md",
+        "### Examples By Mode",
+        "#### T2V Director Instruction",
+        "#### I2V Preservation",
+        "#### V2V Edit",
+        "#### V2V Extend",
+        "#### R2V Role Map",
+        "#### FLF2V Transition",
+        "#### Audio Conflict Repair",
+        "#### Extension Quality Repair",
+        "#### Professional Shot Contract",
+        "#### Localization Handoff Example",
+        "#### Delivery QC Example",
+        "#### Multilingual Community-Informed Examples",
+        "##### Chinese-English R2V",
+        "##### Japanese I2V",
+        "##### Korean Dialogue",
+        "##### Spanish Product",
+        "##### Russian Safe Suspense",
+        "#### Sequence Continuation Example",
+        "#### Standalone Non-Overplanning Example"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-failure-atlas",
+      "path": "references/failure-atlas.html",
+      "anchor": "reference-failure-atlas",
+      "legacy_sections": [
+        "### Reference section: references/failure-atlas.md",
+        "### Failure Atlas"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0",
+        "V4"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-field-observed-tips",
+      "path": "references/field-observed-tips.html",
+      "anchor": "reference-field-observed-tips",
+      "legacy_sections": [
+        "### Reference section: references/field-observed-tips.md",
+        "### Field-Observed Tips",
+        "#### Stable Workflow",
+        "#### Prompt Discipline",
+        "#### High-Risk Areas",
+        "#### Safe Hidden Trick"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-filter-vocab",
+      "path": "references/filter-vocab.html",
+      "anchor": "reference-filter-vocab",
+      "legacy_sections": [
+        "### Reference section: references/filter-vocab.md",
+        "### Filter-Safe Vocabulary",
+        "#### False-Positive Reduction",
+        "#### Multilingual Clarity"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-first-last-frame-guide",
+      "path": "references/first-last-frame-guide.html",
+      "anchor": "reference-first-last-frame-guide",
+      "legacy_sections": [
+        "### Reference section: references/first-last-frame-guide.md",
+        "### First/Last Frame Guide",
+        "#### Core Principle",
+        "#### Reference Roles",
+        "#### Surface Field Notes",
+        "#### Prompt Template",
+        "#### Product-Safe Transition",
+        "#### Character-Safe Transition",
+        "#### Transformation Method",
+        "#### Common Failures"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-frontend-design-system",
+      "path": "references/frontend-design-system.html",
+      "anchor": "reference-frontend-design-system",
+      "legacy_sections": [
+        "### Reference section: references/frontend-design-system.md",
+        "### Frontend Design System",
+        "#### Design goals",
+        "#### Asset rules",
+        "#### README rules",
+        "#### Editorial Design Tokens (v6 front page)"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-genre-guides",
+      "path": "references/genre-guides.html",
+      "anchor": "reference-genre-guides",
+      "legacy_sections": [
+        "### Reference section: references/genre-guides.md",
+        "### Genre Guides",
+        "#### Product Ad",
+        "#### Short Drama",
+        "#### Action",
+        "#### Animation",
+        "#### Music / Beat Sync",
+        "#### Food and Lifestyle",
+        "#### Landscape and Nature",
+        "#### VFX and Transformation"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "historical-frontend-redesign",
+      "path": "references/guides/historical-frontend-redesign.html",
+      "anchor": "historical-frontend-redesign",
+      "legacy_sections": [
+        "### Doc section: docs/frontend-redesign.md",
+        "### V6 Front Page Design",
+        "#### V6 Design Goals",
+        "#### Native Reader Requirements",
+        "#### Assets",
+        "#### Design Rules",
+        "#### V6 Editorial System"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "historical"
+    },
+    {
+      "id": "historical-v6-release-readiness",
+      "path": "references/guides/historical-v6-release-readiness.html",
+      "anchor": "historical-v6-release-readiness",
+      "legacy_sections": [
+        "### Doc section: docs/v6-release-readiness.md",
+        "### V6 Release Readiness",
+        "#### Current Release Surface",
+        "#### Front Page Checks",
+        "#### Validation"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "historical"
+    },
+    {
+      "id": "guide-native-ja",
+      "path": "references/guides/native-ja.html",
+      "anchor": "guide-native-ja",
+      "legacy_sections": [
+        "### Doc section: README native-language notes for Japanese",
+        "### Seedance 2.0 Skill OS 日本語ガイド",
+        "#### まず開くもの",
+        "#### 日本語プロンプトの基本",
+        "#### 連続クリップテンプレート",
+        "#### 日本語作例",
+        "#### 安全な書き換え"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "guide-native-ko",
+      "path": "references/guides/native-ko.html",
+      "anchor": "guide-native-ko",
+      "legacy_sections": [
+        "### Doc section: README native-language notes for Korean",
+        "### Seedance 2.0 Skill OS 한국어 가이드",
+        "#### 먼저 볼 곳",
+        "#### 한국어 프롬프트 기본",
+        "#### 연속 클립 템플릿",
+        "#### 한국어 예시",
+        "#### 안전한 재작성"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "guide-native-zh",
+      "path": "references/guides/native-zh.html",
+      "anchor": "guide-native-zh",
+      "legacy_sections": [
+        "### Doc section: README native-language notes for Chinese",
+        "### Seedance 2.0 Skill OS 中文指南",
+        "#### 先从哪里开始",
+        "#### 中文提示词规则",
+        "#### 连续剧情模板",
+        "#### 中文范例",
+        "#### 安全改写"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-i2v-guide",
+      "path": "references/i2v-guide.html",
+      "anchor": "reference-i2v-guide",
+      "legacy_sections": [
+        "### Reference section: references/i2v-guide.md",
+        "### Image-to-Video Guide",
+        "#### Core Rule",
+        "#### Minimal Template",
+        "#### Two I2V Modes",
+        "#### Preservation Language",
+        "#### Good I2V Additions",
+        "#### Failure Fixes"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-intent-vs-precision",
+      "path": "references/intent-vs-precision.html",
+      "anchor": "reference-intent-vs-precision",
+      "legacy_sections": [
+        "### Reference section: references/intent-vs-precision.md",
+        "### Intent vs Precision",
+        "#### Use Text For",
+        "#### Use References For"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-json-schema",
+      "path": "references/json-schema.html",
+      "anchor": "reference-json-schema",
+      "legacy_sections": [
+        "### Reference section: references/json-schema.md",
+        "### Seedance Prompt JSON Schema",
+        "#### Sequence-State Schemas"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-model-mechanics",
+      "path": "references/model-mechanics.html",
+      "anchor": "reference-model-mechanics",
+      "legacy_sections": [
+        "### Reference section: references/model-mechanics.md",
+        "### Model Mechanics — how the generator thinks",
+        "#### The eight mechanisms",
+        "##### 1. Attention is a budget",
+        "##### 2. Generation pulls toward the familiar",
+        "##### 3. There is no NOT",
+        "##### 4. Time is a trajectory prior",
+        "##### 5. Errors compound",
+        "##### 6. References outrank text where they overlap",
+        "##### 7. Detail capacity scales with screen area",
+        "##### 8. Audio and video are generated together",
+        "#### Deriving guidance for novel cases",
+        "#### Mechanism-indexed diagnosis"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-model-name-map",
+      "path": "references/model-name-map.html",
+      "anchor": "reference-model-name-map",
+      "legacy_sections": [
+        "### Reference section: references/model-name-map.md",
+        "### Model Name Map",
+        "#### Canonical Names",
+        "#### Answer Pattern",
+        "#### Non-Seedance Models (Do Not Confuse)",
+        "#### Wrapper Names"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-multilingual-community-examples",
+      "path": "references/multilingual-community-examples.html",
+      "anchor": "reference-multilingual-community-examples",
+      "legacy_sections": [
+        "### Reference section: references/multilingual-community-examples.md",
+        "### Multilingual Community Examples",
+        "#### Boundary",
+        "#### What Works",
+        "#### What To Avoid",
+        "#### Chinese-English Patterns",
+        "#### Japanese-English Patterns",
+        "#### Korean-English Patterns",
+        "#### Spanish-English Patterns",
+        "#### Russian-English Patterns",
+        "#### Multilingual Prompt Triage",
+        "#### Global Production Handoff Patterns",
+        "##### Chinese-English client shot",
+        "##### Japanese localization handoff",
+        "##### Korean social cutdown",
+        "##### Spanish delivery note",
+        "##### Russian QC handoff"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-multishot-grammar",
+      "path": "references/multishot-grammar.html",
+      "anchor": "reference-multishot-grammar",
+      "legacy_sections": [
+        "### Reference section: references/multishot-grammar.md",
+        "### Multi-Shot Grammar — real cuts inside one generation",
+        "#### The grammar [official]",
+        "#### The budget [official]",
+        "#### Requirements [official + field]",
+        "#### Timestamps: secondary on Western surfaces, primary on Chinese surfaces [official + field]",
+        "#### Dialogue & audio placement [official + field]",
+        "#### The single-take alternative [official]",
+        "#### Worked shapes",
+        "#### Failure → fix [field]",
+        "#### Sequence Boundary"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "operating-loop",
+      "path": "references/operating-loop.html",
+      "anchor": "operating-loop",
+      "legacy_sections": [
+        "## Root Operating Loop",
+        "### Soul",
+        "### Operating Loop",
+        "### Sequence Gate",
+        "### Load Map"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-platform-constraints",
+      "path": "references/platform-constraints.html",
+      "anchor": "reference-platform-constraints",
+      "legacy_sections": [
+        "### Reference section: references/platform-constraints.md",
+        "### Platform Constraints",
+        "#### Stable constraints",
+        "#### Surface-specific claims",
+        "#### User-facing default"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-platform-surface-matrix",
+      "path": "references/platform-surface-matrix.html",
+      "anchor": "reference-platform-surface-matrix",
+      "legacy_sections": [
+        "### Reference section: references/platform-surface-matrix.md",
+        "### Platform Surface Matrix",
+        "#### API Shape Rule",
+        "#### China-Facing Search Note",
+        "#### Surface-Specific Claims",
+        "#### Real-Person Rule",
+        "#### V2V, R2V, and FLF2V Boundary"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-pro-filmmaking-standards",
+      "path": "references/pro-filmmaking-standards.html",
+      "anchor": "reference-pro-filmmaking-standards",
+      "legacy_sections": [
+        "### Reference section: references/pro-filmmaking-standards.md",
+        "### Professional Filmmaking Standards",
+        "#### Source Boundaries",
+        "#### Professional Operating Spine",
+        "#### When To Load Detailed References",
+        "#### Professional Answer Contract"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-progressive-disclosure",
+      "path": "references/progressive-disclosure.html",
+      "anchor": "reference-progressive-disclosure",
+      "legacy_sections": [
+        "### Reference section: references/progressive-disclosure.md",
+        "### Progressive Disclosure Plan",
+        "#### V6 Sequence Disclosure"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-prompt-compiler",
+      "path": "references/prompt-compiler.html",
+      "anchor": "reference-prompt-compiler",
+      "legacy_sections": [
+        "### Reference section: references/prompt-compiler.md",
+        "### Prompt Compiler",
+        "#### Inputs",
+        "#### Compile Order",
+        "#### Natural-Language Prompt Rules",
+        "#### Compression"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-prompt-examples",
+      "path": "references/prompt-examples.html",
+      "anchor": "reference-prompt-examples",
+      "legacy_sections": [
+        "### Reference section: references/prompt-examples.md",
+        "### Prompt Examples",
+        "#### T2V Product Launch",
+        "#### I2V Product Preservation",
+        "#### T2V Character Drama",
+        "#### I2V Portrait Micro-Performance",
+        "#### V2V Motion Transfer Without Identity Transfer",
+        "#### R2V Multi-Reference Product Ad",
+        "#### Dialogue and Lip-Sync",
+        "#### Two-Character Blocking",
+        "#### Action Beat",
+        "#### Safe Original Animation",
+        "#### Food Lifestyle",
+        "#### Landscape Atmosphere",
+        "#### VFX Energy",
+        "#### Weather VFX Around a Product",
+        "#### Music Beat Sync",
+        "#### Troubleshooting Repair: Generic Output",
+        "#### Troubleshooting Repair: I2V Drift",
+        "#### Multilingual Chinese Compressed Prompt",
+        "#### Chinese First/Last Frame",
+        "#### Russian I2V Product Preservation",
+        "#### Russian Reference Role Map",
+        "#### Chinese-English Mixed Role Map",
+        "#### Japanese-English Portrait Control",
+        "#### Korean-English Melodrama Blocking",
+        "#### Spanish-English Product Preservation",
+        "#### Multilingual False-Positive Repair"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-quick-ref",
+      "path": "references/quick-ref.html",
+      "anchor": "reference-quick-ref",
+      "legacy_sections": [
+        "### Reference section: references/quick-ref.md",
+        "### Quick Reference",
+        "#### Default route",
+        "#### Prompt checklist",
+        "#### Fast repair phrases"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-reference-transfer-contract",
+      "path": "references/reference-transfer-contract.html",
+      "anchor": "reference-reference-transfer-contract",
+      "legacy_sections": [
+        "### Reference section: references/reference-transfer-contract.md",
+        "### Reference Transfer Contract",
+        "#### Exact Tag Rule",
+        "#### Role Separation",
+        "#### Continuity Source Versus Motion Reference",
+        "#### Multi-Subject Selector",
+        "#### Transfer And Ignore Clause"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-reference-workflow",
+      "path": "references/reference-workflow.html",
+      "anchor": "reference-reference-workflow",
+      "legacy_sections": [
+        "### Reference section: references/reference-workflow.md",
+        "### Reference Workflow",
+        "#### Asset Role Map",
+        "#### Rules",
+        "#### Workflow-Specific Patterns",
+        "#### Role Examples",
+        "#### Storyboard Reference Workflow",
+        "##### Candidate Protocol",
+        "##### Approved Send Pattern",
+        "#### Motion Transfer",
+        "#### Template",
+        "#### Sequence Transfer Template"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0",
+        "V3",
+        "V4"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-research-2026-05-30",
+      "path": "references/research-2026-05-30.html",
+      "anchor": "reference-research-2026-05-30",
+      "legacy_sections": [
+        "### Reference section: references/research-2026-05-30.md",
+        "### Seedance Research Snapshot",
+        "#### Source Priority",
+        "#### Confirmed Official Signals",
+        "#### Field-Observed Signals",
+        "#### Excluded From Active Guidance",
+        "#### Update Rule"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-retake-protocol",
+      "path": "references/retake-protocol.html",
+      "anchor": "reference-retake-protocol",
+      "legacy_sections": [
+        "### Reference section: references/retake-protocol.md",
+        "### Retake Protocol — the iteration economy",
+        "#### Triage every take — five verdicts",
+        "#### The one-variable rule [heuristic]",
+        "#### Attempt budget [heuristic]",
+        "#### Cost awareness [internal]",
+        "#### The shot log [internal]",
+        "#### Sequence Canon [internal]",
+        "#### When the answer is \"don't generate\""
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-sequence-project-state",
+      "path": "references/sequence-project-state.html",
+      "anchor": "reference-sequence-project-state",
+      "legacy_sections": [
+        "### Reference section: references/sequence-project-state.md",
+        "### Sequence Project State",
+        "#### Operating Model",
+        "#### Canonical State",
+        "#### Required Project Fields",
+        "#### Visual State",
+        "#### Reconciliation",
+        "#### Project State Capsule"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-shot-list-continuity",
+      "path": "references/shot-list-continuity.html",
+      "anchor": "reference-shot-list-continuity",
+      "legacy_sections": [
+        "### Reference section: references/shot-list-continuity.md",
+        "### Shot List And Continuity",
+        "#### Pre-Production Brief",
+        "#### Shot List Fields",
+        "#### Continuity Ledger",
+        "#### Treatment To Shot List",
+        "#### Three-Shot Commercial Pattern",
+        "#### Handoff Rules",
+        "#### Sequence-State Handoff"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-source-registry",
+      "path": "references/source-registry.html",
+      "anchor": "reference-source-registry",
+      "legacy_sections": [
+        "### Reference section: references/source-registry.md",
+        "### Source Registry",
+        "#### Evidence Labels",
+        "#### Primary Source Hierarchy",
+        "#### Required Claim Patterns"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-storytelling-framework",
+      "path": "references/storytelling-framework.html",
+      "anchor": "reference-storytelling-framework",
+      "legacy_sections": [
+        "### Reference section: references/storytelling-framework.md",
+        "### Storytelling Framework",
+        "#### Useful Clip Beats",
+        "#### Beat Formula",
+        "#### Micro-Story Checklist",
+        "#### Three Scales For Sequence Work",
+        "#### Scope Firewall"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-subtitles-localization",
+      "path": "references/subtitles-localization.html",
+      "anchor": "reference-subtitles-localization",
+      "legacy_sections": [
+        "### Reference section: references/subtitles-localization.md",
+        "### Subtitles And Localization",
+        "#### Localization Plan",
+        "#### Prompting For Subtitle-Friendly Footage",
+        "#### Reading And Placement Checks",
+        "#### Global Prompt Handoff",
+        "#### Cultural Localization",
+        "#### Safe False-Positive Repair"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "reference-surface-prompt-profiles",
+      "path": "references/surface-prompt-profiles.html",
+      "anchor": "reference-surface-prompt-profiles",
+      "legacy_sections": [
+        "### Reference section: references/surface-prompt-profiles.md",
+        "### Surface Prompt Profiles",
+        "#### Profile Fields",
+        "#### Conservative Generic Profile",
+        "#### Seedance 2.5 Verified Profiles *(2026-09-04)*",
+        "#### Volatile Claim Rule"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "vocab-en",
+      "path": "references/vocab/en.html",
+      "anchor": "vocab-en",
+      "legacy_sections": [
+        "### Reference section: references/vocab/en.md",
+        "### English Vocabulary",
+        "#### Slop Traps",
+        "#### Filter-Trip Repairs"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "vocab-es",
+      "path": "references/vocab/es.html",
+      "anchor": "vocab-es",
+      "legacy_sections": [
+        "### Reference section: references/vocab/es.md",
+        "### Spanish Vocabulary",
+        "#### Compact Template",
+        "#### Multimodal Template",
+        "#### Slop Traps"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "vocab-ja",
+      "path": "references/vocab/ja.html",
+      "anchor": "vocab-ja",
+      "legacy_sections": [
+        "### Reference section: references/vocab/ja.md",
+        "### Japanese Vocabulary",
+        "#### Compact Template",
+        "#### Multimodal Template",
+        "#### Sequence and Continuation Phrases",
+        "#### Slop Traps"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "vocab-ko",
+      "path": "references/vocab/ko.html",
+      "anchor": "vocab-ko",
+      "legacy_sections": [
+        "### Reference section: references/vocab/ko.md",
+        "### Korean Vocabulary",
+        "#### Compact Template",
+        "#### Multimodal Template",
+        "#### Sequence and Continuation Phrases",
+        "#### Slop Traps"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "vocab-ru",
+      "path": "references/vocab/ru.html",
+      "anchor": "vocab-ru",
+      "legacy_sections": [
+        "### Reference section: references/vocab/ru.md",
+        "### Russian Vocabulary",
+        "#### Compact Template",
+        "#### Russian Dialogue Notes",
+        "#### Slop Traps"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "vocab-zh",
+      "path": "references/vocab/zh.html",
+      "anchor": "vocab-zh",
+      "legacy_sections": [
+        "### Reference section: references/vocab/zh.md",
+        "### Chinese Vocabulary",
+        "#### Compact Template",
+        "#### Timeline Template",
+        "#### Sequence and Continuation Phrases",
+        "#### Slop Traps"
+      ],
+      "source_refs": [
+        "legacy-skill-7.1.0"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "generation-handoff",
+      "path": "references/generation-handoff.html",
+      "anchor": "generation-handoff",
+      "legacy_sections": [
+        "New topic: 生成の引継ぎと観測した状態"
+      ],
+      "source_refs": [
+        "V7",
+        "S1"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cases-processing-is-not-completion",
+      "path": "references/cases/processing-is-not-completion.html",
+      "anchor": "cases-processing-is-not-completion",
+      "legacy_sections": [
+        "New topic: 事例：Processingは完了ではない"
+      ],
+      "source_refs": [
+        "V7"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cases-street-continuity",
+      "path": "references/cases/street-continuity.html",
+      "anchor": "cases-street-continuity",
+      "legacy_sections": [
+        "New topic: 事例：参照競合と場所の連続性"
+      ],
+      "source_refs": [
+        "V4"
+      ],
+      "status": "active"
+    },
+    {
+      "id": "cases-lipsync-review",
+      "path": "references/cases/lipsync-review.html",
+      "anchor": "cases-lipsync-review",
+      "legacy_sections": [
+        "New topic: 事例：音声一致と口形同期は別の確認"
+      ],
+      "source_refs": [
+        "S1"
+      ],
+      "status": "active"
+    }
+  ]
+}

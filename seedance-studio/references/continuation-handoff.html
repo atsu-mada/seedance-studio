@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/continuation-handoff.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-continuation-handoff" data-status="active">
+<h1 id="reference-section-references-continuation-handoff-md-title">Reference section: references/continuation-handoff.md</h1>
+<h3 id="continuation-handoff">Continuation Handoff</h3>
+<p>Use this reference for every continue, extend, next-shot, bridge, repair-tail, or re-anchor request. A successor prompt must be based on accepted source footage or an accepted final frame.</p>
+<h4 id="source-gate">Source Gate</h4>
+<p>Do not write a continuation prompt until these are known:</p>
+<ul><li>project ID and current clip ID;</li><li>parent clip ID;</li><li>accepted source clip or accepted final frame;</li><li>observed end state;</li><li>completed beats;</li><li>reserved future beats;</li><li>continuity locks;</li><li>exact reference registry;</li><li>active surface or conservative surface profile.</li></ul>
+<p>If the source is missing, ask for the clip, final frame, or an exact visible-end description. Do not invent it.</p>
+<h4 id="handoff-record">Handoff Record</h4>
+<p>Record:</p>
+<ul><li>observed start state;</li><li>observed end state;</li><li>open motion vector;</li><li>camera phase;</li><li>screen direction;</li><li>character pose and gaze;</li><li>prop ownership, position, and condition;</li><li>location and persistent environment;</li><li>lighting phase;</li><li>ambience, completed dialogue, active dialogue, music phase, and SFX phase;</li><li>observation confidence and uncertainties.</li></ul>
+<h4 id="seamless-versus-next-shot">Seamless Versus Next Shot</h4>
+<p>Use <code>seamless_continuation</code> only when the next generation continues the same shot, geography, and open motion from accepted footage.</p>
+<p>Use <code>intentional_next_shot</code> when an editorial cut is appropriate. It may preserve story continuity, but it does not promise exact frame continuity.</p>
+<p>Use <code>bridge_between_known_states</code> when a known start state must reach a known final state.</p>
+<p>Use <code>repair_tail</code> when the final seconds of the parent clip failed.</p>
+<p>Use <code>reanchor_after_drift</code> when extension depth or visible drift makes the chain unstable.</p>
+<h4 id="completed-and-reserved-beats">Completed And Reserved Beats</h4>
+<p>Every continuation prompt must exclude completed beats and reserved future beats. If Clip 01 already exited the terminal, Clip 02 must not show the terminal exit again. If vehicle departure is reserved for Clip 03, Clip 02 must stop before departure.</p>
+<h4 id="exact-reference-tags">Exact Reference Tags</h4>
+<p>Preserve tags byte-for-byte: <code>@Image1</code>, <code>@Image 1</code>, <code>[Image1]</code>, <code>[Video 1]</code>, and interface equivalents must not be normalized, translated, renumbered, re-cased, or reformatted.</p>
+<h4 id="acceptance-rule">Acceptance Rule</h4>
+<p>Accepted observed state overrides planned state. Rejected footage never becomes canon. Future prompts stay provisional until the previous accepted take is reviewed.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

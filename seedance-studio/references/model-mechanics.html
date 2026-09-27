@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/model-mechanics.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-model-mechanics" data-status="active">
+<h1 id="reference-section-references-model-mechanics-md-title">Reference section: references/model-mechanics.md</h1>
+<h3 id="model-mechanics-how-the-generator-thinks">Model Mechanics — how the generator thinks</h3>
+<p><em>A working mental model of why this repo's rules work, so an agent can derive correct guidance for cases no rule covers. Built from public machine-learning knowledge and the public model card; Seedance's exact internals are not published. Evidence label: <code>internal</code> reasoning — a thinking tool, never architecture documentation or a platform claim.</em></p>
+<h4 id="the-eight-mechanisms">The eight mechanisms</h4>
+<h5 id="1-attention-is-a-budget">1. Attention is a budget</h5>
+<p>Every word in the prompt competes for a finite amount of conditioning influence. Words that name something visible spend the budget on pixels; words that name an evaluation ("stunning") spend it on nothing. Earlier clauses tend to win more influence.</p>
+<p><strong>Consequences:</strong> word order is a priority ranking · slop is not just ugly, it is expensive · short dense prompts beat long prose. <strong>Explains:</strong> the anti-slop system, the allocation model, the character-budget discipline, "put subject and action first."</p>
+<h5 id="2-generation-pulls-toward-the-familiar">2. Generation pulls toward the familiar</h5>
+<p>The model produces samples near its training distribution. Combinations it has seen millions of times (golden hour + warm rim light) are cheap and stable; rare combinations fight the prior and wobble.</p>
+<p><strong>Consequences:</strong> name dense visual clusters (film noir, cel animation, phone footage), not judgments (beautiful) · expect instability whenever the request is statistically rare, and stage rare ideas as familiar pieces · style flicker between shots is the sampler hopping between nearby clusters — repeat the exact anchor phrase to hold it. <strong>Explains:</strong> style-safe descriptors, the medium-line repetition rule in 2D work, the source-look lock.</p>
+<h5 id="3-there-is-no-not">3. There is no NOT</h5>
+<p>Text conditioning moves probability toward every concept it mentions. Negation is weak grammar wrapped around a strong activation: "no blood" still summons the concept.</p>
+<p><strong>Consequences:</strong> describe what IS there; exclude compositionally · reserve literal negation for the constraint slot platforms parse (<code>no on-screen text, no watermark</code>). <strong>Explains:</strong> negation slop, "negation summons" in the capability map.</p>
+<h5 id="4-time-is-a-trajectory-prior">4. Time is a trajectory prior</h5>
+<p>The model strongly prefers motion that looks like real footage: smooth, momentum-carrying, cause-and-effect. A described cause lets the model compute plausible consequences; a list of disconnected micro-instructions has no trajectory to ride.</p>
+<p><strong>Consequences:</strong> one physical cause with visible consequences beats five stage directions · unmotivated sudden changes get smoothed away or glitch · declared media change the prior — "hand-drawn 2D" legitimizes held frames that photoreal footage would treat as freezing. <strong>Explains:</strong> physics-forward prompting, the one-action discipline, burst-vs-held grammar in 2D.</p>
+<h5 id="5-errors-compound">5. Errors compound</h5>
+<p>Each frame is re-synthesized under the influence of its neighbors; tiny identity errors accumulate across a clip, and feeding outputs back as inputs amplifies them generation after generation.</p>
+<p><strong>Consequences:</strong> identity drifts with clip length and chained continuations — re-anchor with the ORIGINAL references, never with outputs · keep fragile anchors locked and clips short · expect the fifth chained generation to need a reset. <strong>Explains:</strong> the ~4–5-generation drift note, extension-degradation repair, preservation language.</p>
+<h5 id="6-references-outrank-text-where-they-overlap">6. References outrank text where they overlap</h5>
+<p>Image, video, and audio references are dense conditioning; a still image specifies more about appearance than a paragraph ever could. Text that re-describes a reference creates a second, slightly different instruction for the same pixels — and conflict reads as drift. Reference channels also bleed: a motion donor wants to bring its appearance along.</p>
+<p><strong>Consequences:</strong> prompt only what references cannot carry — change over time, camera, sound, constraints · always state what must NOT transfer. <strong>Explains:</strong> intent-vs-precision, role binding with exclusions, "prompt only what the image cannot show."</p>
+<h5 id="7-detail-capacity-scales-with-screen-area">7. Detail capacity scales with screen area</h5>
+<p>A face occupying 2% of the frame gets roughly 2% of the spatial representation. Small regions cannot hold fine structure, and motion makes it worse.</p>
+<p><strong>Consequences:</strong> the hero subject earns its fidelity by being large in frame · distant faces, busy hands, small logos, and on-screen text degrade first · a detail that matters gets its own shot. <strong>Explains:</strong> tiny-detail design-arounds, close-up rationing, text-to-post.</p>
+<h5 id="8-audio-and-video-are-generated-together">8. Audio and video are generated together</h5>
+<p>Sound is not added afterward; it denoises jointly with the picture. Named sound events give the sampler synchronization targets, and lip-sync is a joint constraint across both streams — every extra head or camera motion tightens it.</p>
+<p><strong>Consequences:</strong> name each shot's specific sounds — they anchor timing · audio can act as the clock of the edit · dialogue wants a stable face and a short line because the model is solving picture and phonemes simultaneously. <strong>Explains:</strong> audio-as-clock, sound-per-shot in multi-shot grammar, locked framing for dialogue.</p>
+<h4 id="deriving-guidance-for-novel-cases">Deriving guidance for novel cases</h4>
+<p>When no rule covers the request: (1) ask which mechanism dominates; (2) ask what that mechanism predicts; (3) choose the lever that works with the mechanism instead of against it.</p>
+<p><strong>Worked example — "the mirror reflection should move differently from the subject":</strong> mechanism 2 says this is distribution-rare (training mirrors agree with their subjects), and mechanism 4 says two conflicting trajectories in one region fight the prior. Prediction: wobble, merging, or the reflection syncing back. Levers: stage it as two shots (subject, then mirror as its own subject), or shoot the mirror as the only subject in frame, or accept a brief 2–3s effect window where instability reads as intended. No rule in the repo states this; the mechanics derive it.</p>
+<h4 id="mechanism-indexed-diagnosis">Mechanism-indexed diagnosis</h4>
+<p>Sequence-state failures usually come from compounding error and broken trajectory: a later prompt starts from the planned state instead of the observed state, or repeats a completed action because the project did not log it. The repair is not stronger adjectives; it is a better state handoff.</p>
+<table><thead><tr><th>Symptom</th><th>Dominant mechanism</th><th>Lever</th></tr></thead>
+<tbody>
+<tr><td>Output generic despite long prompt</td><td>1 — attention diluted</td><td>cut slop, reorder priorities first</td></tr>
+<tr><td>Style or look flickers</td><td>2 — cluster hopping</td><td>repeat the exact anchor phrase every shot</td></tr>
+<tr><td>Excluded thing appears</td><td>3 — negation summoned it</td><td>describe the positive replacement</td></tr>
+<tr><td>Action skipped or mushy</td><td>4 — no trajectory to ride</td><td>one cause, visible consequences, an endpoint</td></tr>
+<tr><td>Identity decays over time</td><td>5 — compounding error</td><td>shorter clip, original-reference re-anchor</td></tr>
+<tr><td>Reference fights the prompt</td><td>6 — conflicting conditioning</td><td>delete re-description, state non-transfer</td></tr>
+<tr><td>Small detail breaks</td><td>7 — capacity starvation</td><td>enlarge it in frame or give it its own shot</td></tr>
+<tr><td>Lips or sound desync</td><td>8 — joint constraint overloaded</td><td>lock the face, shorten the line, name the sound</td></tr>
+</tbody>
+</table>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

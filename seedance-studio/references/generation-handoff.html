@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>生成の引継ぎと観測した状態</title><link rel="stylesheet" href="../assets/knowledge-base.css"></head>
+<body><nav><a href="index.html">Seedance Studio knowledge index</a></nav><main id="generation-handoff"><h1 id="title">生成の引継ぎと観測した状態</h1>
+<p>保存した計画と、プロバイダーへ実際に渡した入力を分けて照合する。送信前の準備、送信の許可、受理、生成中、完了、ファイル取得、技術QC、知覚レビュー、採用は別の状態である。自動的なスキル選択は有料生成や投稿への実行承認を追加しない。</p>
+<h2 id="actual-input">実際の入力を記録する</h2><ul><li>プロンプトの版と実際の文面。</li><li>参照の順序、実際のタグ、各参照が担う役割と除外する属性。</li><li>開始・終了フレームの指定有無と対象。</li><li>対象surface、モデル、尺、画角、画質、音声、課金やモードの実表示。</li><li>受理されたジョブID、観測日時、完了/失敗表示、取得したファイルと検査結果。</li></ul>
+<p>記録された過去の秒数・枚数・料金・モードを現在の一般上限としない。現在の機能を説明する必要があれば source gate を通す。具体的なクリック・アップロード・送信は対象プロバイダーの実行手順へ渡す。</p>
+<h2 id="run-fields">既存generation-runへ付ける任意情報</h2>
+<table><thead><tr><th>項目</th><th>表すこと</th></tr></thead><tbody><tr><td>provider_status</td><td>unknown / queued / processing / completed / failed</td></tr><tr><td>technical_qc</td><td>not_checked / pass / fail。実ファイルの技術検査。</td></tr><tr><td>perceptual_review</td><td>pending / pass / fail / uncertain。映像・音の観測判断。</td></tr><tr><td>review_evidence</td><td>作品内相対パスで示す検査・レビュー根拠。</td></tr></tbody></table>
+<p>4つの任意情報を持たない旧記録は互換のまま保ち、欠落値をpassで補完しない。任意情報を1つでも使うaccepted記録では、provider_status=completed、technical_qc=pass、perceptual_review=passをすべて要求する。review_evidenceは任意だが、記載する場合は相対パスの配列として検査する。Processingは既存の result_status=submitted に provider_status=processing を添える。completedだけでacceptedへ進めない。記載されたQCや知覚レビューが不合格・未確認ならacceptedと矛盾する。take-reviewは実際に評価した後で作る。別の重複台帳を追加しない。</p>
+<h2 id="continuation">再開時</h2><p>同じジョブが処理中かを先に確認して重複送信を避ける。継続プロンプトは、採用された前クリップの実際の終端から組む。保存済みプロンプトの予定終端を、観測済みの事実に置き換えない。</p>
+<p><a href="cases/processing-is-not-completion.html">Processingの事例</a> · <a href="cases/lipsync-review.html">口形確認の事例</a> · <a href="continuation-handoff.html">継続引継ぎ</a></p>
+</main></body></html>

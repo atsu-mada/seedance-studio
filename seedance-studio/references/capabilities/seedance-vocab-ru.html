@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — seedance-vocab-ru</title>
+<link rel="stylesheet" href="../../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="../index.html">Seedance Studio knowledge index</a></nav>
+<main id="capability-seedance-vocab-ru" data-status="active">
+<h1 id="seedance-vocab-ru-title">seedance-vocab-ru</h1>
+<p>Use Russian cinematic vocabulary when the user asks for Russian prompt wording, bilingual delivery, compact translation, role binding, first/last-frame workflow, or production vocabulary for camera, lighting, action, VFX, audio, and constraints. Preserve reference tags exactly: <code>[Image1]</code>, <code>[Video1]</code>, and <code>[Audio1]</code> stay unchanged.</p>
+<h3 id="intent">Intent</h3>
+<p>Russian users arrive having already fought the hardest dialogue battle in this model and built workarounds worth respecting. The soul here is honoring that ingenuity: give them the field-tested paths, mark the limits honestly, and never promise what the community has proven fragile.</p>
+<h3 id="usage-rule">Usage Rule</h3>
+<p>Translate production intent, not every English word. Russian prompts should stay compact, concrete, and ordered by subject, action, camera, light, sound, and constraint.</p>
+<p>Load <code>Reference section: vocab/ru</code> for dense role-binding, first/last-frame, camera, lighting, audio, edit/extend, constraint, and safety vocabulary.</p>
+<table><thead><tr><th>Function</th><th>Russian wording</th></tr></thead>
+<tbody>
+<tr><td>Camera</td><td><code>медленный наезд камеры</code>, <code>боковое сопровождение</code>, <code>фиксированный средний план</code>, <code>низкий ракурс</code>, <code>крупный план</code></td></tr>
+<tr><td>Lighting</td><td><code>контровой свет</code>, <code>мягкий свет из окна</code>, <code>теплый практический источник</code>, <code>холодный лунный свет</code>, <code>контурная подсветка</code></td></tr>
+<tr><td>Motion</td><td><code>медленно поворачивается</code>, <code>быстро проходит через кадр</code>, <code>капли стекают вниз</code>, <code>дым мягко рассеивается</code></td></tr>
+<tr><td>Audio</td><td><code>тихий фон помещения</code>, <code>короткая реплика</code>, <code>мягкий металлический щелчок</code>, <code>без музыки</code></td></tr>
+<tr><td>First/last frame</td><td><code>[Image1] как первый кадр</code>, <code>[Image2] как последний кадр</code>, <code>естественный переход к последнему кадру</code></td></tr>
+<tr><td>Constraints</td><td><code>сохранить логотип, этикетку и форму без изменений</code></td></tr>
+</tbody>
+</table>
+<h3 id="compact-pattern">Compact Pattern</h3>
+<p><code>[Image1] — референс; сохранить лицо/форму продукта/логотип точно без изменений. Меняются только [движение/свет/камера]. Камера: [одно движение]. Звук: [аудио-сигнал].</code></p>
+<h3 id="de-slop-rule">De-Slop Rule</h3>
+<p>When the prompt leans on <code>кинематографичный</code>, <code>эпичный</code>, <code>атмосферный</code>, <code>потрясающий</code>, or <code>высокое качество</code>, load the Slop Traps table in <a href="../vocab/ru.html"><code>references/vocab/ru.md</code></a> and decompose each into the physical elements that produce it - движение камеры, источник света, материал, звук.</p>
+<h3 id="dialogue-rule">Dialogue Rule</h3>
+<p>For spoken Russian, load the Russian Dialogue Notes in <a href="../vocab/ru.html"><code>references/vocab/ru.md</code></a>: lines of a few words, one speaker per generation, Cyrillic first with transliteration as the field-reported fallback, and a post-dub plan for fully voiced pieces.</p>
+<h3 id="output-contract">Output Contract</h3>
+<p>Return Russian prompt wording, optional English gloss when useful, and unchanged reference tags.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/frontend-design-system.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-frontend-design-system" data-status="active">
+<h1 id="reference-section-references-frontend-design-system-md-title">Reference section: references/frontend-design-system.md</h1>
+<h3 id="frontend-design-system">Frontend Design System</h3>
+<p>This repository has no application frontend. The user-facing frontend is the GitHub README, generated bitmap assets, and SVG support assets.</p>
+<h4 id="design-goals">Design goals</h4>
+<ul><li>Clean, cinematic, high-contrast presentation.</li><li>No collapsed Markdown.</li><li>No overloaded neon copy.</li><li>Usable on GitHub mobile and dark mode.</li><li>Clear start-here decision path.</li><li>Validation commands visible above the fold after the skill map.</li></ul>
+<h4 id="asset-rules">Asset rules</h4>
+<ul><li>Use SVG for simple structural support diagrams.</li><li>Use generated bitmap images for the README hero, operating-system infographic, skill-map infographic, capability map, CDN delivery map, reference-role map, production-delivery map, and QC stack when the asset needs cinematic texture, real scene depth, or visual storytelling.</li><li>Bitmap hero/infographic/map assets should be logo-free, watermark-free, and readable at GitHub README width.</li><li>Text-rich infographics are allowed when labels are large, short, corrected, and repeated in accessible Markdown next to the image.</li><li>SVG assets must include <code>&lt;title&gt;</code> and <code>&lt;desc&gt;</code>.</li><li>No external scripts, images, fonts, or tracking in SVG assets.</li><li>Avoid generic lens dashboards, dense decorative noise, and unreadable micro labels.</li><li>Inspect generated text manually; reject garbled words, ugly font treatment, low contrast, noisy decoration, and placeholder-looking panels.</li></ul>
+<h4 id="readme-rules">README rules</h4>
+<ul><li>No line longer than 500 characters.</li><li>Tables should have real newlines.</li><li>Every major section should answer a user decision: what is it, where do I start, what skills exist, how do I validate, what changed.</li><li>Bitmap hero art should avoid watermarks and tiny text. Text-rich infographic labels must also be represented in Markdown for accessibility and search.</li></ul>
+<h4 id="editorial-design-tokens-v6-front-page">Editorial Design Tokens (v6 front page)</h4>
+<p>The front page uses a studio spec-sheet system. Apply these tokens to every hand-built vector asset; never reintroduce gradients, glow blobs, or multi-hue accent ramps.</p>
+<table><thead><tr><th>Token</th><th>Dark</th><th>Light</th></tr></thead>
+<tbody>
+<tr><td>Background</td><td><code>#100E0A</code> warm ink</td><td><code>#F7F3EA</code> warm paper</td></tr>
+<tr><td>Foreground</td><td><code>#EDE6D6</code></td><td><code>#1C1914</code></td></tr>
+<tr><td>Muted</td><td><code>#9A917D</code></td><td><code>#6F6757</code></td></tr>
+<tr><td>Hairline</td><td><code>#2E2A22</code></td><td><code>#D8D0BE</code></td></tr>
+<tr><td>Accent (single)</td><td><code>#E2A75E</code> amber</td><td><code>#A86F24</code> amber</td></tr>
+</tbody>
+</table>
+<ul><li>Display type: <code>Didot, 'Bodoni MT', 'Hoefler Text', Baskerville, 'Palatino Linotype', Georgia, serif</code> - high-contrast editorial serif where the system provides one, Georgia as the universal fallback; weight 400, no external fonts. The tagline is set as a serif italic aphorism in sentence case, not monospace.</li><li>Script accent: <code>'Snell Roundhand', 'Apple Chancery', 'Gabriola', 'Segoe Script', 'Brush Script MT', cursive</code> - a calligraphic line used once, for the <code>Skill OS</code> half of the wordmark, paired against the engraved Didot <code>Seedance 2.0</code>. This is the only flourish; everything else stays disciplined. System scripts only, no external fonts, graceful fallback to <code>cursive</code>. Keep <code>Seedance 2.0</code>, the tagline, and all specification labels out of script so the masthead stays legible.</li><li>Specification type: <code>ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace</code> - weight 400, smaller sizes, generous letter-spacing (6-7px on eyebrows); labels whisper, the wordmark speaks.</li><li>Motifs: sprocket strips, viewfinder corner marks, crosshairs, timecode, waveform ticks - drawn as fine line work.</li><li>The masthead ships as a theme-aware pair (<code>hero-dark.svg</code>, <code>hero-light.svg</code>) behind a <code>prefers-color-scheme</code> picture element; the operating diagram (<code>skill-map.svg</code>) carries its own background so it reads on both themes.</li><li>Do not bake version numbers or counts into vector assets; they go stale. Use timeless labels (ROUTE / VERIFY / DIRECT / DELIVER).</li><li>Generated bitmap art is gallery-only. The working interface of the README is vector.</li></ul>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

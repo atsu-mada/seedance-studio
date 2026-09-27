@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — seedance-vocab-es</title>
+<link rel="stylesheet" href="../../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="../index.html">Seedance Studio knowledge index</a></nav>
+<main id="capability-seedance-vocab-es" data-status="active">
+<h1 id="seedance-vocab-es-title">seedance-vocab-es</h1>
+<p>Use Spanish cinematic vocabulary when the user asks for Spanish prompts, bilingual delivery, or compact translation of camera, lighting, action, VFX, audio, and production constraints. Preserve reference tags exactly: <code>[Image1]</code>, <code>[Video1]</code>, <code>[Audio1]</code> must never be translated.</p>
+<h3 id="intent">Intent</h3>
+<p>Spanish carries rhythm even in technical direction. Serve users who think in Spanish with vocabulary that keeps its musicality while staying camera-precise - they should never feel that directing in their language is a downgrade.</p>
+<h3 id="usage-rule">Usage Rule</h3>
+<p>Translate production meaning, not word-for-word English. Keep the prompt concrete and concise: subject, visible action, camera, light, sound, and constraint.</p>
+<table><thead><tr><th>Function</th><th>Spanish wording</th></tr></thead>
+<tbody>
+<tr><td>Camera</td><td><code>travelling de acercamiento</code>, <code>plano medio</code>, <code>primer plano</code>, <code>seguimiento lateral</code>, <code>cámara fija</code></td></tr>
+<tr><td>Lighting</td><td><code>contraluz</code>, <code>luz suave de ventana</code>, <code>luz práctica cálida</code>, <code>sombra marcada</code>, <code>halo frío de luna</code></td></tr>
+<tr><td>Motion</td><td><code>gira lentamente</code>, <code>cruza rápido el encuadre</code>, <code>avanza con estabilidad</code>, <code>las gotas se deslizan</code></td></tr>
+<tr><td>Audio</td><td><code>sonido ambiente</code>, <code>diálogo claro</code>, <code>golpe metálico suave</code>, <code>sin música</code></td></tr>
+<tr><td>Constraints</td><td><code>mantener el logotipo, la etiqueta y la forma sin cambios</code></td></tr>
+</tbody>
+</table>
+<h3 id="compact-pattern">Compact Pattern</h3>
+<p><code>[Image1] es la referencia; mantener identidad, color y forma sin cambios. Solo cambia [movimiento/luz/cámara]. Cámara: [un movimiento]. Sonido: [señal].</code></p>
+<h3 id="de-slop-rule">De-Slop Rule</h3>
+<p>When the prompt leans on <code>cinematográfico</code>, <code>épico</code>, <code>impresionante</code>, <code>mágico</code>, or <code>de alta calidad</code>, load the Slop Traps table in <a href="../vocab/es.html"><code>references/vocab/es.md</code></a> and decompose each into the physical elements that produce it - movimiento de cámara, fuente de luz, material, sonido.</p>
+<h3 id="output-contract">Output Contract</h3>
+<p>Return Spanish prompt wording, optional English gloss when useful, and unchanged reference tags.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

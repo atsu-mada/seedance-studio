@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/multishot-grammar.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-multishot-grammar" data-status="active">
+<h1 id="reference-section-references-multishot-grammar-md-title">Reference section: references/multishot-grammar.md</h1>
+<h3 id="multi-shot-grammar-real-cuts-inside-one-generation">Multi-Shot Grammar — real cuts inside one generation</h3>
+<p><em>Seedance 2.0's defining capability over 1.x: a single 10–15s call can contain 2–3 shots with genuine editorial cuts. Labels: [official] = ByteDance/fal docs · [field] = practitioner-reported. Last verified 2026-06-09.</em></p>
+<h4 id="the-grammar-official">The grammar [official]</h4>
+<p>Label every cut explicitly — <code>Shot 1:</code> / <code>Shot 2:</code> / <code>Shot 3:</code> — in plain prose. The labels are what give the model cut points; long unlabeled prompts tend to render as one continuous take. Per shot: <strong>one primary action + one camera move</strong>, plus its sound. Order inside each shot: subject + action → camera → sound.</p>
+<h4 id="the-budget-official">The budget [official]</h4>
+<p>Shots cost seconds. Plan ≈4–6s per shot: two shots want ~10s, three want 12–15s. Ask for four shots in 5s and the model compresses or skips beats. <code>duration: auto</code> lets the model size the clip to the prompt's complexity — a strong default for multi-shot; set an explicit duration only when the edit demands it.</p>
+<h4 id="requirements-official-field">Requirements [official + field]</h4>
+<ul><li><strong>Standard tier [field].</strong> Official fal docs give fast endpoints the same schema and multi-shot support, but field reports say fast tiers do not reliably honor multi-shot (or slow-motion or dolly moves) on the first try.</li><li><strong>10–15s or <code>auto</code> [official].</strong> Multi-shot below ~10s starves the beats.</li></ul>
+<h4 id="timestamps-secondary-on-western-surfaces-primary-on-chinese-surfaces-official-field">Timestamps: secondary on Western surfaces, primary on Chinese surfaces [official + field]</h4>
+<p>Prefer <code>Shot N:</code> labels as the structure — clear and portable across surfaces. fal's reference-to-video docs additionally accept timestamp pacing phrases ("At 5 seconds…", "Cut scene to…"); use them sparingly as <em>hints inside</em> a labeled shot, never as bracketed <code>[0-6s]</code> blocks replacing the labels.</p>
+<p>Surface exception [field]: on Dreamina/Jimeng, Chinese community practice structures longer prompts (over ~8s) with a bracketed timeline as the primary skeleton — <code>【时间轴】0-3s: … / 3-6s: … / 6-10s: …</code> — each segment carrying its own 画面/镜头/音效 (frame, camera, sound). Match the convention of the active surface; do not mix both skeletons in one prompt.</p>
+<h4 id="dialogue-audio-placement-official-field">Dialogue &amp; audio placement [official + field]</h4>
+<p>A spoken line goes inside the shot where the speaker is on-screen, written naturally in quotes; keep lines short. Name each shot's specific sounds — they anchor the audio pass. Audio is generated per call, not across calls: multi-block pieces get their unifying score in post.</p>
+<h4 id="the-single-take-alternative-official">The single-take alternative [official]</h4>
+<p>For an unbroken take, say so: "single continuous take, no cuts" — otherwise a long action description may get cut up.</p>
+<h4 id="worked-shapes">Worked shapes</h4>
+<p><em>Three-shot commercial (≈15s):</em> Shot 1: extreme close-up of condensation sliding down a glass bottle, ice clinking. Shot 2: the bottle rises from crushed ice, camera tilting up into a backlit halo. Shot 3: a hand grabs it against a sunset rooftop, the city humming below. <em>(Paraphrased from the official demo shape.)</em></p>
+<p><em>Two-shot dialogue beat (≈10s):</em> Shot 1: close on the detective under a flickering platform light, rain on his shoulders — he says quietly, "You were never on that train." Shot 2: cut to the woman's face as the train doors close behind her, a half-smile; the departure chime swallows the silence.</p>
+<h4 id="failure-fix-field">Failure → fix [field]</h4>
+<table><thead><tr><th>Symptom</th><th>Fix</th></tr></thead>
+<tbody>
+<tr><td>Renders as one continuous take</td><td>clearer <code>Shot N:</code> labels · reduce to two shots · Standard tier</td></tr>
+<tr><td>A shot's action skipped/compressed</td><td>fewer shots · raise duration / <code>auto</code> · one action per shot</td></tr>
+<tr><td>Cut lands mid-action</td><td>end each shot's sentence on the completed beat; let the next shot open the new one</td></tr>
+<tr><td>Atmosphere breaks between shots</td><td>declare the persisting effect once for the whole piece: "thin mist throughout, every shot" (全程薄雾)</td></tr>
+</tbody>
+</table>
+<h4 id="sequence-boundary">Sequence Boundary</h4>
+<p>Multi-shot grammar describes cuts inside one generation. Sequence-state planning describes multiple connected generations. Do not paste future clip prompts into the current multishot prompt. If a beat belongs to a later generation, mark it reserved and leave it out.</p>
+<p>Dense multishot prompts use shot labels and endpoints. Continuous takes use phases and no hard cuts. Do not mix those contracts.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

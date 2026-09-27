@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/vocab/en.md</title>
+<link rel="stylesheet" href="../../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="../index.html">Seedance Studio knowledge index</a></nav>
+<main id="vocab-en" data-status="active">
+<h1 id="reference-section-references-vocab-en-md-title">Reference section: references/vocab/en.md</h1>
+<h3 id="english-vocabulary">English Vocabulary</h3>
+<p>Use this reference for precise English Seedance prompt wording. English is the default prompting language and the most heavily moderated surface, and it fails in two ways at once: empty quality words ("cinematic, stunning, 8K") add zero signal, and vague threat-adjacent wording trips false-positive filters. Precision fixes both - concrete production English reads better to the model and to the filter. Keep reference tags unchanged: <code>[Image1]</code>, <code>[Video1]</code>, and <code>[Audio1]</code> stay literal.</p>
+<table><thead><tr><th>Function</th><th>English wording</th><th>What it decides</th></tr></thead>
+<tbody>
+<tr><td>Role</td><td><code>[Image1] is the first frame</code></td><td>locks the opening composition</td></tr>
+<tr><td>Role</td><td><code>[Image2] is the last frame</code></td><td>sets the final visual target</td></tr>
+<tr><td>Role</td><td><code>[Image1] locks character identity</code></td><td>face, hair, and wardrobe stay stable</td></tr>
+<tr><td>Role</td><td><code>[Video1] controls camera movement only</code></td><td>motion donor, no appearance transfer</td></tr>
+<tr><td>Role</td><td><code>[Video1] controls action rhythm only</code></td><td>pacing donor, nothing else transfers</td></tr>
+<tr><td>Role</td><td><code>[Audio1] controls tempo and mood only</code></td><td>the clock of the edit, not its content</td></tr>
+<tr><td>FirstLastFrame</td><td><code>keep the first frame unchanged</code></td><td>anchors the opening state</td></tr>
+<tr><td>FirstLastFrame</td><td><code>treat the last frame as the final visual target</code></td><td>endpoint, not mood reference</td></tr>
+<tr><td>FirstLastFrame</td><td><code>one continuous motion, no jump cut</code></td><td>forces a single transition path</td></tr>
+<tr><td>FirstLastFrame</td><td><code>preserve the same character, wardrobe, and layout</code></td><td>continuity lock across frames</td></tr>
+<tr><td>Camera</td><td><code>slow push-in</code></td><td>replaces "cinematic zoom"</td></tr>
+<tr><td>Camera</td><td><code>pull back to reveal the space</code></td><td>motivated reveal, not "epic wide"</td></tr>
+<tr><td>Camera</td><td><code>stable lateral tracking</code></td><td>clean sideways travel</td></tr>
+<tr><td>Camera</td><td><code>locked medium shot</code></td><td>stability for faces and dialogue</td></tr>
+<tr><td>Camera</td><td><code>macro close-up</code></td><td>material and product detail</td></tr>
+<tr><td>Camera</td><td><code>low-angle shot</code></td><td>stature without the word "epic"</td></tr>
+<tr><td>Camera</td><td><code>over-the-shoulder shot</code></td><td>conversation geometry</td></tr>
+<tr><td>Camera</td><td><code>handheld with slight breathing sway</code></td><td>documentary energy, controlled</td></tr>
+<tr><td>Shot</td><td><code>medium close-up</code></td><td>emotion with context</td></tr>
+<tr><td>Shot</td><td><code>wide establishing shot</code></td><td>place before people</td></tr>
+<tr><td>Shot</td><td><code>three-quarter profile</code></td><td>dimensional face angle</td></tr>
+<tr><td>Lens</td><td><code>24mm wide spatial feel</code></td><td>space and context</td></tr>
+<tr><td>Lens</td><td><code>50mm natural portrait perspective</code></td><td>honest faces</td></tr>
+<tr><td>Lens</td><td><code>macro lens on material detail</code></td><td>texture as the subject</td></tr>
+<tr><td>Lighting</td><td><code>soft backlight</code></td><td>separation without glow words</td></tr>
+<tr><td>Lighting</td><td><code>warm practical light from the left</code></td><td>sourced, directional warmth</td></tr>
+<tr><td>Lighting</td><td><code>cool moonlight rim</code></td><td>night shape without "moody"</td></tr>
+<tr><td>Lighting</td><td><code>volumetric light through thin mist</code></td><td>visible beams, physical cause</td></tr>
+<tr><td>Lighting</td><td><code>wet asphalt reflecting neon</code></td><td>the reflection is the light</td></tr>
+<tr><td>Motion</td><td><code>fog parts around the footsteps</code></td><td>environment reacts to subject</td></tr>
+<tr><td>Motion</td><td><code>droplets merge and slide down the label</code></td><td>product motion, physical</td></tr>
+<tr><td>Motion</td><td><code>a slow head turn that stops</code></td><td>acting beat with an endpoint</td></tr>
+<tr><td>Motion</td><td><code>fabric settles after the gesture</code></td><td>follow-through proves the move</td></tr>
+<tr><td>VFX</td><td><code>gold particles rise, catch the backlight, and dissipate</code></td><td>source, path, endpoint</td></tr>
+<tr><td>VFX</td><td><code>thin electrical arcs crawl along the cable</code></td><td>effect anchored to an object</td></tr>
+<tr><td>VFX</td><td><code>cold vapor rolls over the rim and sinks</code></td><td>density and direction</td></tr>
+<tr><td>Audio</td><td><code>quiet room tone</code></td><td>silence with presence</td></tr>
+<tr><td>Audio</td><td><code>one clear spoken line in quotes</code></td><td>dialogue the lip-sync can hold</td></tr>
+<tr><td>Audio</td><td><code>a single soft metallic tick</code></td><td>one sound, one event</td></tr>
+<tr><td>Audio</td><td><code>no music until after the line</code></td><td>mix priority stated plainly</td></tr>
+<tr><td>Audio</td><td><code>distant traffic bed under rain</code></td><td>layered ambience, no slop</td></tr>
+<tr><td>Text</td><td><code>no on-screen text, no watermark</code></td><td>text belongs in post</td></tr>
+<tr><td>Editing</td><td><code>match cut on the circular shape</code></td><td>named transition, not "cool"</td></tr>
+<tr><td>Editing</td><td><code>hard cut on the downbeat</code></td><td>edit tied to the sound</td></tr>
+<tr><td>Constraint</td><td><code>keep the logo, label, and shape unchanged</code></td><td>product identity lock</td></tr>
+<tr><td>Constraint</td><td><code>no identity change, no object redesign</code></td><td>drift guard</td></tr>
+<tr><td>Constraint</td><td><code>one action, one camera move</code></td><td>the budget rule in six words</td></tr>
+<tr><td>Constraint</td><td><code>nothing else moves</code></td><td>isolates the hero motion</td></tr>
+<tr><td>Safety</td><td><code>staged confrontation, no graphic injury</code></td><td>action without harm reading</td></tr>
+<tr><td>Safety</td><td><code>original character with broad archetype traits</code></td><td>identity without likeness</td></tr>
+<tr><td>Safety</td><td><code>prop object handled safely</code></td><td>objects without threat reading</td></tr>
+</tbody>
+</table>
+<h4 id="slop-traps">Slop Traps</h4>
+<p>English prompts attract empty evaluation words. Each adds tokens and zero signal; replace with something a camera, microphone, light meter, or stopwatch could detect.</p>
+<table><thead><tr><th>Slop</th><th>Say instead</th></tr></thead>
+<tbody>
+<tr><td>cinematic</td><td>name the shot scale, camera move, and light source</td></tr>
+<tr><td>epic</td><td>physical scale: crowd size, lens distance, structure height</td></tr>
+<tr><td>stunning / breathtaking</td><td>the one visible contrast or reveal that earns it</td></tr>
+<tr><td>beautiful</td><td>color, texture, material, light behavior</td></tr>
+<tr><td>masterpiece / award-winning</td><td>delete; quality is not a request</td></tr>
+<tr><td>8K / ultra-HD / hyper-detailed</td><td>delete; resolution is a render setting, not prose</td></tr>
+<tr><td>dynamic</td><td>the specific movement, its speed, and its endpoint</td></tr>
+<tr><td>dramatic</td><td>blocking, shadow, silence, or camera pressure</td></tr>
+<tr><td>atmosphere of mystery</td><td>what is hidden, by what: doorway, shadow, fog</td></tr>
+<tr><td>ultra-realistic</td><td>material behavior, skin texture, natural motion</td></tr>
+<tr><td>insanely detailed</td><td>the two details that matter, named</td></tr>
+<tr><td>trending / viral style</td><td>the actual format: vertical, fast hook, caption-safe framing</td></tr>
+</tbody>
+</table>
+<h4 id="filter-trip-repairs">Filter-Trip Repairs</h4>
+<p>English carries the heaviest moderation. Use this only for safe prompts being misunderstood - the repair is clarity, not evasion. Genuinely prohibited content routes to a plain refusal via the filter skill.</p>
+<table><thead><tr><th>Trigger-prone English</th><th>Professional clarification</th></tr></thead>
+<tbody>
+<tr><td>shoot the scene / shooting</td><td>film the scene, capture the take</td></tr>
+<tr><td>kill the lights</td><td>cut the lights to black</td></tr>
+<tr><td>gun it / shot after shot</td><td>accelerate hard / take after take</td></tr>
+<tr><td>execution of the move</td><td>the move performed cleanly</td></tr>
+<tr><td>dead silence</td><td>held silence, room tone only</td></tr>
+<tr><td>blow up the image</td><td>enlarge the image to full frame</td></tr>
+<tr><td>fight breaks out</td><td>choreographed action beat begins, no graphic injury</td></tr>
+</tbody>
+</table>
+<p>Anything genuinely risky - minors, real-person likeness, sexual or graphic content - is not a wording problem; route it to the filter skill's boundary for a plain refusal.</p>
+<p>Load <code>filter-vocab.md</code> for the full false-positive repair table and <code>anti-slop-lexicon.md</code> for the core replacement rule.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

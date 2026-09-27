@@ -25,6 +25,52 @@
     "reference_tags": {"type": "array", "items": {"type": "string"}},
     "prompt": {"type": "string"},
     "result_status": {"enum": ["not_run_fixture", "submitted", "generated", "reviewed", "accepted", "rejected"]},
-    "is_synthetic_fixture": {"type": "boolean"}
-  }
+    "is_synthetic_fixture": {"type": "boolean"},
+    "provider_status": {"enum": ["unknown", "queued", "processing", "completed", "failed"]},
+    "technical_qc": {"enum": ["not_checked", "pass", "fail"]},
+    "perceptual_review": {"enum": ["pending", "pass", "fail", "uncertain"]},
+    "review_evidence": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1}
+    }
+  },
+  "allOf": [
+    {
+      "if": {"required": ["result_status"], "properties": {"result_status": {"const": "accepted"}}},
+      "then": {
+        "anyOf": [
+          {
+            "not": {
+              "anyOf": [
+                {"required": ["provider_status"]},
+                {"required": ["technical_qc"]},
+                {"required": ["perceptual_review"]},
+                {"required": ["review_evidence"]}
+              ]
+            }
+          },
+          {
+            "required": ["provider_status", "technical_qc", "perceptual_review"],
+            "properties": {
+              "provider_status": {"const": "completed"},
+              "technical_qc": {"const": "pass"},
+              "perceptual_review": {"const": "pass"}
+            }
+          }
+        ]
+      }
+    },
+    {
+      "if": {"required": ["provider_status"], "properties": {"provider_status": {"enum": ["queued", "processing"]}}},
+      "then": {"properties": {"result_status": {"const": "submitted"}}}
+    },
+    {
+      "if": {"required": ["provider_status"], "properties": {"provider_status": {"const": "completed"}}},
+      "then": {"properties": {"result_status": {"not": {"const": "submitted"}}}}
+    },
+    {
+      "if": {"required": ["provider_status"], "properties": {"provider_status": {"const": "failed"}}},
+      "then": {"properties": {"result_status": {"const": "rejected"}}}
+    }
+  ]
 }

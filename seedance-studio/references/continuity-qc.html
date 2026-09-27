@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/continuity-qc.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-continuity-qc" data-status="active">
+<h1 id="reference-section-references-continuity-qc-md-title">Reference section: references/continuity-qc.md</h1>
+<h3 id="continuity-qc">Continuity QC</h3>
+<p>Use this reference before finalizing a sequence prompt and after reviewing a generated take.</p>
+<h4 id="hard-fail-without-explanation">Hard-Fail Without Explanation</h4>
+<p>Do not silently change:</p>
+<ul><li>canonical identity;</li><li>wardrobe;</li><li>product identity;</li><li>product geometry;</li><li>prop ownership;</li><li>location;</li><li>vehicle identity;</li><li>persistent environment;</li><li>exact reference tag;</li><li>accepted completed beat status;</li><li>parent clip lineage.</li></ul>
+<h4 id="warn-unless-declared">Warn Unless Declared</h4>
+<p>Warn on unexplained changes in pose, frame position, screen direction, motion vector, camera phase, focus state, lighting phase, emotional state, ambience, music phase, or active dialogue.</p>
+<p>Allow changes only when declared under transition, allowed changes, accepted deviation, intentional axis reset, or intentional next shot.</p>
+<h4 id="boundary-check">Boundary Check</h4>
+<p>Before a successor prompt ships, verify:</p>
+<ul><li>predecessor accepted status;</li><li>successor <code>parent_clip_id</code>;</li><li>predecessor <code>observed_end_state</code>;</li><li>successor <code>planned_start_state</code>;</li><li>completed beats excluded;</li><li>future beats excluded;</li><li>exact tags preserved;</li><li>current prompt covers only current clip.</li></ul>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

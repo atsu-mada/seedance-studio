@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Doc section: README native-language notes for Chinese</title>
+<link rel="stylesheet" href="../../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="../index.html">Seedance Studio knowledge index</a></nav>
+<main id="guide-native-zh" data-status="active">
+<h1 id="doc-section-readme-native-language-notes-for-chinese-title">Doc section: README native-language notes for Chinese</h1>
+<h3 id="seedance-2-0-skill-os">Seedance 2.0 Skill OS 中文指南</h3>
+<p>这是从当前 HTML 入口访问的中文指南；原资料中的 v6.1.0 标记作为迁移时点说明保留。它不是英文 README 的逐字翻译，而是给中文创作者、提示词作者、剪辑和交付团队使用的工作指南。</p>
+<h4 id="section">先从哪里开始</h4>
+<table><thead><tr><th>你要做什么</th><th>先打开</th></tr></thead>
+<tbody>
+<tr><td>写中文提示词</td><td><a href="../capabilities/seedance-vocab-zh.html#capability-seedance-vocab-zh"><code>Capability section: seedance-vocab-zh</code></a> 和 <a href="../vocab/zh.html"><code>references/vocab/zh.md</code></a></td></tr>
+<tr><td>看中文范例</td><td><a href="../capabilities/seedance-examples-zh.html#capability-seedance-examples-zh"><code>Capability section: seedance-examples-zh</code></a></td></tr>
+<tr><td>做三段以上连续剧情</td><td><a href="../capabilities/seedance-sequence.html#capability-seedance-sequence"><code>Capability section: seedance-sequence</code></a></td></tr>
+<tr><td>接着上一段视频继续拍</td><td><a href="../capabilities/seedance-continuation.html#capability-seedance-continuation"><code>Capability section: seedance-continuation</code></a></td></tr>
+<tr><td>有图片、视频、音频参考</td><td><a href="../reference-workflow.html"><code>references/reference-workflow.md</code></a></td></tr>
+<tr><td>首帧/尾帧控制</td><td><a href="../first-last-frame-guide.html"><code>references/first-last-frame-guide.md</code></a></td></tr>
+</tbody>
+</table>
+<h4 id="section-2">中文提示词规则</h4>
+<ul><li>不翻译参考标签：<code>[Image1]</code>、<code>[Video1]</code>、<code>[Audio1]</code>、<code>@图1</code>、<code>@视频1</code> 必须原样保留。</li><li>先写参考角色，再写动作、镜头、光线、声音。</li><li>不用空泛词堆质量，例如“电影感”“高级感”“氛围感”。要拆成景别、运镜、光源、材质、色彩、空气。</li><li>不让模型生成最终字幕、广告文案、法务文案；这些在剪辑或交付阶段添加。</li><li>连续剧情不要一次写完整结局。先生成 Clip 01，再用真实结尾写 Clip 02。</li></ul>
+<h4 id="section-3">连续剧情模板</h4>
+<pre><code class="language-text">项目目标：[故事最终要到达的结果]
+已发生：[已经被接受的视频事实]
+本段只拍：[本 clip 的一个可见任务]
+不能提前出现：[保留到后面 clip 的内容]
+参考：[Image1] 锁定主体；[Video1] 仅参考运镜；[Audio1] 仅参考节奏
+提示词：[一个动作 + 一个镜头 + 真实光线 + 声音]</code></pre>
+<h4 id="section-4">中文范例</h4>
+<pre><code class="language-text">[Image1]为产品参考，严格保持logo、标签、瓶身形状和颜色不变。
+仅改变光线和微小动作：左侧暖色条形光扫过玻璃，水珠沿瓶身缓慢下滑。
+镜头固定产品近景，轻微推镜到标签。声音：低环境声，结尾一声轻微玻璃声。
+不要新增字幕、水印或无关文字。</code></pre>
+<h4 id="section-5">安全改写</h4>
+<p>如果用户写了受保护角色、明星、品牌、歌曲、真实人物脸或声音，不要换一种语言隐藏它。保留创意功能，改成原创角色、原创世界、已授权参考或后期替代方案。</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

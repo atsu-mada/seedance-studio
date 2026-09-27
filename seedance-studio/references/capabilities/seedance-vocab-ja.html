@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — seedance-vocab-ja</title>
+<link rel="stylesheet" href="../../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="../index.html">Seedance Studio knowledge index</a></nav>
+<main id="capability-seedance-vocab-ja" data-status="active">
+<h1 id="seedance-vocab-ja-title">seedance-vocab-ja</h1>
+<p>Use Japanese cinematic vocabulary when the user asks for Japanese prompt wording, bilingual delivery, compact translation, or production vocabulary for camera, lighting, motion, VFX, and audio. Preserve reference tags exactly: <code>[Image1]</code>, <code>[Video1]</code>, and <code>[Audio1]</code> remain in English brackets.</p>
+<h3 id="intent">Intent</h3>
+<p>The user working in Japanese often lives closest to the anime tradition this model loves to render. Serve both registers - the politeness-shaped natural sentence and the production term - and let the vocabulary feel native, never translated.</p>
+<h3 id="usage-rule">Usage Rule</h3>
+<p>Prefer concise production Japanese over literal translation. Keep the structure readable: subject, action, camera, lighting, sound, and preservation constraint.</p>
+<table><thead><tr><th>Function</th><th>Japanese wording</th></tr></thead>
+<tbody>
+<tr><td>Camera</td><td><code>ゆっくりドリーイン</code>, <code>横移動のトラッキング</code>, <code>固定の中景</code>, <code>低いアングル</code>, <code>クローズアップ</code></td></tr>
+<tr><td>Lighting</td><td><code>逆光</code>, <code>柔らかい窓光</code>, <code>暖かい実用照明</code>, <code>冷たい月明かり</code>, <code>輪郭光</code></td></tr>
+<tr><td>Motion</td><td><code>ゆっくり振り返る</code>, <code>画面を素早く横切る</code>, <code>水滴が下へ流れる</code>, <code>煙が薄く広がる</code></td></tr>
+<tr><td>Audio</td><td><code>静かな環境音</code>, <code>短い台詞</code>, <code>金属音</code>, <code>音楽なし</code></td></tr>
+<tr><td>Constraints</td><td><code>ロゴ、ラベル、形状を正確に維持する</code></td></tr>
+</tbody>
+</table>
+<h3 id="compact-pattern">Compact Pattern</h3>
+<p><code>[Image1]を参照として、被写体の顔/商品形状/ロゴを正確に維持する。変化は[動き/光/カメラ]のみ。カメラ：[一つの動き]。音：[音声指示]。</code></p>
+<h3 id="de-slop-rule">De-Slop Rule</h3>
+<p>When the prompt leans on <code>映画のような</code>, <code>エモい</code>, <code>雰囲気のある</code>, <code>壮大な</code>, or <code>高画質</code>, load the Slop Traps table in <a href="../vocab/ja.html"><code>references/vocab/ja.md</code></a> and decompose each into the physical elements that produce it - 動作動詞＋速度＋視点, 光源＋方向＋挙動.</p>
+<h3 id="output-contract">Output Contract</h3>
+<p>Return Japanese prompt wording, optional English gloss when useful, and unchanged reference tags.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

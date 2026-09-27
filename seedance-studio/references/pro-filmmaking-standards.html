@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/pro-filmmaking-standards.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-pro-filmmaking-standards" data-status="active">
+<h1 id="reference-section-references-pro-filmmaking-standards-md-title">Reference section: references/pro-filmmaking-standards.md</h1>
+<h3 id="professional-filmmaking-standards">Professional Filmmaking Standards</h3>
+<p>last_verified: 2026-05-30</p>
+<p>Use this reference when Seedance work must support directors, cinematographers, editors, producers, localization teams, commercial agencies, or delivery/QC teams. Treat these standards as workflow guidance, not as a promise that a video-generation surface can render or export every technical deliverable directly.</p>
+<h4 id="source-boundaries">Source Boundaries</h4>
+<table><thead><tr><th>Area</th><th>Preferred source type</th><th>Use in this skill</th><th>Boundary</th></tr></thead>
+<tbody>
+<tr><td>Shot design</td><td>ASC, cinematography education, production shot-list practice</td><td>Translate creative intent into shot contracts.</td><td>Do not over-specify frame-perfect camera physics for short AI clips.</td></tr>
+<tr><td>Continuity</td><td>Script supervision and production continuity practice</td><td>Track wardrobe, props, screen direction, eyelines, lighting state, and final-frame handoff.</td><td>AI continuity is probabilistic; use references and smaller shots for fragile anchors.</td></tr>
+<tr><td>Color</td><td>ACES docs, AMF, delivery partner guidance</td><td>Track color intent, show look, LUT/CDL/LMT notes, HDR/SDR expectations.</td><td>A prompt can request a look; finishing must still be verified in color tools.</td></tr>
+<tr><td>Aspect ratio</td><td>Delivery partner specs, DCI/ISDCF, platform specs</td><td>Separate creative framing from delivery containers and safe areas.</td><td>Do not assume every surface supports every ratio or crop.</td></tr>
+<tr><td>Audio</td><td>ITU BS.1770, EBU R128, ATSC A/85, delivery partner mix specs</td><td>Plan dialogue, ambience, SFX, music, M&amp;E/stems, loudness, and sync checks.</td><td>Seedance prompt audio is not a certified final mix.</td></tr>
+<tr><td>Subtitles</td><td>Netflix timed text, WebVTT, accessibility and caption rules</td><td>Plan subtitles, SDH, forced narratives, reading time, placement, and localization notes.</td><td>Do not rely on generated burned-in text as final deliverable subtitles.</td></tr>
+<tr><td>Delivery/QC</td><td>SMPTE IMF, DPP, Netflix delivery specs, DCI</td><td>Create preflight checks for frame rate, resolution, color, audio, captions, textless, metadata, and human QC.</td><td>Always follow the buyer/platform spec actually contracted for the job.</td></tr>
+</tbody>
+</table>
+<h4 id="professional-operating-spine">Professional Operating Spine</h4>
+<ol><li><strong>Brief:</strong> define client/creative goal, audience, territory, duration, aspect ratio, deliverables, references, rights, approval owner, and hard constraints.</li><li><strong>Pre-production:</strong> create treatment, reference map, shot list, continuity ledger, color/audio/localization intent, and risk log.</li><li><strong>Generation plan:</strong> split into stable shots. Assign one visible beat, one camera idea, and one endpoint per Seedance clip.</li><li><strong>Review loop:</strong> evaluate identity, product, action, camera, continuity, audio sync, text, safety, and rights before extending or editing.</li><li><strong>Post plan:</strong> edit, conform, stabilize, sound, color, captions, versioning, textless, and archival metadata.</li><li><strong>Delivery/QC:</strong> check spec, naming, frame rate, resolution, color pipeline, loudness, captions, safe areas, rights notes, and human review.</li></ol>
+<h4 id="when-to-load-detailed-references">When To Load Detailed References</h4>
+<table><thead><tr><th>User need</th><th>Load</th></tr></thead>
+<tbody>
+<tr><td>Treatment, production plan, client brief, campaign</td><td><code>shot-list-continuity.md</code>, <code>delivery-qc.md</code></td></tr>
+<tr><td>Camera, lens, shot size, blocking</td><td><code>cinematography-shot-language.md</code></td></tr>
+<tr><td>Multi-shot continuity, scene handoff</td><td><code>shot-list-continuity.md</code></td></tr>
+<tr><td>ACES, HDR/SDR, LUT/CDL/look language</td><td><code>color-pipeline-aces.md</code></td></tr>
+<tr><td>16:9, 9:16, 1.85, 2.39, social cutdowns</td><td><code>aspect-ratio-delivery.md</code></td></tr>
+<tr><td>Dialogue, mix, stems, M&amp;E, loudness</td><td><code>audio-post-delivery.md</code></td></tr>
+<tr><td>Subtitles, dubbing, captions, forced narrative</td><td><code>subtitles-localization.md</code></td></tr>
+<tr><td>IMF/DCP/social export, QC checklist</td><td><code>delivery-qc.md</code></td></tr>
+</tbody>
+</table>
+<h4 id="professional-answer-contract">Professional Answer Contract</h4>
+<p>For professional filmmaker requests, return:</p>
+<ul><li>production phase and role: director, DP, editor, producer, sound, localization, or delivery;</li><li>assumptions and source-date caveats for volatile platform claims;</li><li>shot contract or workflow checklist;</li><li>reference and rights map;</li><li>continuity anchors;</li><li>post/delivery notes when the output will leave the prompt stage.</li></ul>
+<p>Avoid giving only a final prompt when the user is asking for a film, commercial, campaign, localization package, or delivery-ready workflow.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

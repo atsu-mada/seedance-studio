@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — seedance-motion</title>
+<link rel="stylesheet" href="../../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="../index.html">Seedance Studio knowledge index</a></nav>
+<main id="capability-seedance-motion" data-status="active">
+<h1 id="seedance-motion-title">seedance-motion</h1>
+<p>Use physical verbs and consequences. Motion should be observable on screen, timed within the clip, and assigned to a subject or object. Prefer one strong action with a visible endpoint over several vague actions competing for attention.</p>
+<p>Load <code>Reference section: reference-workflow</code> for video-motion references, <code>Reference section: shot-list-continuity</code> for action handoffs across shots, <code>Reference section: examples-by-mode</code> for safe edit, extend, and R2V patterns, and <code>Reference section: directing-engine</code> when motion is performance: translate the scene's emotion into one true visible gesture per beat - a playable action with an objective and subtext - instead of an emotion word the model cannot render.</p>
+<h3 id="intent">Intent</h3>
+<p>Motion is the verb of the user's story - the thing they came to see HAPPEN. The soul here is consequence: motion that begins, lands, and changes something feels lived; motion that loops feels generated. Every action carries the story one beat forward, or it doesn't belong in the clip.</p>
+<h3 id="motion-contract">Motion Contract</h3>
+<p>State: actor/object, action, force level, timing, physical consequence, continuity requirement, and endpoint.</p>
+<table><thead><tr><th>Motion type</th><th>Strong phrase</th><th>Weak phrase</th></tr></thead>
+<tbody>
+<tr><td>Subtle acting</td><td><code>Character A inhales, grips the cup tighter, then sets it down without looking away</code></td><td><code>she feels nervous</code></td></tr>
+<tr><td>Product material</td><td><code>condensation beads gather, merge, and slide down the bottle neck</code></td><td><code>the product looks refreshing</code></td></tr>
+<tr><td>Choreography</td><td><code>Character B ducks under the swinging bag, pivots left, and stops in a guarded stance</code></td><td><code>fast action fight scene</code></td></tr>
+<tr><td>Object physics</td><td><code>paper receipt lifts in the fan breeze, flips once, and lands face-up</code></td><td><code>papers move dynamically</code></td></tr>
+<tr><td>Environmental motion</td><td><code>rain streaks diagonally across the backlight while puddle ripples spread from footsteps</code></td><td><code>stormy weather atmosphere</code></td></tr>
+</tbody>
+</table>
+<h3 id="physics-forward-pattern">Physics-Forward Pattern</h3>
+<p>Official material claims strong physics; extract it by writing causes and letting the model compute consequences (field-observed emphasis - test before promising results). State mass, force, and material, then name one consequence the camera can see: <code>the heavy oak door swings shut and the candle flames bend toward it</code> beats <code>the door closes dramatically</code>. Consequences prove the action: weight shows in landing compression, momentum in overshoot and recovery, friction in skid length, wind in what it displaces. One physical cause with two or three visible consequences reads stronger than three separate actions.</p>
+<h3 id="timing-pattern">Timing Pattern</h3>
+<p>Use a three-beat structure for short clips: setup, action, changed end state. Example: <code>0-2s: candle flame steady; 2-4s: door opens and flame bends; 4-6s: smoke trail curls toward the hallway</code>. Time segmentation is useful for action, VFX, lip-sync, and product demonstrations, but avoid frame-perfect overload unless the user truly needs it.</p>
+<p>When sound drives the motion, pair each visible change with one beat or SFX: <code>door click at 2s, light pulse on the downbeat, hand releases the cup on the final chime</code>. Do not ask for many cuts, locations, and micro-actions inside one short clip.</p>
+<h3 id="reference-motion-rules">Reference Motion Rules</h3>
+<p>For reference footage, use only owned, licensed, public-domain, stock, mocap, rehearsal, or self-recorded material. Map <code>[Video1]</code> to motion, camera, timing, or blocking, not identity, unless the identity is authorized. If a reference contains a real person, transfer only general motion or camera behavior and explicitly exclude likeness transfer.</p>
+<h3 id="stability-rules">Stability Rules</h3>
+<p>Hands, faces, logos, and product geometry drift when too many actions occur. Reduce motion around fragile details: lock the camera for lip-sync, keep hands in simple poses, ask product parts to remain rigid, and move light or environment instead of the core identity anchor.</p>
+<h3 id="sequence-state">Sequence State</h3>
+<p>When sequence state is present, inherit the observed action phase, open motion vector, current clip scope, continuity locks, exact reference tags, and reserved future beats. Do not replay actions marked already happened or completed. Do not perform a reserved beat early; carry unfinished motion from the accepted end state into the next clip.</p>
+<h3 id="output-contract">Output Contract</h3>
+<p>Return the motion phrase, timing pattern, reference role map if any, and repaired prompt language.</p>
+<section lang="ja"><h2 id="visible-motion-area">可視の移動領域</h2><p>人物や物体がどの領域をどちらへ移動し、何を通過し、どの状態で終わるかを書く。移動主体とカメラを区別し、姿勢や視線の変化を因果に沿って記述する。終端が予定と異なる場合は、予定を実際の継続状態として渡さない。</p></section>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

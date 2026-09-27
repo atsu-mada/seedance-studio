@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/subtitles-localization.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-subtitles-localization" data-status="active">
+<h1 id="reference-section-references-subtitles-localization-md-title">Reference section: references/subtitles-localization.md</h1>
+<h3 id="subtitles-and-localization">Subtitles And Localization</h3>
+<p>Use this reference when a Seedance project needs global release, subtitles, captions, forced narratives, dubbing, multilingual prompts, or market-specific copy.</p>
+<h4 id="localization-plan">Localization Plan</h4>
+<table><thead><tr><th>Deliverable</th><th>Purpose</th><th>Prompt/post boundary</th></tr></thead>
+<tbody>
+<tr><td>Subtitles</td><td>translate spoken dialogue</td><td>create in post from approved script, not generated as moving text</td></tr>
+<tr><td>SDH captions</td><td>dialogue plus important sound cues</td><td>plan sound cues and speaker IDs; author captions in post</td></tr>
+<tr><td>Forced narrative</td><td>translate signs, texts, or off-language lines</td><td>avoid burned-in AI text; keep clean plates</td></tr>
+<tr><td>Dubbing</td><td>localized voice performance</td><td>use short speaker turns, stable framing, and post-sync review</td></tr>
+<tr><td>M&amp;E</td><td>music and effects without dialogue</td><td>plan audio layers separately</td></tr>
+<tr><td>Textless</td><td>picture without titles/lower thirds</td><td>generate clean background/action plates</td></tr>
+<tr><td>Market copy</td><td>local tagline or legal claim</td><td>add in design/edit tools after legal approval</td></tr>
+</tbody>
+</table>
+<h4 id="prompting-for-subtitle-friendly-footage">Prompting For Subtitle-Friendly Footage</h4>
+<ul><li>Keep dialogue short and assigned to a speaker.</li><li>Use stable medium or medium close-up for important spoken lines.</li><li>Leave negative space for captions when needed.</li><li>Avoid generated subtitles or small moving text unless the task is explicitly a rough concept preview.</li><li>Preserve clean plates for markets where copy changes.</li><li>For multilingual dialogue, specify which language is spoken and which language is captioned in post.</li></ul>
+<h4 id="reading-and-placement-checks">Reading And Placement Checks</h4>
+<p>For professional output, check:</p>
+<ul><li>captions do not cover faces, product claims, logos, legal disclaimers, or key action;</li><li>subtitles have enough reading time for the target language;</li><li>speaker changes are clear;</li><li>SDH sound cues describe story-relevant sounds only;</li><li>forced narratives are used only when needed;</li><li>line breaks preserve meaning;</li><li>formal/informal address matches region and character relationship.</li></ul>
+<h4 id="global-prompt-handoff">Global Prompt Handoff</h4>
+<table><thead><tr><th>Language need</th><th>Safe wording</th></tr></thead>
+<tbody>
+<tr><td>Chinese prompt with English camera terms</td><td>Chinese for role binding, English for camera/lens terms if clearer; never for evasion</td></tr>
+<tr><td>Japanese market copy</td><td>keep generated shot textless; add Japanese copy in post</td></tr>
+<tr><td>Korean dialogue</td><td>short quoted line, stable face framing, no head turn</td></tr>
+<tr><td>Spanish captions</td><td>plan caption-safe lower third and avoid burned-in source text</td></tr>
+<tr><td>Russian localization</td><td>deliver textless plate plus separate Russian subtitle/copy file</td></tr>
+</tbody>
+</table>
+<h4 id="cultural-localization">Cultural Localization</h4>
+<p>Ask what must localize: dialogue, product claim, holiday/season, gesture, sign, food, wardrobe, legal text, or music cue. Do not assume a literal translation is a market-ready localization.</p>
+<h4 id="safe-false-positive-repair">Safe False-Positive Repair</h4>
+<p>Mixed-language wording may clarify benign production context and reference roles, but it must not hide unsafe content. If a blocked prompt includes violence, real-person likeness, protected IP, sexual content, or evasion-like phrasing, repair the underlying issue in every language.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

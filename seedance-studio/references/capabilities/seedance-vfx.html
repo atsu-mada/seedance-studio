@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — seedance-vfx</title>
+<link rel="stylesheet" href="../../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="../index.html">Seedance Studio knowledge index</a></nav>
+<main id="capability-seedance-vfx" data-status="active">
+<h1 id="seedance-vfx-title">seedance-vfx</h1>
+<p>VFX prompts need material behavior, source, timing, and consequence. Treat every effect as physical: it starts somewhere, interacts with light and objects, changes over time, and ends in a visible state. Avoid generic words such as magical, explosive, or cinematic unless they are translated into particles, fluids, smoke, light, debris, deformation, or energy behavior.</p>
+<h3 id="intent">Intent</h3>
+<p>The user wants wonder, and wonder dies the moment it stops obeying physics. This skill's purpose is magic with a budget of cause and effect: every effect has a source, a journey, and an ending, so the impossible reads as witnessed rather than rendered.</p>
+<h3 id="effects-contract">Effects Contract</h3>
+<p>State: effect source, material, motion path, interaction with light, interaction with objects, dissipation, and endpoint.</p>
+<table><thead><tr><th>Effect</th><th>Prompt-ready phrase</th><th>Stability note</th></tr></thead>
+<tbody>
+<tr><td>Product particles</td><td><code>gold dust particles spiral from behind the logo, catch the backlight, then settle on the table</code></td><td>Keep logo and bottle rigid.</td></tr>
+<tr><td>Energy</td><td><code>thin blue electrical arcs crawl along the cable, briefly illuminating fingerprints on the plug</code></td><td>Keep arcs attached to source.</td></tr>
+<tr><td>Smoke</td><td><code>cold white vapor rolls over the rim, sinks down the glass, and thins near the tabletop</code></td><td>Describe density and direction.</td></tr>
+<tr><td>Transformation</td><td><code>paper edge chars inward from the corner, flakes curl and fall, final logo remains untouched</code></td><td>Protect identity anchor.</td></tr>
+<tr><td>Weather</td><td><code>wind pushes rain diagonally across the frame, puddles ripple outward from each step</code></td><td>Tie weather to surfaces.</td></tr>
+</tbody>
+</table>
+<h3 id="vfx-integration-rules">VFX Integration Rules</h3>
+<p>Use one hero effect per clip. Anchor the source to a clear object or body part. Make the effect respect gravity, wind, collision, reflection, and occlusion. For VFX near faces, hands, logos, or text, keep the core identity stable and place the effect around it rather than through it.</p>
+<h3 id="timing-and-dissipation">Timing and Dissipation</h3>
+<p>Effects need an endpoint: settle, fade, evaporate, freeze, collapse, glow out, or leave residue. If the effect is complex, use a three-step timing phrase: <code>forms -&gt; travels -&gt; dissipates</code>. Avoid perpetual effects with no consequence because they often become noisy overlays.</p>
+<h3 id="output-contract">Output Contract</h3>
+<p>Return the VFX contract, stability constraints, and a compact prompt-ready phrase.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

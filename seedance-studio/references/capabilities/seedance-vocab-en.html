@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — seedance-vocab-en</title>
+<link rel="stylesheet" href="../../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="../index.html">Seedance Studio knowledge index</a></nav>
+<main id="capability-seedance-vocab-en" data-status="active">
+<h1 id="seedance-vocab-en-title">seedance-vocab-en</h1>
+<p>English is the default prompting language and fails in two ways at once: slop (empty evaluation words that add tokens and no signal) and false positives (vague threat-adjacent wording that trips the heaviest moderation surface). The cure for both is the same: concrete production English. Preserve reference tags exactly: <code>[Image1]</code>, <code>[Video1]</code>, <code>[Audio1]</code> must never be reworded.</p>
+<h3 id="intent">Intent</h3>
+<p>English is where most users think, and where most prompts quietly rot. The soul of this vocabulary is precision as kindness: give people exact words so their excitement survives contact with the model, and so honest prompts stop being mistaken for dangerous ones.</p>
+<h3 id="usage-rule">Usage Rule</h3>
+<p>If a camera, microphone, light meter, or stopwatch cannot detect it, rewrite it. Every sentence should name something visible, audible, or measurable: subject, visible action, camera, light source, sound, constraint.</p>
+<table><thead><tr><th>Function</th><th>English wording</th></tr></thead>
+<tbody>
+<tr><td>Camera</td><td><code>slow push-in</code>, <code>locked medium shot</code>, <code>stable lateral tracking</code>, <code>pull back to reveal</code>, <code>macro close-up</code></td></tr>
+<tr><td>Lighting</td><td><code>soft backlight</code>, <code>warm practical light from the left</code>, <code>cool moonlight rim</code>, <code>wet asphalt reflecting neon</code></td></tr>
+<tr><td>Motion</td><td><code>a slow head turn that stops</code>, <code>droplets merge and slide down</code>, <code>fabric settles after the gesture</code></td></tr>
+<tr><td>Audio</td><td><code>quiet room tone</code>, <code>one clear spoken line in quotes</code>, <code>no music until after the line</code></td></tr>
+<tr><td>Constraints</td><td><code>keep the logo, label, and shape unchanged</code>, <code>one action, one camera move</code>, <code>nothing else moves</code></td></tr>
+</tbody>
+</table>
+<h3 id="de-slop-pass">De-Slop Pass</h3>
+<p>Strip quality adjectives before adding anything: <code>cinematic</code>, <code>epic</code>, <code>stunning</code>, <code>masterpiece</code>, <code>8K</code>, <code>ultra-realistic</code>, <code>award-winning</code>, <code>hyper-detailed</code> all delete or convert to one observable detail each. A prompt that earns "epic" names the crowd size, the lens distance, or the structure height instead of the word.</p>
+<h3 id="filter-aware-wording">Filter-Aware Wording</h3>
+<p>English homonyms read as threats to filters: <code>shoot the scene</code>, <code>kill the lights</code>, <code>gun it</code>, <code>dead silence</code>, <code>blow up the image</code>. Use the production synonym (<code>film the take</code>, <code>cut the lights to black</code>, <code>accelerate hard</code>, <code>held silence</code>, <code>enlarge to full frame</code>). This is clarity for safe prompts only — never evasion. Anything genuinely risky (minors, real-person likeness, sexual or graphic content) routes to <code>Capability section: seedance-filter</code> for its boundary rule, not to a rewording.</p>
+<h3 id="compact-pattern">Compact Pattern</h3>
+<p><code>[Image1] is the reference; keep identity, color, and shape unchanged. Only [motion/light/camera] changes. Camera: [one move]. Sound: [one cue]. Constraints: [lock].</code></p>
+<p>Load <a href="../vocab/en.html"><code>references/vocab/en.md</code></a> for the full function-organized vocabulary, slop traps, and filter-trip repairs. Load <code>Reference section: anti-slop-lexicon</code> for the core replacement rule and <code>Reference section: filter-vocab</code> for the full false-positive repair table.</p>
+<h3 id="output-contract">Output Contract</h3>
+<p>Return the de-slopped English prompt, each replacement made (slop → observable detail), any filter-trip repair applied, and unchanged reference tags.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/field-observed-tips.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-field-observed-tips" data-status="active">
+<h1 id="reference-section-references-field-observed-tips-md-title">Reference section: references/field-observed-tips.md</h1>
+<h3 id="field-observed-tips">Field-Observed Tips</h3>
+<p>last_verified: 2026-05-30</p>
+<p>These are practitioner patterns gathered from public community material. Treat them as field-observed, not official platform guarantees.</p>
+<h4 id="stable-workflow">Stable Workflow</h4>
+<ol><li>Draft short before long: test 3-5 seconds before spending on a 10-15 second clip.</li><li>Change one variable per retry: camera, lighting, motion, or reference role.</li><li>Bind every reference asset to one job.</li><li>Use locked framing for fragile identity, product logos, readable text, lip-sync, hands, or complex VFX.</li><li>Use video references for motion rhythm or camera behavior, not unauthorized identity transfer.</li><li>Use audio references for tempo, mood, or ambience unless the voice/music is owned, licensed, or authorized.</li><li>Prefer edit, extend, or segment replacement over regenerating a whole clip when only one beat fails.</li><li>For continuation, save the returned last frame when the surface supports it and use it as the next first-frame anchor.</li><li>If an audio reference should control timing, mute competing reference videos before upload or explicitly lower their role to camera/motion only.</li><li>For sequences, write down the observed final state before asking for the next prompt; do not assume the planned endpoint occurred.</li></ol>
+<h4 id="prompt-discipline">Prompt Discipline</h4>
+<table><thead><tr><th>Weak pattern</th><th>Stronger pattern</th></tr></thead>
+<tbody>
+<tr><td><code>cinematic, epic, beautiful</code></td><td><code>soft side backlight, wet asphalt reflections, locked medium shot, quiet room tone</code></td></tr>
+<tr><td><code>make it move naturally</code></td><td><code>shoulders rise once with breathing, hand releases the cup, final pose holds for one second</code></td></tr>
+<tr><td><code>use this video as style</code></td><td><code>[Video1] provides only side-tracking camera rhythm; do not transfer performer identity or background</code></td></tr>
+<tr><td><code>make product luxury</code></td><td><code>narrow warm light sweep across the label, black acrylic table reflection, no label redesign</code></td></tr>
+</tbody>
+</table>
+<h4 id="high-risk-areas">High-Risk Areas</h4>
+<ul><li>Fast hand gestures.</li><li>Small text, signs, logos, labels, and subtitles.</li><li>Multi-character action without tags.</li><li>Multiple simultaneous camera moves.</li><li>Product transformations when identity must stay fixed.</li><li>Real-person faces, voices, celebrity likeness, and protected characters.</li><li>Long script-like prompts that ask for too many cuts, locations, and character turns in one generation.</li><li>Extension chains without a last-frame anchor; quality and continuity can degrade across retries.</li><li>Sequence chains where completed beats, reserved beats, or exact reference tags are not logged.</li></ul>
+<h4 id="safe-hidden-trick">Safe Hidden Trick</h4>
+<p>The best "trick" is not bypassing filters. It is making intent legible: source, role, action path, camera endpoint, light source, sound cue, and constraint.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

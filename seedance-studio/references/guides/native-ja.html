@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Doc section: README native-language notes for Japanese</title>
+<link rel="stylesheet" href="../../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="../index.html">Seedance Studio knowledge index</a></nav>
+<main id="guide-native-ja" data-status="active">
+<h1 id="doc-section-readme-native-language-notes-for-japanese-title">Doc section: README native-language notes for Japanese</h1>
+<h3 id="seedance-2-0-skill-os">Seedance 2.0 Skill OS 日本語ガイド</h3>
+<p>これは現行 HTML 入口から参照する日本語ガイドです。元資料の v6.1.0 表記は移行時点の説明として保持しています。英語 README の直訳ではなく、日本語で Seedance のプロンプト、連続クリップ、参照素材、字幕・納品を扱うための実用ガイドです。</p>
+<h4 id="section">まず開くもの</h4>
+<table><thead><tr><th>やりたいこと</th><th>先に見る場所</th></tr></thead>
+<tbody>
+<tr><td>日本語プロンプトを書く</td><td><a href="../capabilities/seedance-vocab-ja.html#capability-seedance-vocab-ja"><code>Capability section: seedance-vocab-ja</code></a> と <a href="../vocab/ja.html"><code>references/vocab/ja.md</code></a></td></tr>
+<tr><td>日本語の作例を見る</td><td><a href="../capabilities/seedance-examples-ja.html#capability-seedance-examples-ja"><code>Capability section: seedance-examples-ja</code></a></td></tr>
+<tr><td>長い物語を複数クリップに分ける</td><td><a href="../capabilities/seedance-sequence.html#capability-seedance-sequence"><code>Capability section: seedance-sequence</code></a></td></tr>
+<tr><td>採用済み動画の続きを作る</td><td><a href="../capabilities/seedance-continuation.html#capability-seedance-continuation"><code>Capability section: seedance-continuation</code></a></td></tr>
+<tr><td>画像・動画・音声参照を使う</td><td><a href="../reference-workflow.html"><code>references/reference-workflow.md</code></a></td></tr>
+<tr><td>最初と最後のフレームを固定する</td><td><a href="../first-last-frame-guide.html"><code>references/first-last-frame-guide.md</code></a></td></tr>
+</tbody>
+</table>
+<h4 id="section-2">日本語プロンプトの基本</h4>
+<ul><li><code>[Image1]</code>、<code>[Video1]</code>、<code>[Audio1]</code> は翻訳せず、そのまま残します。</li><li>人物の同一性、衣装、構図、動きの終点を先に固定します。</li><li>「映画的」「エモい」「雰囲気のある」だけで止めず、カメラ、光源、素材、空気、音に分解します。</li><li>最終字幕、広告コピー、法務文言は生成映像に焼き込ませず、後処理で入れます。</li><li>連続物語では、前の採用済みクリップの実際の終点を確認してから次のプロンプトを書きます。</li></ul>
+<h4 id="section-3">連続クリップテンプレート</h4>
+<pre><code class="language-text">物語の最終目標：[最後に到達したい状態]
+採用済み事実：[前の動画で実際に起きたこと]
+このクリップだけ：[今回見せる一つの可視タスク]
+まだ見せないこと：[後のクリップに残す内容]
+参照：[Image1]で人物を固定、[Video1]はカメラだけ、[Audio1]はテンポだけ
+プロンプト：[一つの動き + 一つのカメラ + 具体的な光 + 音]</code></pre>
+<h4 id="section-4">日本語作例</h4>
+<pre><code class="language-text">[Image1]の商品を参照し、ロゴ、ラベル、形状、色を正確に維持する。
+変化は小さな水滴が表面を下へ流れる動きと、左から横切る柔らかい暖色光だけ。
+Camera: locked product close-up, slow push-in.
+Sound: quiet room tone, one small glass tick at the end.
+字幕、透かし、余計な文字を追加しない。</code></pre>
+<h4 id="section-5">安全な書き換え</h4>
+<p>保護されたキャラクター、実在人物、ブランド、曲、声を別の言語で隠さないでください。創作上の役割を残し、オリジナル人物、オリジナル世界、許可済み参照、または後処理案に置き換えます。</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

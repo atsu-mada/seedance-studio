@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/json-schema.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-json-schema" data-status="active">
+<h1 id="reference-section-references-json-schema-md-title">Reference section: references/json-schema.md</h1>
+<h3 id="seedance-prompt-json-schema">Seedance Prompt JSON Schema</h3>
+<p>Use this schema when the user wants structured output or when an automation pipeline needs stable fields.</p>
+<pre><code class="language-json">{
+  "mode": "t2v | i2v | v2v | r2v | flf2v | edit | extend | audio-led",
+  "duration": "string",
+  "aspect_ratio": "string",
+  "references": [
+    {"tag": "Image1", "role": "identity | product | pose | environment | style | first_frame | last_frame | reference_image"},
+    {"tag": "Video1", "role": "motion | camera | pacing | blocking | source_clip | reference_video"},
+    {"tag": "Audio1", "role": "voice | rhythm | ambience | music | tempo | reference_audio"},
+    {"tag": "Storyboard1", "role": "storyboard_blocking | storyboard_camera_flow only; canonical identity and accepted continuity state override it"}
+  ],
+  "characters": [],
+  "production": {
+    "phase": "brief | preproduction | generation | review | post | localization | delivery",
+    "role": "director | dp | producer | editor | colorist | sound | localization | qc",
+    "delivery_surface": "web | broadcast | social | theatrical | client_review | archive",
+    "approval_owner": ""
+  },
+  "shot_list": [
+    {
+      "shot_id": "S01_SH01",
+      "purpose": "establish | reveal | demonstrate | emotional_turn | end_card",
+      "shot_contract": "shot size, angle, lens feel, camera move, endpoint",
+      "start_frame": "",
+      "end_frame": "",
+      "risks": []
+    }
+  ],
+  "continuity_anchors": {
+    "character": [],
+    "product": [],
+    "wardrobe": [],
+    "props": [],
+    "location": "",
+    "screen_direction": "",
+    "eyeline": "",
+    "lighting_state": "",
+    "audio_state": ""
+  },
+  "scene": "",
+  "camera": "",
+  "motion": "",
+  "lighting": "",
+  "style": "",
+  "audio": "",
+  "color_pipeline": {
+    "look_intent": "",
+    "working_assumption": "",
+    "output_transform": "SDR Rec.709 | HDR PQ | theatrical | social",
+    "show_lut_or_cdl_notes": "",
+    "qc_notes": []
+  },
+  "subtitle_plan": {
+    "subtitles": false,
+    "sdh": false,
+    "forced_narrative": false,
+    "dubbing": false,
+    "textless_required": false,
+    "languages": []
+  },
+  "audio_deliverables": {
+    "full_mix": true,
+    "stems": [],
+    "m_and_e": false,
+    "loudness_target": "",
+    "sync_cues": []
+  },
+  "delivery": {
+    "frame_rate": "",
+    "resolution": "",
+    "aspect_ratio": "",
+    "safe_area": "",
+    "version_name": "",
+    "qc_checks": []
+  },
+  "safety_notes": [],
+  "final_prompt": ""
+}</code></pre>
+<p>The JSON wrapper is for planning. The final prompt still needs to read naturally. For professional work, keep the production, shot-list, continuity, localization, audio, color, and delivery fields as handoff metadata; do not cram all of them into the prompt.</p>
+<h4 id="sequence-state-schemas">Sequence-State Schemas</h4>
+<p>Version 6 adds machine-valid state fixtures under <code>schemas/</code>:</p>
+<ul><li><code>project-state.schema.json</code> for project state, story, beats, clip lineage, take history, canon revision, and reference registry.</li><li><code>clip-contract.schema.json</code> for the current clip production task.</li><li><code>take-review.schema.json</code> for observed start/end state, accepted deviations, completed beats, and rejection/repair verdicts.</li><li><code>prompt-spec.schema.json</code> for internal prompt compilation metadata.</li><li><code>generation-run.schema.json</code> for synthetic benchmark and local run records.</li></ul>
+<p>These schemas are planning artifacts. The final Seedance prompt remains natural language unless the user explicitly requests structured output.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

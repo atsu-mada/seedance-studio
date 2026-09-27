@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — seedance-filter</title>
+<link rel="stylesheet" href="../../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="../index.html">Seedance Studio knowledge index</a></nav>
+<main id="capability-seedance-filter" data-status="active">
+<h1 id="seedance-filter-title">seedance-filter</h1>
+<h3 id="intent">Intent</h3>
+<p>A wrongly blocked prompt makes a user feel accused by a machine with no court of appeal. This skill is the advocate: clear the innocent by stating their honest intent plainly, and never coach the guilty. The user's dignity and the platform's boundary are protected in the same gesture.</p>
+<h3 id="boundary-read-before-anything-else">Boundary — read before anything else</h3>
+<p>This skill repairs <strong>false positives only</strong>: benign production content blocked or degraded by over-broad filtering (medical, historical, athletic, fictional-original contexts). It works by <strong>clarifying legitimate context in plain language</strong> — never by disguising intent. It does not rephrase genuinely prohibited content: anything risky involving minors, real-person likeness without rights, sexual or graphic or illegal material. If the underlying request is prohibited, refuse plainly and offer a legitimate alternative only where one exists.</p>
+<p>Use this when a prompt is blocked, degraded, likely to trigger moderation, or needs a safer rewrite without losing creative intent. This skill does not help evade safety systems. It rewrites risky surface wording into professional, non-graphic production language and preserves the safe creative core.</p>
+<h3 id="repair-method">Repair Method</h3>
+<ol><li>Identify the creative intent: action, mood, camera, subject, and final beat.</li><li>Identify risky surface wording: graphic harm, protected identity, sexualized framing, real-person likeness, weapons, self-harm, hate, evasion language, or exact IP copying.</li><li>Replace risky terms with professional, non-graphic, production-context language.</li><li>Preserve composition, action, mood, camera logic, and authorized references.</li><li>For likely false positives, clarify benign production context, ownership, and non-graphic intent. Do not help bypass safety systems or provide evasion tactics.</li></ol>
+<h3 id="safer-rewrite-patterns">Safer Rewrite Patterns</h3>
+<table><thead><tr><th>Intent</th><th>Safer direction</th></tr></thead>
+<tbody>
+<tr><td>Conflict</td><td><code>staged confrontation, choreographed action beat, no graphic injury</code></td></tr>
+<tr><td>Aftermath</td><td><code>non-graphic distress, torn fabric, scattered props, dramatic silence</code></td></tr>
+<tr><td>Suspense</td><td><code>threat implied by shadow, locked door, heavy breathing, low light</code></td></tr>
+<tr><td>Weapon-like prop</td><td><code>prop object handled safely within a staged action scene</code></td></tr>
+<tr><td>Horror mood</td><td><code>eerie atmosphere, flickering practical light, off-screen sound cue</code></td></tr>
+<tr><td>Protected identity</td><td><code>original character with broad genre archetype traits</code></td></tr>
+</tbody>
+</table>
+<h3 id="boundary-rule">Boundary Rule</h3>
+<p>If the user's request is unsafe, refuse or redirect to a safe alternative. If it is safe but poorly worded, repair the wording. When uncertain, state the risk class and offer a conservative prompt that keeps the non-harmful scene function.</p>
+<p>Do not provide filter-bypass, evasion, or hidden-word tactics. The safe path is to clarify production intent, remove unsafe identity or harm elements, and rewrite into an original authorized scene.</p>
+<p>Face-limit or portrait-verification workarounds are not safe prompt tricks. If a surface offers sanctioned virtual portrait, trusted model-output, or authorization asset flows, route the user to those current official paths instead of evasion language.</p>
+<p>Load <code>Reference section: filter-vocab</code> for safer substitutions. Load <code>Reference section: multilingual-community-examples</code> only when the safe repair needs Chinese/Russian/Japanese/Korean/Spanish or mixed-language wording for clarity.</p>
+<h3 id="output-contract">Output Contract</h3>
+<p>Return likely trigger class, safer wording, final prompt, what changed, and any content boundary that still applies.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

@@ -121,6 +121,23 @@ REQUIRED_IDS = {
     "sequence_prompt_contains_only_current_clip",
     "directing_scene_coherence",
     "directorial_voice_across_sequence",
+    "storyboard_role_isolation",
+    "storyboard_candidate_batch_approval_no_promotion",
+}
+
+REQUIRED_ASSERTION_FRAGMENTS = {
+    "storyboard_role_isolation": [
+        "includes the exact storyboard sending phrase",
+        "canonical identity and accepted continuity state override storyboard",
+        "does not transfer storyboard identity costume brand dialogue audio lighting environment detail or style",
+        "does not render source-panel numbers or transition arrows in generated video",
+    ],
+    "storyboard_candidate_batch_approval_no_promotion": [
+        "uses only isolated pending_approval approved or rejected candidate states",
+        "stops before human approval when required provenance or authorization is missing",
+        "requires explicit batch approval with approver timestamp and selected candidate IDs",
+        "pending and rejected candidates do not enter active references canonical state final prompts or parent sources",
+    ],
 }
 
 
@@ -167,6 +184,19 @@ def main() -> int:
     missing_ids = REQUIRED_IDS - ids
     if missing_ids:
         errors.append("missing required eval ids: " + ", ".join(sorted(missing_ids)))
+
+    cases_by_id = {case.get("id"): case for case in cases if isinstance(case, dict)}
+    for eval_id, fragments in REQUIRED_ASSERTION_FRAGMENTS.items():
+        case = cases_by_id.get(eval_id)
+        if not case:
+            continue
+        assertions = case.get("assertions")
+        if not isinstance(assertions, list):
+            continue
+        assertion_text = "\n".join(item for item in assertions if isinstance(item, str)).lower()
+        for fragment in fragments:
+            if fragment.lower() not in assertion_text:
+                errors.append(f"case {eval_id} missing required assertion phrase `{fragment}`")
 
     if errors:
         print("Eval schema errors:")

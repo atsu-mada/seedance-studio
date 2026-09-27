@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>事例：参照競合と場所の連続性</title><link rel="stylesheet" href="../../assets/knowledge-base.css"></head>
+<body><nav><a href="../index.html">Seedance Studio knowledge index</a></nav><main id="cases-street-continuity"><h1 id="title">事例：参照競合と場所の連続性</h1>
+<h2 id="observed">観測</h2><p>同じ街路をカメラが上へ移動するはずの動画で、中盤に人物が消え、終盤に別の広場へ変わる失敗が記録された。別テイクではカットや視点変化に伴って光の線が減り、消えていた。</p>
+<h2 id="hypothesis">仮説</h2><p>参照に含まれる広場・俯瞰構図が、街路を保つ指示と競合した可能性がある。参照を外したら改善したという結果は未確認である。失敗を観測したことと原因を特定したことを混同しない。</p>
+<h2 id="repair">修正案</h2><ol><li>人物が動ける領域、固定ランドマーク、地面と建物の関係、効果の起点・終点を記述する。</li><li>各参照の継承属性と除外属性を決める。キャラクター、街路、効果、絵コンテが相互に背景や画角を上書きしないか確認する。</li><li>「連続ショット」と「編集カット」を同時に要求しない。カメラの開始、経路、終点と、見えるパララックスを具体化する。</li><li>仮説を一つ選んで比較する。尺・参照・カメラを同時変更した場合は、どれが効いたか判断できないと記録する。</li></ol>
+<h2 id="acceptance">確認</h2><p>開始・中盤・終端で、同じ地形、人物、接続点が保たれるかを見る。全体再生でも消失や場所の切替を確認する。技術QC合格だけでこの失敗を採用してはいけない。</p>
+<p><a href="../reference-workflow.html">参照ワークフロー</a> · <a href="../capabilities/seedance-camera.html">カメラ</a></p>
+</main></body></html>

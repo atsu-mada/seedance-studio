@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/retake-protocol.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-retake-protocol" data-status="active">
+<h1 id="reference-section-references-retake-protocol-md-title">Reference section: references/retake-protocol.md</h1>
+<h3 id="retake-protocol-the-iteration-economy">Retake Protocol — the iteration economy</h3>
+<p><em>What happens after a generation comes back. The rest of this skill plans the shot and repairs outright failure; this governs everything in between — the partially good take, which is most of real production. Labels: [heuristic] = default to test · [internal] = workflow guidance. Cost figures are surface-specific and volatile: load <code>api-status.md</code> and verify live before budgeting.</em></p>
+<h4 id="triage-every-take-five-verdicts">Triage every take — five verdicts</h4>
+<table><thead><tr><th>Verdict</th><th>When</th><th>Next move</th></tr></thead>
+<tbody>
+<tr><td><strong>Keep</strong></td><td>The primary spend (the thing this shot is FOR, per <code>allocation-model.md</code>) is delivered and nothing is fatal.</td><td>Lock it, log it, move on. Perfection in secondary details is post's job.</td></tr>
+<tr><td><strong>Fix in post</strong></td><td>The flaw lives in post's domain: color, on-screen text, sound mix, trim, a few unstable frames at the ends.</td><td>Never burn takes on what an editor fixes in minutes.</td></tr>
+<tr><td><strong>Edit, don't regenerate</strong></td><td>Composition and timing are right; exactly one layer is wrong, and the surface supports edit.</td><td>Preserve the take as the source clip; change only the failing layer.</td></tr>
+<tr><td><strong>Re-roll</strong></td><td>The prompt is right; the sample was unlucky (sampling variance).</td><td>Same prompt, new seed. Two or three re-rolls maximum — then the prompt is the problem, by definition.</td></tr>
+<tr><td><strong>Rewrite</strong></td><td>The same flaw appears in two or more takes.</td><td>It is systematic, not luck. Diagnose by mechanism (<code>model-mechanics.md</code>), change the prompt.</td></tr>
+</tbody>
+</table>
+<h4 id="the-one-variable-rule-heuristic">The one-variable rule [heuristic]</h4>
+<p>Change one thing per retake: one prompt clause, OR the seed, OR the mode, OR one reference — never several. Same seed plus one prompt change is the closest available thing to a controlled experiment; new seed with the same prompt is a pure re-roll. Change two things at once and the result is unreadable either way it lands — you learn nothing.</p>
+<h4 id="attempt-budget-heuristic">Attempt budget [heuristic]</h4>
+<p>Set it before take one: a number of takes (default: five standard-tier, or ten fast-tier drafts) and a written "good enough" — the primary spend delivered, secondary flaws postable. At half the budget with no progress on the same flaw, stop iterating and change strategy: a different mode, decomposition into more shots, or the honest exit below. Iteration without a stop condition is how a five-dollar shot becomes a hundred-dollar shot.</p>
+<h4 id="cost-awareness-internal">Cost awareness [internal]</h4>
+<p>Every second of generation costs real money, and retakes multiply it: at the fal figures last verified in <code>api-status.md</code> (≈$0.30/s standard 720p, ≈$0.68/s 1080p — verify live), a single 15-second standard take is several dollars, and a ten-take session is a real invoice. Spend accordingly:</p>
+<ul><li><strong>Draft cheap, lock expensive</strong>: explore composition on the fast tier, short durations, or lower resolution; spend standard tier and full length only on the locked design.</li><li>Ten four-second drafts answer more questions than one failed fifteen-second take.</li><li>Quote costs to users only with the verification date and a verify-live caveat.</li></ul>
+<h4 id="the-shot-log-internal">The shot log [internal]</h4>
+<p>One line per take — this is the story state made auditable:</p>
+<p><code>Take N · changed: [the one variable] · seed: [same/new] · verdict: [keep/post/edit/re-roll/rewrite] · evidence: [one sentence]</code></p>
+<p>Re-reading the log beats re-living it. Two takes in the log with the same flaw is a rewrite, by rule — no third attempt on luck.</p>
+<h4 id="sequence-canon-internal">Sequence Canon [internal]</h4>
+<p>For sequence projects, a take review decides whether footage becomes canon.</p>
+<ul><li>Accept: record observed start/end state and allow it to become a parent source.</li><li>Accept with deviation: record the deviation, update downstream beats, and carry unfinished work forward.</li><li>Repair: do not advance the sequence until the repaired tail or layer is accepted.</li><li>Reject: do not update canon and do not use that take as a parent source.</li></ul>
+<p>Accepted observed state overrides planned state. If a clip unexpectedly completes a future beat, mark that beat completed and remove it from later prompts.</p>
+<h4 id="when-the-answer-is-don-t-generate">When the answer is "don't generate"</h4>
+<p>Honest direction sometimes refuses the tool: dense on-screen text belongs to post, a real product's exact behavior may belong to a camera, archival reality belongs to licensing, and a shot that has failed its budget twice after decomposition belongs to a different idea. "Film this one for real" is a deliverable, not a failure.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

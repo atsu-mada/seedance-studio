@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Doc section: docs/frontend-redesign.md</title>
+<link rel="stylesheet" href="../../assets/knowledge-base.css">
+</head>
+<body data-status="historical"><nav><a href="../index.html">Seedance Studio knowledge index</a></nav>
+<main id="historical-frontend-redesign" data-status="historical">
+<p data-status="historical"><strong>Status:</strong> Historical document retained for migration context.</p>
+<h1 id="doc-section-docs-frontend-redesign-md-title">Doc section: docs/frontend-redesign.md</h1>
+<h3 id="v6-front-page-design">V6 Front Page Design</h3>
+<p>The repository does not currently contain a standalone web app. The public frontend is the GitHub README, generated bitmap hero/infographic assets, and SVG support diagrams.</p>
+<h4 id="v6-design-goals">V6 Design Goals</h4>
+<ul><li>Lead with the v6 sequence-state promise: one story state, one current clip contract, one compiled Seedance prompt.</li><li>Make the README useful to native English, Chinese, Japanese, and Korean readers before they reach the install section, including full native-reader docs and active example skills.</li><li>Show Seedance's practical range: references, first/last-frame continuity, continuation, product reveal, timeline control, audio, and camera direction.</li><li>Use generated cinematic infographics for the operating-system overview, skill map, skill capability map, CDN delivery map, reference role map, production delivery map, and QC stack.</li><li>Allow text-rich infographics when the text is large, corrected, visually balanced, and repeated in nearby searchable Markdown.</li><li>Keep SVG assets as support diagrams, not the primary emotional surface.</li><li>Validate README completeness, gallery coverage, PNG dimensions, and asset presence with <code>scripts/design_audit.py</code>.</li></ul>
+<h4 id="native-reader-requirements">Native Reader Requirements</h4>
+<ul><li>The first screen must say the project is current v6 work.</li><li>The README must include visible Chinese, Japanese, and Korean copy, not only English labels saying those languages exist.</li><li>Native-language rows must link to active skill files and active vocabulary references, not migrated legacy files.</li><li>Japanese and Korean must have active example-skill routes equal in status to Chinese examples.</li><li>Reference tags such as <code>[Image1]</code>, <code>[Video1]</code>, <code>[Audio1]</code>, <code>@图1</code>, and <code>@视频1</code> must be shown exactly so readers do not translate them away.</li><li>Localization guidance must keep subtitles, legal copy, and market copy in post-production unless the user explicitly asks for simple on-screen generated text.</li></ul>
+<h4 id="assets">Assets</h4>
+<ul><li><code>assets/hero-command-center.png</code></li><li><code>assets/hero-global-filmmaker-mode.png</code></li><li><code>assets/infographic-skill-capabilities.png</code></li><li><code>assets/infographic-cdn-delivery-map.png</code></li><li><code>assets/infographic-reference-role-map.png</code></li><li><code>assets/infographic-production-delivery.png</code></li><li><code>assets/infographic-professional-qc-stack.png</code></li><li><code>assets/hero-cinematic.png</code></li><li><code>assets/skill-os-infographic.png</code></li><li><code>assets/skill-map-cinematic.png</code></li><li><code>assets/hero-dark.svg</code></li><li><code>assets/hero-light.svg</code></li><li><code>assets/skill-map.svg</code></li></ul>
+<h4 id="design-rules">Design Rules</h4>
+<ul><li>No external fonts or scripts in SVG.</li><li>Every SVG needs <code>&lt;title&gt;</code> and <code>&lt;desc&gt;</code>.</li><li>README should stay readable on mobile and dark mode.</li><li>Avoid dense badge walls and noisy decorative text.</li><li>Use text-rich generated infographics only for big, short labels that remain legible at README width.</li><li>Inspect every generated text image; reject garbled words, ugly typography, poor contrast, or placeholder-looking panels before commit.</li><li>Keep equivalent Markdown explanation beside every text-rich image so the repo remains accessible and searchable.</li></ul>
+<h4 id="v6-editorial-system">V6 Editorial System</h4>
+<p>The masthead moved from generated bitmap art to a hand-built editorial system: serif display over monospace specification labels, warm ink/paper themes with a single amber accent, film sprocket and viewfinder line work, and zero gradients. <code>assets/hero-dark.svg</code> and <code>assets/hero-light.svg</code> are served through a <code>prefers-color-scheme</code> picture element so the hero matches the viewer's GitHub theme; <code>assets/skill-map.svg</code> was rebuilt as a specification diagram (gates -&gt; root -&gt; clusters -&gt; reference library -&gt; validation). Badges were unified to flat-square ink/amber. Generated bitmaps - the hero shots and text-rich infographics, including assets/infographic-cdn-delivery-map.png - remain in the curated Visual Gallery with searchable alt text, plus the operating-system art relocated from the body. Tokens live in <a href="../frontend-design-system.html"><code>references/frontend-design-system.md</code></a>.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

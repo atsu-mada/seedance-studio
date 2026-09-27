@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/delivery-qc.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-delivery-qc" data-status="active">
+<h1 id="reference-section-references-delivery-qc-md-title">Reference section: references/delivery-qc.md</h1>
+<h3 id="delivery-and-qc">Delivery And QC</h3>
+<p>Use this reference when output must be reviewed, handed to a client, prepared for platform upload, localized, archived, or delivered as part of a professional campaign.</p>
+<h4 id="delivery-preflight">Delivery Preflight</h4>
+<table><thead><tr><th>Area</th><th>Check</th></tr></thead>
+<tbody>
+<tr><td>Picture</td><td>frame rate, resolution, aspect ratio, crop, safe area, stabilization, flicker, banding</td></tr>
+<tr><td>Color</td><td>working space, look notes, HDR/SDR target, product/brand color, legal range if required</td></tr>
+<tr><td>Audio</td><td>sync, loudness, true peak, dialogue clarity, stems, M&amp;E, silence where intended</td></tr>
+<tr><td>Text</td><td>captions, subtitles, forced narrative, on-screen copy, title-safe placement</td></tr>
+<tr><td>Continuity</td><td>wardrobe, props, screen direction, product orientation, light direction, last-frame handoffs</td></tr>
+<tr><td>Rights</td><td>references, music, voice, likeness, product/brand authorization, stock licenses</td></tr>
+<tr><td>Metadata</td><td>job ID, model/surface, prompt version, seed/settings if available, source URLs, approval owner</td></tr>
+<tr><td>Versioning</td><td>hero, cutdown, vertical, square, textless, localized, archival</td></tr>
+<tr><td>Human QC</td><td>watch all outputs at normal speed and pause on fragile frames</td></tr>
+</tbody>
+</table>
+<h4 id="naming-pattern">Naming Pattern</h4>
+<p>Use consistent names:</p>
+<p><code>PROJECT_CAMPAIGN_VERSION_RATIO_LANG_DATE_STATUS</code></p>
+<p>Example:</p>
+<p><code>LUMA_BOTTLE_HERO_15S_9x16_TEXTLESS_2026-05-30_REVIEW01</code></p>
+<h4 id="client-review-packet">Client Review Packet</h4>
+<p>Include:</p>
+<ul><li>concept/treatment;</li><li>shot list and accepted prompts;</li><li>reference role map and rights notes;</li><li>exported review links/files;</li><li>known issues and recommended fixes;</li><li>approval questions;</li><li>delivery spec assumptions.</li></ul>
+<h4 id="qc-failure-routing">QC Failure Routing</h4>
+<table><thead><tr><th>Failure</th><th>Route</th></tr></thead>
+<tbody>
+<tr><td>face/product/text drift</td><td>I2V lock, edit pass, composite in post, or regenerate from stable frame</td></tr>
+<tr><td>continuity mismatch</td><td>update continuity ledger and regenerate only affected shot</td></tr>
+<tr><td>color mismatch</td><td>grade/conform first; only regenerate if lighting intent is wrong</td></tr>
+<tr><td>caption/text issue</td><td>remove generated text and add typography in post</td></tr>
+<tr><td>loudness/sync issue</td><td>fix mix or edit timing; do not rely on prompt repair alone</td></tr>
+<tr><td>unsafe or rights issue</td><td>rewrite to original/authorized material and document rights</td></tr>
+</tbody>
+</table>
+<h4 id="done-definition">Done Definition</h4>
+<p>A professional Seedance asset is done only when the creative owner approves the shot, the rights map is clean, continuity is tracked, the post handoff is explicit, and the delivery target has passed human QC.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

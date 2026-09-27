@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — seedance-prompt</title>
+<link rel="stylesheet" href="../../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="../index.html">Seedance Studio knowledge index</a></nav>
+<main id="capability-seedance-prompt" data-status="active">
+<h1 id="seedance-prompt-title">seedance-prompt</h1>
+<p>Build production-ready Seedance prompts from clear concepts or supplied reference assets. Treat the prompt as a short shooting brief: it must say what changes on screen, what the camera does, what the light and sound contribute, and what must stay stable. Keep final prompts under the platform prompt budget and remove filler before delivery.</p>
+<p>Load <code>Reference section: quick-ref</code> for the checklist, <code>Reference section: reference-workflow</code> for multimodal references, <code>Reference section: i2v-guide</code> for image-to-video, <code>Reference section: first-last-frame-guide</code> for first/last-frame work, <code>Reference section: examples-by-mode</code> when examples are useful, <code>Reference section: shot-list-continuity</code> for multi-shot professional plans, <code>Reference section: multishot-grammar</code> for shot-label grammar, the shots-times-seconds budget, and cut placement inside one generation, and <code>Reference section: multilingual-community-examples</code> for Chinese/Russian/Japanese/Korean/Spanish or mixed-language prompts. When sequence state is present, load <code>Reference section: prompt-compiler</code> and compile only the current clip contract.</p>
+<h3 id="intent">Intent</h3>
+<p>This is the translator between a scene that exists in someone's head and one that exists on screen. The user has already imagined it; the job is to lose as little as possible in transit. Success is a first generation close enough that they can react instead of explain. Each revision inherits everything the story has already decided and changes only what the reaction asked for - a draft is a conversation, not a restart.</p>
+<h3 id="director-formula">Director Formula</h3>
+<p>Before filling slots, decide the one thing the shot is doing. Load <code>Reference section: directing-engine</code>, read the scene, name a single intention, and let that intention choose the camera, lighting, blocking, performance, and sound together so they reinforce instead of compete. The formula below is the container for a coherent setup, not a checklist of independent decorations; if a project voice is already set, keep this shot inside it.</p>
+<p>Use <code>Subject + Action + Scene + Camera + Lighting/Style + Audio + Constraints</code>. Put the subject and primary action first because early clauses set the shot hierarchy. Do not force every slot if a reference asset already shows the information; for I2V, describe only the motion, camera, timing, transformation, audio, and preservation constraints that the still image cannot show.</p>
+<table><thead><tr><th>Slot</th><th>Use for</th><th>Prompt-ready pattern</th></tr></thead>
+<tbody>
+<tr><td>Subject</td><td>The anchor the model must track.</td><td><code>Original ceramic perfume bottle on black acrylic, label preserved exactly</code></td></tr>
+<tr><td>Action</td><td>The visible change.</td><td><code>condensation beads form and slide down the glass over five seconds</code></td></tr>
+<tr><td>Scene</td><td>Only what is not already in references.</td><td><code>quiet rain-lit kitchen counter, shallow depth of field</code></td></tr>
+<tr><td>Camera</td><td>One primary move with endpoint.</td><td><code>slow dolly-in from medium product shot to macro label detail</code></td></tr>
+<tr><td>Light and style</td><td>Physical light plus safe visual language.</td><td><code>warm practical key from frame left, cool blue rim, clean commercial realism</code></td></tr>
+<tr><td>Audio</td><td>Ambient bed, SFX, dialogue, or silence.</td><td><code>Sound: low room tone, soft glass chime on final frame</code></td></tr>
+<tr><td>Constraints</td><td>Preservation and exclusions.</td><td><code>do not alter logo, shape, label, or cap geometry</code></td></tr>
+</tbody>
+</table>
+<h3 id="mode-gate">Mode Gate</h3>
+<p>Choose the mode before drafting. <strong>T2V</strong> needs subject, action, scene, camera, light, style, and constraints because nothing is visible yet. <strong>I2V</strong> starts from <code>[Image1]</code> and adds only motion, time, camera, lighting transition, audio, and preservation. <strong>V2V</strong> should map <code>[Video1]</code> to source clip, camera move, action rhythm, blocking, edit target, or extension anchor rather than accidentally transferring identity. <strong>R2V</strong> must list every reference role and state what must not transfer. <strong>FLF2V</strong> uses <code>[Image1]</code> as first frame and <code>[Image2]</code> as last frame, then describes only the continuous transition.</p>
+<table><thead><tr><th>Mode</th><th>Drafting priority</th><th>Common mistake</th><th>Repair</th></tr></thead>
+<tbody>
+<tr><td>T2V</td><td>Build the whole shot in compact layers.</td><td>Too many events in one clip.</td><td>Keep one visible beat and one endpoint.</td></tr>
+<tr><td>I2V</td><td>Preserve visible identity; add motion.</td><td>Re-describing the image until the product or face drifts.</td><td>Say <code>preserve [Image1] exactly</code>; add only dynamic changes.</td></tr>
+<tr><td>V2V</td><td>Transfer motion, camera, or timing.</td><td>Copying unauthorized likeness or scene details.</td><td>Use owned/licensed/authorized references and restrict transfer role.</td></tr>
+<tr><td>R2V</td><td>Assign separate roles to each asset.</td><td>One reference asked to control identity, pose, scene, and style.</td><td>Split roles or prioritize the most important role.</td></tr>
+<tr><td>FLF2V</td><td>Move from first frame to last frame.</td><td>Treating the last frame as vague mood instead of endpoint.</td><td>State <code>[Image2]</code> is the final visual target.</td></tr>
+<tr><td>Edit</td><td>Preserve the source clip while changing one layer.</td><td>Rewriting the whole scene and losing continuity.</td><td>Say <code>[Video1] is the source clip; change only...</code></td></tr>
+<tr><td>Extend</td><td>Continue from accepted source footage only.</td><td>Starting from a planned ending or inventing the clip state.</td><td>Route to <code>Capability section: seedance-continuation</code> and use the observed end state.</td></tr>
+</tbody>
+</table>
+<h3 id="sequence-boundary">Sequence Boundary</h3>
+<p>The generic prompt skill must not independently invent continuation state. If the user asks to continue, extend, make part two, or use a previous clip, route to <code>Capability section: seedance-continuation</code> unless the accepted clip/final frame and observed end state are already present in the sequence state.</p>
+<p>For sequence prompts, preserve <code>project_id</code>, <code>clip_id</code>, <code>parent_clip_id</code>, continuity locks, exact reference tags, the actual opening state, completed beat exclusions, and reserved future beats. The final prompt remains natural language and covers only the current clip.</p>
+<h3 id="prompt-build-process">Prompt Build Process</h3>
+<p>First, identify the single visible beat: reveal, arrival, decision, transformation, contact, pursuit, or disappearance, and name the one intention it serves. Next, assign reference roles before adding adjectives. Then write a compact first draft in the director formula order, keeping camera, light, performance, and sound aimed at that intention. Finally, run a self-check and the directing coherence test from <code>Reference section: directing-engine</code>: one main subject, one main action, one motivated main camera move, physically motivated lighting, performance written as a visible gesture rather than an emotion word, assigned character tags, sound intent, and no hollow boosters.</p>
+<h3 id="compression-rules">Compression Rules</h3>
+<p>When the prompt is too long, cut in this order: duplicate style adjectives, generic quality words, background details visible in references, secondary camera moves, secondary actions, and speculative emotional labels. Keep preservation constraints, action timing, and role maps. If a user requests a bilingual or mixed-language prompt, use language mixing only for clarity: reference roles, dialogue language, technical camera terms, and safe production constraints. Do not use another language to hide unsafe intent.</p>
+<h3 id="output-contract">Output Contract</h3>
+<p>Return:</p>
+<ol><li>Mode: T2V, I2V, V2V, R2V, FLF2V, edit, or extend.</li><li>Reference role map, if any.</li><li>Final prompt under the verified active-surface prompt budget.</li><li>Optional Chinese compressed version when useful.</li><li>Shot-list or delivery note when the prompt belongs to a professional sequence.</li><li>Safety or copyright note when relevant.</li></ol>
+<p>Before finalizing, run an anti-slop pass and remove vague quality boosters.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

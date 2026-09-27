@@ -7,6 +7,8 @@ import re
 from datetime import date
 from pathlib import Path
 
+from knowledge_html import load_knowledge_map, html_table_rows, visible_text
+
 REQUIRED_LABELS = ["confirmed", "volatile", "field-observed", "unverified", "internal"]
 REQUIRED_OFFICIAL_MARKERS = ["seed.bytedance.com", "volcengine.com", "arxiv.org", "runwayml.com"]
 
@@ -28,38 +30,51 @@ def main() -> int:
     errors: list[str] = []
     warnings: list[str] = []
 
-    registry = root / "references" / "source-registry.md"
-    if not registry.exists():
-        errors.append("missing references/source-registry.md")
+    knowledge_map, map_errors = load_knowledge_map(root)
+    errors.extend(map_errors)
+    source_topic = next(
+        (topic for topic in knowledge_map.get("topics", []) if topic.get("path") == "references/source-registry.html"),
+        None,
+    ) if isinstance(knowledge_map, dict) else None
+    if not source_topic:
+        errors.append("knowledge map missing registered source-registry.html")
+        text = ""
+        rows: list[list[str]] = []
     else:
-        text = registry.read_text(encoding="utf-8")
-        match = re.search(r"^last_verified:\s*(\d{4}-\d{2}-\d{2})$", text, re.M)
+        registry_path = root / source_topic["path"]
+        if not registry_path.exists():
+            errors.append("registered source-registry.html missing")
+            text = ""
+            rows = []
+        else:
+            text = visible_text(registry_path)
+            rows = html_table_rows(registry_path)
+        match = re.search(r"last_verified:\s*(\d{4}-\d{2}-\d{2})", text, re.I)
         if not match:
-            errors.append("source-registry.md missing last_verified: YYYY-MM-DD")
+            errors.append("source-registry document missing last_verified: YYYY-MM-DD")
         else:
             verified = parse_date(match.group(1))
             if verified:
                 age = (date.today() - verified).days
                 if age > 30:
-                    errors.append(f"source-registry.md last_verified is {age} days old")
+                    errors.append(f"source-registry document last_verified is {age} days old")
                 elif age > 14:
-                    warnings.append(f"source-registry.md last_verified is {age} days old")
+                    warnings.append(f"source-registry document last_verified is {age} days old")
 
         for label in REQUIRED_LABELS:
-            if f"`{label}`" not in text:
-                errors.append(f"source-registry.md missing evidence label `{label}`")
+            if label not in text:
+                errors.append(f"source-registry document missing evidence label `{label}`")
 
         for marker in REQUIRED_OFFICIAL_MARKERS:
             if marker not in text:
-                errors.append(f"source-registry.md missing official source marker `{marker}`")
+                errors.append(f"source-registry document missing official source marker `{marker}`")
 
-        for line in text.splitlines():
-            if "|" not in line or line.lstrip().startswith("|---"):
-                continue
-            if "volatile" in line and "Recheck" not in line and "recheck" not in line:
+        for row in rows:
+            row_text = " | ".join(row)
+            if "volatile" in row_text.lower() and "recheck" not in row_text.lower():
                 errors.append("volatile source row must include recheck wording")
-            if any(word in line.lower() for word in ["reddit", "community", "corpus", "forum"]) and not any(
-                label in line for label in ["field-observed", "unverified", "internal"]
+            if any(word in row_text.lower() for word in ["reddit", "community", "corpus", "forum"]) and not any(
+                label in row_text for label in ["field-observed", "unverified", "internal"]
             ):
                 errors.append("community source row must be field-observed, unverified, or internal")
 

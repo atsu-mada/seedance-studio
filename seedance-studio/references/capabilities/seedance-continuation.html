@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — seedance-continuation</title>
+<link rel="stylesheet" href="../../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="../index.html">Seedance Studio knowledge index</a></nav>
+<main id="capability-seedance-continuation" data-status="active">
+<h1 id="seedance-continuation-title">seedance-continuation</h1>
+<p>Use this for seamless continuation, intentional next shots, bridge clips, tail repair, and re-anchoring after drift. A continuation prompt must be grounded in accepted footage, not only in the old plan.</p>
+<p>Load <code>Reference section: continuation-handoff</code>, <code>Reference section: sequence-project-state</code>, <code>Reference section: prompt-compiler</code>, <code>Reference section: reference-transfer-contract</code>, and <code>Reference section: continuity-qc</code>. Load <code>Reference section: failure-atlas</code> when the continuation failed or drift is visible. Load <code>Reference section: directing-engine</code> so the next clip inherits the project's directorial voice and its position on the long-form spine; the look never re-rolls between clips.</p>
+<h3 id="required-input-gate">Required Input Gate</h3>
+<p>Before writing any continuation prompt, require:</p>
+<ul><li><code>project_id</code>;</li><li>current <code>clip_id</code>;</li><li>valid <code>parent_clip_id</code>;</li><li>full-story objective;</li><li>final story outcome;</li><li>next planned narrative job;</li><li>accepted previous clip or accepted final frame;</li><li><code>observed_end_state</code>;</li><li>continuity locks;</li><li>inherited directorial voice and arc position;</li><li>exact reference registry;</li><li>active surface or conservative surface profile.</li></ul>
+<p>If the source is unavailable, say: "I have the story plan, but I do not have the actual ending of the previous generation. Upload the clip or its final frame, or describe exactly what is visible at the end. I should not invent the continuation state."</p>
+<p>Do not hide this uncertainty by writing a speculative prompt.</p>
+<h3 id="continuation-types">Continuation Types</h3>
+<p><code>seamless_continuation</code>: same shot, same geography, same open motion, same or motivated camera continuation, and accepted previous footage as the source.</p>
+<p><code>intentional_next_shot</code>: an editorial cut is appropriate. Story continuity matters, but exact frame continuity is not promised. Do not call it seamless.</p>
+<p><code>bridge_between_known_states</code>: a defined start state and end state must be connected, often with first/last-frame generation when the active surface supports it.</p>
+<p><code>repair_tail</code>: the previous final seconds failed. Repair, edit, or regenerate the tail before continuing because continuing from a failed tail amplifies the error.</p>
+<p><code>reanchor_after_drift</code>: identity, detail, geography, motion, audio, or world continuity degraded. Return to canonical identity, the strongest accepted final frame, a stable source clip, or a new intentional shot using canonical references.</p>
+<h3 id="canon-rule">Canon Rule</h3>
+<p>Accepted observed footage overrides planned state. If the plan says the subject reached the car door but the accepted clip ends two steps away, the next prompt begins two steps away. It does not replay the terminal exit, and it does not assume the subject is inside the car.</p>
+<p>Rejected footage never updates canon and never becomes a parent source.</p>
+<p>Track <code>extension_depth</code>. At depth 2 or greater, warn that repeated extension can increase continuity risk. When visible drift has begun, recommend re-anchoring instead of blindly extending again.</p>
+<h3 id="output-contract">Output Contract</h3>
+<p>Return:</p>
+<ol><li>Continuation type.</li><li>Source evidence used.</li><li>Observed end state.</li><li>Next clip contract.</li><li>Continuity locks and allowed changes.</li><li>Completed beats to exclude.</li><li>Reserved future beats to exclude.</li><li>Final natural-language Seedance prompt for the current clip only.</li><li>Updated Project State Capsule or a request for missing source evidence.</li></ol>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

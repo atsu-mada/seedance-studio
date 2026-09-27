@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/allocation-model.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-allocation-model" data-status="active">
+<h1 id="reference-section-references-allocation-model-md-title">Reference section: references/allocation-model.md</h1>
+<h3 id="allocation-model-decide-where-the-prompt-spends-its-budget">Allocation Model — decide where the prompt spends its budget</h3>
+<p><em>The operational companion to <code>intent-vs-precision.md</code>: every generation has a finite fidelity budget, and a prompt that demands everything gets mediocrity everywhere. Decide where the budget goes before writing a word. Labels: [field] = practitioner-reported · [heuristic] = default to test. Craft guidance compiled 2026-06-11; no platform-availability claims.</em></p>
+<h4 id="the-premise-field">The premise [field]</h4>
+<p>Identity fidelity, motion boldness, and scene density compete for the same generation budget. The known fragile areas — detail stability, multi-subject consistency, text rendering, facial micro-acting — are where overdrawn budgets fail first. A shot that needs a perfect face, a backflip, a crowded market, and a spoken line in one call will land none of them cleanly.</p>
+<h4 id="the-three-spends">The three spends</h4>
+<table><thead><tr><th>Spend</th><th>What it buys</th><th>What it strains</th></tr></thead>
+<tbody>
+<tr><td>Identity fidelity</td><td>stable faces, products, logos, costumes</td><td>motion range; every bold move risks drift</td></tr>
+<tr><td>Motion boldness</td><td>committed action, physics, choreography</td><td>close-up identity detail, especially faces and hands</td></tr>
+<tr><td>Scene density</td><td>crowds, layered environments, weather, props</td><td>per-subject stability; tiny background detail degrades</td></tr>
+</tbody>
+</table>
+<h4 id="allocation-method-heuristic">Allocation method [heuristic]</h4>
+<ol><li>Name the primary spend — the one thing this shot is for. One per generation.</li><li>Pick one secondary; economize everything else on purpose.</li><li>Offload fidelity to references: identity carried by <code>[Image1]</code> is budget the text no longer spends, freeing prose for motion and timing.</li><li>Pay for the primary out of the others: bold motion buys down facial detail, so stage emotion in the body and ration close-ups; dense scenes buy down subject precision, so keep hero subjects large in frame and few in number.</li><li>Re-anchor across a series: chained generations drift, so respend on identity (original references, not outputs) every few clips.</li></ol>
+<h4 id="worked-allocations-field">Worked allocations [field]</h4>
+<table><thead><tr><th>Shot</th><th>Primary</th><th>Secondary</th><th>Economized</th></tr></thead>
+<tbody>
+<tr><td>Product ad</td><td>product identity (ref-anchored)</td><td>one material motion beat</td><td>scene density, crowd, weather</td></tr>
+<tr><td>Dance / action</td><td>motion boldness (donor <code>[Video1]</code>)</td><td>identity via <code>[Image1]</code> re-anchor</td><td>facial close-ups, set dressing</td></tr>
+<tr><td>Establishing world shot</td><td>scene density and atmosphere</td><td>camera move</td><td>character identity (no close subjects)</td></tr>
+<tr><td>Dialogue close-up</td><td>facial stability (locked camera)</td><td>the spoken line</td><td>motion, background activity</td></tr>
+</tbody>
+</table>
+<h4 id="trade-table-field">Trade table [field]</h4>
+<table><thead><tr><th>If the shot needs</th><th>It pays with</th></tr></thead>
+<tbody>
+<tr><td>Bold motion and a close-up face</td><td>choose one; put the emotion in posture and staging, or cut to a separate close-up shot</td></tr>
+<tr><td>Many subjects</td><td>per-subject identity precision; pick one hero and let the rest read as shapes</td></tr>
+<tr><td>Readable on-screen text</td><td>nothing — move text to post</td></tr>
+<tr><td>A crowded frame and a tiny product detail</td><td>the detail; isolate the product beat in its own shot</td></tr>
+</tbody>
+</table>
+<h4 id="pre-write-checklist-heuristic">Pre-write checklist [heuristic]</h4>
+<p>For sequence projects, allocate the current clip before allocating the full story. The full story owns objective and final outcome; the current clip owns one action, one endpoint, and the continuity locks needed for the next handoff. Future beats are not part of the current prompt budget.</p>
+<ol><li>What is this shot for — identity, motion, or world?</li><li>Which references carry fidelity so the text does not have to?</li><li>What is deliberately economized, and is that written as a constraint?</li><li>If the answer to 1 is "all three," which beats split into separate shots or generations?</li></ol>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

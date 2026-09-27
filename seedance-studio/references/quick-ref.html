@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/quick-ref.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-quick-ref" data-status="active">
+<h1 id="reference-section-references-quick-ref-md-title">Reference section: references/quick-ref.md</h1>
+<h3 id="quick-reference">Quick Reference</h3>
+<h4 id="default-route">Default route</h4>
+<ul><li>Vague idea: <code>seedance-interview</code>.</li><li>Clear idea: <code>seedance-prompt</code>.</li><li>Long story or connected clips: <code>seedance-sequence</code>.</li><li>Continue, extend, repair tail, or re-anchor accepted footage: <code>seedance-continuation</code>.</li><li>Short prompt: <code>seedance-prompt-short</code>.</li><li>Bad result: <code>seedance-troubleshoot</code>.</li><li>Storyboard candidate or approved storyboard: <code>storyboard-reference-workflow</code>; it controls rough blocking and camera flow only.</li><li>IP or real-person risk: <code>seedance-copyright</code>.</li><li>Blocked prompt: <code>seedance-filter</code>.</li><li>Camera, light, motion, style, VFX, audio, or character-specific work: load the matching specialist sub-skill.</li></ul>
+<h4 id="prompt-checklist">Prompt checklist</h4>
+<table><thead><tr><th>Gate</th><th>Pass condition</th></tr></thead>
+<tbody>
+<tr><td>Mode</td><td>T2V, I2V, V2V, or R2V is explicit.</td></tr>
+<tr><td>References</td><td>Each asset has exactly one primary role unless deliberately layered.</td></tr>
+<tr><td>Storyboard</td><td>Candidate boards remain isolated until explicit full-batch approval; approved boards control rough blocking and camera flow only.</td></tr>
+<tr><td>Subject</td><td>Main subject appears in the first clause and has stable tags if needed.</td></tr>
+<tr><td>Action</td><td>One visible beat has an observable endpoint.</td></tr>
+<tr><td>Camera</td><td>One primary move has start, speed, subject relationship, and endpoint.</td></tr>
+<tr><td>Lighting</td><td>Source, direction, color, atmosphere, or transition is physical.</td></tr>
+<tr><td>Audio</td><td>Dialogue, ambience, SFX, music, or silence is intentional.</td></tr>
+<tr><td>Safety</td><td>Protected identity, IP, and unsafe wording are rewritten or authorization-gated.</td></tr>
+<tr><td>Anti-slop</td><td>Hollow boosters are replaced by observable production language.</td></tr>
+<tr><td>Budget</td><td>Final prompt fits the verified active-surface prompt budget.</td></tr>
+<tr><td>Sequence lineage</td><td>Sequence prompts have <code>project_id</code>, <code>clip_id</code>, and parent when continuing.</td></tr>
+<tr><td>Actual state</td><td>Continuations start from accepted observed state, not planned state.</td></tr>
+<tr><td>Clip scope</td><td>Completed beats are excluded and reserved future beats stay out.</td></tr>
+</tbody>
+</table>
+<h4 id="fast-repair-phrases">Fast repair phrases</h4>
+<table><thead><tr><th>Failure</th><th>Add or replace with</th></tr></thead>
+<tbody>
+<tr><td>I2V drift</td><td><code>preserve [Image1] subject/product exactly; only motion, light, and camera change</code></td></tr>
+<tr><td>Generic look</td><td><code>physical light source + material behavior + specific camera endpoint</code></td></tr>
+<tr><td>Camera chaos</td><td><code>one controlled [move] from [start frame] to [end frame]</code></td></tr>
+<tr><td>Weak action</td><td><code>actor + verb + timing + consequence + final state</code></td></tr>
+<tr><td>Lip-sync instability</td><td><code>locked medium close-up, short quoted line, no head turn during dialogue</code></td></tr>
+<tr><td>Noisy VFX</td><td><code>source + material + path + interaction + dissipation endpoint</code></td></tr>
+<tr><td>Style/IP risk</td><td><code>medium + texture + palette + composition + motion rhythm</code></td></tr>
+<tr><td>Planned ending mismatch</td><td><code>begin from the observed final frame: [actual visible state]</code></td></tr>
+<tr><td>Future beat leakage</td><td><code>this clip stops at [endpoint]; do not show [reserved future beat] yet</code></td></tr>
+<tr><td>Storyboard transfer leak</td><td><code>storyboard controls rough blocking and camera flow only; do not transfer start frame, final visual style, lighting, character identity, costume, or environment detail.</code></td></tr>
+</tbody>
+</table>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

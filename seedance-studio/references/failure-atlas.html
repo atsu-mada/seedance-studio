@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/failure-atlas.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-failure-atlas" data-status="active">
+<h1 id="reference-section-references-failure-atlas-md-title">Reference section: references/failure-atlas.md</h1>
+<h3 id="failure-atlas">Failure Atlas</h3>
+<p>Use this reference when sequence or continuation output fails.</p>
+<table><thead><tr><th>Symptom</th><th>Likely cause</th><th>Primary repair variable</th></tr></thead>
+<tbody>
+<tr><td>Continuation begins from planned ending</td><td>Parent observed state was not reviewed.</td><td>Replace opening with observed end state.</td></tr>
+<tr><td>Action restarts</td><td>Completed beat was not marked already happened.</td><td>Add completed beat exclusion.</td></tr>
+<tr><td>Future event appears early</td><td>Reserved beat leaked into prompt.</td><td>Remove future beat from prompt and endpoint.</td></tr>
+<tr><td>Identity drifts through extensions</td><td>Continuity source displaced canonical identity reference.</td><td>Re-anchor identity from canonical image.</td></tr>
+<tr><td>Screen direction flips</td><td>Axis was not locked or reset intentionally.</td><td>State screen direction or declare axis reset.</td></tr>
+<tr><td>Open motion stops</td><td>Motion vector was not inherited.</td><td>Carry subject/camera speed and direction.</td></tr>
+<tr><td>Camera phase restarts</td><td>Camera endpoint from parent was missing.</td><td>Start from observed camera phase.</td></tr>
+<tr><td>Prop contradicts prior clip</td><td>Prop owner/position/condition was not tracked.</td><td>Add prop state handoff.</td></tr>
+<tr><td>Dialogue repeats</td><td>Completed dialogue was not logged.</td><td>Mark line completed and continue audio phase.</td></tr>
+<tr><td>Extension quality degrades</td><td>Extension depth and drift were ignored.</td><td>Re-anchor or create intentional next shot.</td></tr>
+<tr><td>Reference roles contaminate</td><td>Transfer/ignore clauses were absent.</td><td>Split reference roles and exclusions.</td></tr>
+<tr><td>Event density is too high</td><td>Several beats were compiled into one prompt.</td><td>Reassign future beats to later clips.</td></tr>
+</tbody>
+</table>
+<section lang="ja"><h2 id="observed-versus-cause">観測と原因を分ける</h2><p>人物消失、場所変化、VFXの減衰は観測できる症状。参照競合や状態リセットは原因仮説であり、確認前に確定しない。開始・中盤・終端を調べ、修正後も実際に比較する。<a href="cases/street-continuity.html">場所の連続性の事例</a>を参照。</p></section>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

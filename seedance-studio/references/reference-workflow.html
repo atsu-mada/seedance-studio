@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/reference-workflow.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-reference-workflow" data-status="active">
+<h1 id="reference-section-references-reference-workflow-md-title">Reference section: references/reference-workflow.md</h1>
+<h3 id="reference-workflow">Reference Workflow</h3>
+<h4 id="asset-role-map">Asset Role Map</h4>
+<p>Before writing prompt prose, assign every uploaded asset a role. Role mapping prevents accidental transfer of identity, logos, scene ownership, or incompatible camera and motion instructions.</p>
+<table><thead><tr><th>Asset</th><th>Good Roles</th><th>Avoid</th></tr></thead>
+<tbody>
+<tr><td>Image</td><td>identity, product, pose, costume, environment, first frame, last frame</td><td>asking it to define unseen motion</td></tr>
+<tr><td>Video</td><td>motion, camera, pacing, blocking, timing, gesture rhythm</td><td>copying protected identity, logo, or scene ownership</td></tr>
+<tr><td>Audio</td><td>rhythm, tempo, mood, ambience, delivery tone, music texture</td><td>assuming voice, song, or likeness authorization</td></tr>
+<tr><td>Storyboard</td><td>rough blocking, subject placement, camera flow</td><td>identity, costume, brand, dialogue, audio, lighting, environment detail, final style, start frame</td></tr>
+<tr><td>Text brief</td><td>action, genre, camera plan, constraints</td><td>replacing concrete reference roles with vague mood words</td></tr>
+</tbody>
+</table>
+<h4 id="rules">Rules</h4>
+<ul><li>Preserve reference tags exactly.</li><li>Give every reference one primary role before writing style language.</li><li>Do not ask one reference to control incompatible roles unless the tradeoff is explicit.</li><li>Use owned, licensed, public-domain, or clearly authorized references.</li><li>Write what should transfer and what should not transfer.</li><li>When authorization is unclear, transfer broad motion, tempo, mood, or production function rather than protected identity.</li><li>Treat multimodal reference generation, video edit, video extend, and first/last-frame generation as separate tasks. They can share assets, but the prompt should name the active workflow.</li><li>If audio and video references compete, make the video silent when audio timing must dominate, or state that the video controls camera/motion only and <code>[Audio1]</code> controls tempo.</li><li>In sequences, separate canonical references from accepted continuity sources: canonical identity/product references control immutable design, while accepted previous footage controls transient opening state.</li><li>Never let a motion reference overwrite continuity locks, completed beats, reserved beats, or exact reference tags.</li><li>Canonical identity and accepted continuity state always override storyboard. Do not allow storyboard-derived identity, costume, brand, dialogue, audio, lighting, environment detail, or style into final prompt/state.</li></ul>
+<h4 id="workflow-specific-patterns">Workflow-Specific Patterns</h4>
+<table><thead><tr><th>Workflow</th><th>Use this wording</th><th>Avoid</th></tr></thead>
+<tbody>
+<tr><td>Multimodal reference</td><td><code>[Image1] controls product identity; [Video1] controls camera rhythm; [Audio1] controls tempo only.</code></td><td><code>Use all references for style.</code></td></tr>
+<tr><td>Video edit</td><td><code>[Video1] is the source clip; preserve composition and timing, change only [lighting/background/VFX].</code></td><td>Regenerating the whole concept from scratch.</td></tr>
+<tr><td>Video extend</td><td><code>[Video1] is the previous clip; continue the same shot for [duration] and preserve last-frame continuity.</code></td><td>Starting a new scene with no continuity anchor.</td></tr>
+<tr><td>First/last frame</td><td><code>[Image1] is first frame; [Image2] is final visual target; generate the continuous transition only.</code></td><td>Asking the last frame to be only "mood."</td></tr>
+<tr><td>Audio reference</td><td><code>[Audio1] controls tempo and energy; do not copy protected voice, song, or performance identity.</code></td><td>Treating audio as authorization proof.</td></tr>
+<tr><td>Storyboard reference</td><td><code>storyboard controls rough blocking and camera flow only; do not transfer start frame, final visual style, lighting, character identity, costume, or environment detail.</code></td><td>Transferring source-panel numbers or transition arrows into generated video.</td></tr>
+</tbody>
+</table>
+<h4 id="role-examples">Role Examples</h4>
+<table><thead><tr><th>Situation</th><th>Strong map</th></tr></thead>
+<tbody>
+<tr><td>Product ad</td><td><code>[Image1] controls product identity; [Audio1] controls tempo only.</code></td></tr>
+<tr><td>Motion transfer</td><td><code>[Video1] controls side-step choreography only; do not transfer performer, costume, room, or logo.</code></td></tr>
+<tr><td>Style reference</td><td><code>[Image2] controls warm bar atmosphere only; product identity remains from [Image1].</code></td></tr>
+<tr><td>First-last frame</td><td><code>[Image1] is first frame; [Image2] is target end frame; transition occurs through light sweep, not product deformation.</code></td></tr>
+<tr><td>Edit/extend</td><td><code>[Video1] is the source clip; preserve subject and camera path, replace only the failed lighting beat from 3s to 5s.</code></td></tr>
+<tr><td>Storyboard</td><td><code>[Storyboard1] controls rough subject placement and camera flow only; source-panel numbers and transition arrows must not appear in generated video.</code></td></tr>
+</tbody>
+</table>
+<h4 id="storyboard-reference-workflow">Storyboard Reference Workflow</h4>
+<p>Use this workflow only when the input is a clip beat, canonical character/environment references, and existing composition requirements. Generate storyboard candidates outside active references and outside canonical state. The candidate board is a planning artifact, not a source frame or style reference.</p>
+<p>Candidate-board style: white or pale paper; black-gray rough line art; <code>GridTileStyle</code>; readable character shape, orientation, and action; sparse backgrounds. Panel numbers and transition arrows are permitted in boards. Do not use captions, logos, watermarks, color fills, finished illustration, or strong shading.</p>
+<p>Storyboard controls rough blocking, subject placement, and camera flow only. Use this exact sending phrase:</p>
+<p><code>storyboard controls rough blocking and camera flow only; do not transfer start frame, final visual style, lighting, character identity, costume, or environment detail.</code></p>
+<p>Source-panel numbers and transition arrows are planning annotations only and must not transfer to generated video.</p>
+<h5 id="candidate-protocol">Candidate Protocol</h5>
+<p>For every candidate, record: candidate ID, batch ID, inputs, prompt version, dimensions, hash, provenance status, authorization status, risk status, reviewer result, selection status, and approval status. Candidate states are exactly <code>isolated</code>, <code>pending_approval</code>, <code>approved</code>, and <code>rejected</code>.</p>
+<ol><li>Create candidates in <code>isolated</code> state; keep active references, canonical state, final prompts, and parent sources unchanged.</li><li>Batch-review every candidate with a human. If any required provenance or authorization is missing, stop before human approval.</li><li>Mark the reviewed batch <code>pending_approval</code> until explicit batch approval records approver, timestamp, and selected candidate IDs.</li><li>Only selected <code>approved</code> candidates may be mapped into a Seedance send. Before that approval, active references, canonical state, final prompts, and parent sources remain unchanged. Pending or rejected candidates cannot progress.</li><li>For failed candidate regeneration, choose exactly one reason: <code>finished-look</code>, <code>too-rough</code>, <code>unclear-action</code>, <code>unclear-layout</code>, or <code>unwanted-text</code>. Preserve active assets while regenerating.</li></ol>
+<p>Canonical identity and accepted continuity state always override storyboard. Final prompts and state must exclude storyboard-derived identity, costume, brand, dialogue, audio, lighting, environment detail, and style.</p>
+<h5 id="approved-send-pattern">Approved Send Pattern</h5>
+<p>After explicit batch approval only, send the approved storyboard with canonical references and accepted continuity state, preserving role separation:</p>
+<p><code>[Storyboard1] storyboard controls rough blocking and camera flow only; do not transfer start frame, final visual style, lighting, character identity, costume, or environment detail. Canonical references control identity and environment; accepted continuity state controls the opening state. Do not render source-panel numbers or transition arrows in generated video.</code></p>
+<h4 id="motion-transfer">Motion Transfer</h4>
+<p>Field-observed technique; test before promising results. Probably the most under-used reference capability: a donor video drives choreography or camera rhythm while an image keeps identity.</p>
+<ul><li>Pair one donor <code>[Video1]</code> with one identity anchor <code>[Image1]</code>, and write the exclusion explicitly: <code>[Video1] controls the choreography only - nothing of its appearance, performer, costume, room, or logo transfers.</code></li><li>Pick donor clips with one clear action, a clean silhouette, and a steady camera. Busy multi-person footage transfers noise, not motion.</li><li>Mute the donor clip before upload unless its sound should drive timing; if it keeps sound, state which reference owns the clock.</li><li>Transfers well: choreography, gesture timing, camera rhythm, blocking. Transfers poorly: fine hand detail, multi-person sync, facial performance.</li><li>Use only owned, licensed, stock, mocap, rehearsal, or self-recorded donor footage; real-person donors transfer general motion only, never likeness.</li></ul>
+<h4 id="template">Template</h4>
+<p><code>[Image1] controls product identity. [Video1] controls camera pace only. [Audio1] controls tempo only. Preserve the subject from [Image1]; do not copy characters, logos, music, voice, or environment from [Video1]/[Audio1].</code></p>
+<h4 id="sequence-transfer-template">Sequence Transfer Template</h4>
+<p><code>[Video 1] is the accepted previous clip and controls only the actual opening state, camera phase, motion phase, ambience, and environment arrangement. @Image 1 controls canonical identity. Preserve both tags exactly. Do not copy unrelated identity, costume, logo, or future action from any reference.</code></p>
+<section lang="ja"><h2 id="reference-inheritance">継承属性と競合仮説</h2><p>参照ごとに、継承する人物同一性・場所の形状・効果の接続点と、継承しない背景・画角・状態を明記する。全カテゴリを毎ショットへ機械的に添付しない。競合は観測した症状と仮説を分け、<a href="cases/street-continuity.html">一変数の比較</a>で調べる。</p></section>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

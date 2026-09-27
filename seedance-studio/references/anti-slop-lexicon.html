@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/anti-slop-lexicon.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-anti-slop-lexicon" data-status="active">
+<h1 id="reference-section-references-anti-slop-lexicon-md-title">Reference section: references/anti-slop-lexicon.md</h1>
+<h3 id="anti-slop-lexicon">Anti-Slop Lexicon</h3>
+<p>Replace empty evaluation language with observable production language. Field-confirmed across prompting communities in every supported language: abstract quality words destabilize generation because the model cannot tell which element to emphasize; decomposing them into physical elements (camera verb + speed + viewpoint, light source + direction + behavior, material + texture + motion) stabilizes it.</p>
+<h4 id="the-six-slop-classes">The Six Slop Classes</h4>
+<table><thead><tr><th>Class</th><th>Looks like</th><th>Repair</th></tr></thead>
+<tbody>
+<tr><td>Empty evaluators</td><td><code>cinematic, epic, stunning, beautiful, dramatic</code></td><td>convert each to the one observable detail that earns it</td></tr>
+<tr><td>Borrowed image-model tokens</td><td><code>8K, masterpiece, award-winning, trending on ArtStation, Unreal Engine, RAW</code></td><td>delete; resolution and quality are settings or outcomes, never prose</td></tr>
+<tr><td>Tag salad</td><td>comma-separated keyword dumps ported from image prompting</td><td>rewrite as shooting-brief prose: one sentence per element - subject, action, camera, light, sound</td></tr>
+<tr><td>Negation slop</td><td><code>no blur, no artifacts, no distortion, no extra fingers</code></td><td>negation summons; exclude compositionally - describe what IS there instead</td></tr>
+<tr><td>Adjective stacking</td><td><code>gorgeous, breathtaking, mesmerizing sunset</code></td><td>three synonyms make one weak claim; pick the single detail that matters</td></tr>
+<tr><td>Feel-suffix words</td><td><code>电影感 · 雰囲気のある · 감성적인 · atmosférico · атмосферный · vibey</code></td><td>name the physical cause of the feeling; every vocab file has a language-specific Slop Traps table</td></tr>
+</tbody>
+</table>
+<h4 id="replacement-table">Replacement Table</h4>
+<table><thead><tr><th>Weak phrase</th><th>Replace with</th></tr></thead>
+<tbody>
+<tr><td>cinematic</td><td>shot scale, camera move, lighting, grade</td></tr>
+<tr><td>epic</td><td>physical scale, stakes, crowd size, lens distance</td></tr>
+<tr><td>beautiful</td><td>color, texture, composition, material, light behavior</td></tr>
+<tr><td>stunning / breathtaking</td><td>visible contrast, reveal, movement, or detail</td></tr>
+<tr><td>dynamic</td><td>specific movement, speed, and endpoint</td></tr>
+<tr><td>dramatic</td><td>blocking, shadow, silence, or camera pressure</td></tr>
+<tr><td>ultra-realistic</td><td>material behavior, skin texture, lens artifacts, natural motion</td></tr>
+<tr><td>cool transition</td><td>match cut, whip pan, dissolve, hard cut, object wipe</td></tr>
+<tr><td>magical</td><td>particle behavior, glow source, motion path, interaction</td></tr>
+<tr><td>professional</td><td>product lighting setup, clean background, controlled camera</td></tr>
+<tr><td>masterpiece / award-winning</td><td>delete; quality is not a request</td></tr>
+<tr><td>8K / ultra-HD / high quality</td><td>delete; resolution is a render setting, not prose</td></tr>
+<tr><td>atmosphere of mystery</td><td>what is hidden, by what: doorway, shadow, fog</td></tr>
+<tr><td>insanely / highly detailed</td><td>the two details that matter, named</td></tr>
+<tr><td>visually striking</td><td>the one frame the viewer remembers, described</td></tr>
+<tr><td>trending / viral style</td><td>the actual format: vertical, fast hook, caption-safe framing</td></tr>
+</tbody>
+</table>
+<h4 id="tag-salad-repair">Tag Salad Repair</h4>
+<p>Image-model habits port badly: <code>girl, sunset, 8K, cinematic, beautiful light, masterpiece, detailed face</code> gives a video model no action, no camera, no time axis. Rewrite as a brief: <code>A woman turns from the railing at sunset; the low sun flares behind her hair. Camera: slow push-in to a medium close-up. Sound: wind and distant surf.</code> One sentence per element beats twenty comma fragments.</p>
+<h4 id="negation-rule">Negation Rule</h4>
+<p>Naming a flaw plants it. Instead of <code>no blur, no extra fingers, no watermark text</code>, lock the positive: <code>hands rest still on the table</code>, <code>clean unbroken label</code>, <code>empty sky above the skyline</code>. Use negation only in the constraint slot where the platform expects it (<code>no on-screen text, no watermark</code>), never as quality insurance.</p>
+<p>Rule: if a camera, microphone, light meter, or stopwatch cannot detect it, rewrite it.</p>
+<p>Each language file in <code>references/vocab/</code> carries a Slop Traps table for its own community's empty words: English (<code>vocab/en.md</code>), Chinese (<code>vocab/zh.md</code>), Japanese (<code>vocab/ja.md</code>), Korean (<code>vocab/ko.md</code>), Spanish (<code>vocab/es.md</code>), Russian (<code>vocab/ru.md</code>).</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/surface-prompt-profiles.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-surface-prompt-profiles" data-status="active">
+<h1 id="reference-section-references-surface-prompt-profiles-md-title">Reference section: references/surface-prompt-profiles.md</h1>
+<h3 id="surface-prompt-profiles">Surface Prompt Profiles</h3>
+<p>Use this reference to keep platform behavior surface-specific. Do not hardcode duration, prompt length, reference counts, tag syntax, edit support, extension support, audio behavior, regions, pricing, or authorization requirements as universal Seedance facts.</p>
+<h4 id="profile-fields">Profile Fields</h4>
+<p>For the active surface, resolve:</p>
+<ul><li>exact reference-tag convention;</li><li>verified duration range;</li><li>prompt budget;</li><li>supported reference roles;</li><li>timeline syntax;</li><li>edit or extension availability;</li><li>audio behavior;</li><li>known constraints;</li><li>source and verification date.</li></ul>
+<p>If the surface is unknown, state that the profile is conservative and avoid unsupported numbers.</p>
+<h4 id="conservative-generic-profile">Conservative Generic Profile</h4>
+<p>Use only when no surface is known:</p>
+<ul><li>plan one compact generation-sized clip at a time;</li><li>keep prompt concise;</li><li>preserve exact user-supplied tags;</li><li>avoid asserting native extend, prompt limits, or reference counts;</li><li>ask for the actual clip or final frame before continuation;</li><li>prefer role-bound references over unsupported feature claims.</li></ul>
+<h4 id="seedance-2-5-verified-profiles-2026-09-04">Seedance 2.5 Verified Profiles <em>(2026-09-04)</em></h4>
+<p><strong>ByteDance model capability:</strong> a single generation can run up to 30 seconds. This establishes the model ceiling, not the controls exposed by every host.</p>
+<p><strong>BytePlus enhanced video generation:</strong> 4–30 seconds for <code>dreamina-seedance-2-5-260628</code> on the documented route. The page does not establish a universal 5,000-character prompt limit.</p>
+<p><strong>Higgsfield:</strong> up to 30 seconds is documented on Higgsfield's Seedance 2.5 model page. The public page did not state a prompt-character budget at verification time. If the user requests a 4,500–4,900-character Higgsfield prompt, treat that as an authoring target and verify the active field counter before claiming paste-ready compatibility.</p>
+<p><strong>Leonardo.AI:</strong> the provider documentation specifies a maximum 5,000-character prompt for <code>bytedance/seedance-2.5</code>. Count the submitted prompt value only, including spaces and line breaks; keep a small margin unless the user explicitly requires an exact boundary test.</p>
+<p>For any 30-second prompt, allocate time before prose: define the opening state, timestamped turns, one motivated camera purpose per phase, continuity locks, and an explicit final state. A longer budget does not authorize extra story beats. Remove repeated quality adjectives before removing action, spatial logic, or continuity instructions.</p>
+<h4 id="volatile-claim-rule">Volatile Claim Rule</h4>
+<p>For current model names, pricing, upload limits, reference counts, regions, endpoint names, or authorization requirements, load source-gated references and verify with dated primary sources before making operational claims.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

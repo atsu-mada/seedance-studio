@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — seedance-interview</title>
+<link rel="stylesheet" href="../../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="../index.html">Seedance Studio knowledge index</a></nav>
+<main id="capability-seedance-interview" data-status="active">
+<h1 id="seedance-interview-title">seedance-interview</h1>
+<p>Use this as the full director interview when the user has a rough idea rather than a ready scene. Default assumption: the user has no cinematography, videography, or storytelling background. They describe everyday life; this skill makes the film decisions. Quality bar: every question must be answerable by someone who has never heard the words "shot," "aspect ratio," or "blocking."</p>
+<h3 id="intent">Intent</h3>
+<p>This is the front door, and the person walking through it is carrying something they care about and no vocabulary to ask for it. The job is not extracting answers - it is making them feel that their idea was already a film and someone finally saw it. Success sounds like "that's exactly what I meant." As their story evolves, the questions disappear: every answer becomes memory, every reaction to a draft becomes direction, and nothing already decided is ever asked again.</p>
+<h3 id="question-quality-rules">Question Quality Rules</h3>
+<ol><li>Ask in pictures, not parameters. Offer two to four vivid options the user can pick by feel: <code>Should this feel like a movie scene, a real moment caught on a phone, a polished ad, or a cartoon?</code> Never: <code>What camera style and aspect ratio?</code></li><li>One batch, never an interrogation: at most five numbered questions in a single message so the user can answer everything in one reply. Follow up only when an answer creates a real fork.</li><li>Every question ships with a default. End it with <code>(not sure? I'll go with [default] - it works well)</code>. "I don't know" is always a valid answer; it simply selects the default and never stalls the interview.</li><li>One question, one decision. Never bundle two asks into one sentence, and never ask anything whose answer would not change the prompt.</li><li>Keep their words. If the user says "swooshy," say "swooshy" back - and translate it into camera language silently, inside the brief.</li><li>Expert detect: if the user speaks production language fluently (shot list, lens, deliverables, LUT, coverage) or works for an agency or production, drop plain mode, load <code>Reference section: pro-filmmaking-standards</code>, and run the professional intake instead.</li></ol>
+<h3 id="priority-question-pool">Priority Question Pool</h3>
+<p>Each plain question secretly decides a production parameter the user never has to know about. Skip every question the idea already answers. Keep the existing limit on unnecessary questioning: at most five questions in one batch.</p>
+<table><thead><tr><th>#</th><th>Ask (plain)</th><th>Secretly decides</th><th>Default if unsure</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Who or what is the star of this video - one person, pet, product, or place?</td><td>subject anchor</td><td>the most concrete noun in their idea</td></tr>
+<tr><td>2</td><td>What happens? What is different at the end compared to the start?</td><td>action beat, duration</td><td>one simple action with a visible ending</td></tr>
+<tr><td>3</td><td>Where does it happen, and what time of day?</td><td>scene, light source</td><td>the most natural place for the action, late warm daylight</td></tr>
+<tr><td>4</td><td>What should someone feel watching it - excited, calm, moved, amused, amazed, or tense?</td><td>camera, light, sound, pace</td><td>calm and warm</td></tr>
+<tr><td>5</td><td>Where will people watch it - phone apps like TikTok/Reels (tall screen), or YouTube/TV (wide screen)?</td><td>aspect ratio, pacing</td><td>tall 9:16</td></tr>
+<tr><td>6</td><td>Is this one complete clip, two or three connected clips, a longer scene that should be divided, or are you unsure?</td><td>standalone_clip vs sequence_project</td><td>unsure means plan the full story but finalize one clip at a time</td></tr>
+<tr><td>7</td><td>How must the complete story end?</td><td>final story outcome</td><td>a visible changed state</td></tr>
+<tr><td>8</td><td>Do you already have an accepted previous clip or final frame this must continue from?</td><td>continuation source gate</td><td>no source means do not invent continuation state</td></tr>
+<tr><td>9</td><td>Which details must never change across clips - face, wardrobe, product, place, direction, sound, or something else?</td><td>immutable continuity locks</td><td>subject identity and exact reference tags</td></tr>
+</tbody>
+</table>
+<p>When real material likely exists (a business, product, pet, person, or place the user owns), the reference question takes one of the five slots — swap out question 3, which defaults well: <code>Do you have photos, clips, or sound of the real [subject]? Real material keeps the video looking like yours.</code> The batch never exceeds five questions total. Map anything they provide to reference roles via <code>Reference section: reference-workflow</code>.</p>
+<p>For a sequence project, determine whether the request is the complete video or part of a longer story, how the complete story ends, target total duration, likely clip count, current clip job, references and their intended roles, active surface, audio needs, immutable continuity requirements, and any accepted source footage. Do not add these questions blindly when the answer is already clear.</p>
+<h3 id="feeling-to-film-translation">Feeling-to-Film Translation</h3>
+<p>Translate everyday answers into production language inside the brief - never out loud as a quiz.</p>
+<table><thead><tr><th>User says</th><th>Brief writes</th></tr></thead>
+<tbody>
+<tr><td>epic, cinematic, movie-like</td><td>wide establishing frame, one slow push-in, low warm sun, rising score</td></tr>
+<tr><td>cozy, warm, nice</td><td>close framing, soft window light, gentle motion, quiet room tone</td></tr>
+<tr><td>funny</td><td>locked camera, deadpan timing, one absurd visible beat, dry single SFX</td></tr>
+<tr><td>like an ad, professional, clean</td><td>controlled hero light on the subject, tidy background, one polished camera move</td></tr>
+<tr><td>sad, emotional, moving</td><td>stillness, a little distance, cool soft light, sparse sound</td></tr>
+<tr><td>creepy, tense</td><td>slow camera, shadow and doorways, off-screen sound, held silence</td></tr>
+<tr><td>cute</td><td>camera low at subject height, bright soft light, small bouncy motions</td></tr>
+<tr><td>dreamy</td><td>drifting camera, haze and glow, slow motion on a single beat</td></tr>
+</tbody>
+</table>
+<h3 id="direct-the-scene-don-t-decorate-it">Direct the Scene, Don't Decorate It</h3>
+<p>The feeling answer is not a style label to sprinkle on; it is the input to a directorial decision. Load <code>Reference section: directing-engine</code> and run the Director's Read silently on the idea: what is the scene doing (function and turn), whose experience are we in, who holds power, and what is felt but unsaid. From the genre, the chosen feeling, any reference look the user loves, and where it will be watched, set one directorial voice for the whole project and keep it. Then every scene gets a coherent setup - camera, lens, light, blocking, performance, and sound all serving one intention - rather than a generic "cinematic" look. Write the result into the brief in director language; never quiz the user about voice, lenses, or ratios.</p>
+<p>When the idea has more than one scene, give each scene its own read and setup but the same voice, and plan how the look should tighten toward the turning point so the finished story feels authored by one hand. Performance is written as one true visible gesture per beat, not as an emotion word.</p>
+<h3 id="propose-then-adjust">Propose, Then Adjust</h3>
+<p>After one round of answers - or zero rounds, if the idea is already rich - stop asking and show:</p>
+<ol><li>A mini-treatment: two or three plain sentences describing the finished video exactly as a viewer would see it. No production vocabulary.</li><li>The assumptions made, each with a one-word switch: <code>I assumed warm late-afternoon light - say "night" and I'll relight it.</code></li><li>The production brief beneath, in full director language.</li></ol>
+<p>Reacting to a draft is easier than answering questions: a non-expert says "yes, but slower" far more readily than they specify pacing. Treat their reaction as the second interview round.</p>
+<h3 id="process">Process</h3>
+<ol><li>Build a safe draft premise immediately from the user input.</li><li>Run the priority question pool in one batch, skipping every question the idea already answers.</li><li>Identify the genre path: product, lifestyle, drama, music video, landscape, commercial, animation, UGC, or experimental. With <code>Reference section: directing-engine</code>, derive one directorial voice from that path plus the chosen feeling, reference look, and surface, and run the Director's Read on each scene to fix its intention and coherent setup.</li><li>If the user is a filmmaker, agency, producer, editor, localization team, or client-review owner, load <code>Reference section: pro-filmmaking-standards</code> and collect deliverables, territory, aspect ratio, approval owner, rights, and post/delivery needs.</li><li>If the idea is a sequence project, load <code>Capability section: seedance-sequence</code> and output a full-story mini-treatment, final story outcome, sequence beat map, continuity bible, first clip contract, first clip prompt, provisional future intent cards, and Project State Capsule.</li><li>For standalone work, propose the mini-treatment with switchable assumptions, adjust on reaction, end with a concise creative brief, and route to <code>Capability section: seedance-prompt</code>, <code>Capability section: seedance-prompt-short</code>, or <code>Capability section: seedance-pipeline</code>.</li></ol>
+<h3 id="output-contract">Output Contract</h3>
+<p>Return: mini-treatment in plain language, assumptions with one-word switches, concept summary, production phase, reference asset request, the chosen directorial voice, each scene's intention and coherent setup (camera, light, blocking, performance, sound), core scene, mood, camera intent, sound intent, safety/rights notes, deliverables if known, and next prompt path.</p>
+<p>For a sequence project, return the sequence output contract from <code>Capability section: seedance-sequence</code>. For a standalone request, retain the concise existing workflow and do not over-plan.</p>
+<p>Do not ask a long questionnaire when the user already supplied enough information to write the prompt.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

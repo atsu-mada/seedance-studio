@@ -1,12 +1,61 @@
-# Changelog — seedance-20
+# Changelog — seedance-studio
 
 All notable changes to this project are documented here.
 
-Current active release: **6.1.0**. Older entries below are preserved as release history, not active version guidance.
+Current active release: **7.2.0**. Older entries below are preserved as release history, not active version guidance.
+
+## [7.2.0] — 2026-09-22
+
+### Changed
+
+- Migrated the consolidated knowledge surface from the large Markdown body into registered static UTF-8 HTML documents while keeping `SKILL.md` as the single entrypoint with the mandatory root gates.
+- Added the HTML knowledge index, operating-loop document, one-to-one capability documents, integrated references, six vocabulary documents, three native-language guides, and clearly labeled historical documents.
+- Updated validators to read the registered HTML documents, verify the knowledge map and real links, and retain the existing schemas, examples, evals, golden prompts, source registry, license, invocation policy, and generation fixtures.
+- Added source-bound production lessons and optional generation evidence fields, keeping legacy records compatible and separating provider completion, technical QC, perceptual review, and acceptance.
+- Kept this as a local skill version; it does not claim an upstream Seedance release.
 
 ## Unreleased
 
 _No unreleased changes._
+
+## [7.1.0] — 2026-09-04
+
+### Added
+
+- Added source-gated Seedance 2.5 guidance for the verified 30-second model capability, BytePlus's documented 4–30 second route, and Higgsfield's 30-second creator surface.
+- Added Leonardo.AI's provider-specific 5,000-character prompt limit without promoting it to a universal Seedance limit.
+- Added explicit correction of “Seedream 2.5” to Seedance 2.5 when the request concerns video generation.
+
+### Changed
+
+- Expanded the root skill description and model map from Seedance 2.0 to Seedance 2.x.
+- Added long-prompt allocation rules that spend extra characters on timeline, spatial continuity, reference roles, camera motivation, sound, and end state instead of padding or extra story beats.
+
+## [7.0.1] — 2026-07-12
+
+### Added
+
+- Added the Storyboard Reference Workflow: isolated `GridTileStyle` rough-board candidates, complete candidate provenance/authorization/risk recording, mandatory human batch review, and explicit batch approval before any promotion.
+- Added storyboard role isolation: approved storyboards control rough blocking, subject placement, and camera flow only; canonical identity and accepted continuity state override storyboard-derived content.
+- Added storyboard golden example and adversarial eval coverage for role isolation and no promotion before batch approval.
+
+### Changed
+
+- Updated active release metadata, README, validators, eval metadata, and benchmark fixtures to v7.0.1.
+
+## [7.0.0] — 2026-07-05
+
+### Breaking
+
+- Renamed the user-invocable skill to `seedance-studio`.
+- Consolidated the former root skill, 28 Seedance sub-skills, reference library, and native docs into a single `SKILL.md`.
+- Removed legacy standalone sub-skill entrypoints and compatibility aliases.
+- Removed `references/` and `docs/` after absorbing their active content into the single skill file and README.
+
+### Changed
+
+- Updated installer, agent metadata, README, validation scripts, and behavior contract checks for the single-skill layout.
+- Kept assets, examples, evals, scripts, schemas, tests, and data as validation and regression fixtures.
 
 ## [6.1.0] — 2026-06-22
 
@@ -34,7 +83,7 @@ _No unreleased changes._
 
 ### Added
 
-- Added full native-reader entry docs for Chinese, Japanese, and Korean: `docs/README.zh.md`, `docs/README.ja.md`, and `docs/README.ko.md`.
+- Added full native-reader entry docs for Chinese, Japanese, and Korean: `README native-language notes for Chinese`, `README native-language notes for Japanese`, and `README native-language notes for Korean`.
 - Added `seedance-examples-ja` and `seedance-examples-ko` so Japanese and Korean users have active example/rewrite skills, not only vocabulary translation.
 - Added CJK sequence/continuation, accepted-footage, textless-localization, and safety rewrite phrases to the active Chinese, Japanese, and Korean vocabulary references.
 - Added eval coverage for the CJK front page, Japanese examples, Korean examples, and localized CJK continuation behavior.
@@ -134,7 +183,7 @@ The minor bump marks the completion of the production arc built across the 5.4.6
 ### Added
 
 - Added the multilingual anti-slop layer: language-specific Slop Traps tables in all six vocabulary files (en, zh, ja, ko, es, ru), each converting that community's own empty-quality words into the physical elements that produce the feeling, grounded in community-documented practice.
-- Added `skills/seedance-vocab-en`: English precision vocabulary with a 51-row function table, de-slop pass, and filter-aware homonym repairs (clarity-only; genuinely risky content routes to the filter boundary).
+- Added `SKILL.md` capability section `seedance-vocab-en`: English precision vocabulary with a 51-row function table, de-slop pass, and filter-aware homonym repairs (clarity-only; genuinely risky content routes to the filter boundary).
 - Added the six-class slop taxonomy to `anti-slop-lexicon.md` and `seedance-antislop`: empty evaluators, borrowed image-model tokens, tag salad, negation slop, adjective stacking, and cross-language feel-suffix words, with tag-salad and negation repair sections.
 - Added eval cases for English slop and filter vocabulary and Chinese feel-word decomposition (58 cases total).
 - Added a fal source row to the source registry, fal model-page URLs to the api-status recheck list, and verified r2v request fields and tier-specific resolution (2026-06-11).
@@ -178,7 +227,7 @@ The minor bump marks the completion of the production arc built across the 5.4.6
 ### Changed
 
 - Updated the README hero, badges, design standard, frontend redesign notes, and frontend design-system rules for text-rich infographic assets.
-- Updated install guidance so the repo can be installed into `$CODEX_HOME/skills/seedance-20` or `~/.codex/skills/seedance-20` for direct Codex use.
+- Updated install guidance so the repo could be installed into Codex skill directories for direct Codex use.
 - Strengthened `scripts/design_audit.py` to require the visual gallery, validate PNG headers, enforce minimum dimensions, and fail stale visual guidance.
 - Bumped active skill metadata, validator expectations, and eval metadata to v5.4.5.
 

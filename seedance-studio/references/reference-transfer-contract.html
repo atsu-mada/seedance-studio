@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/reference-transfer-contract.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-reference-transfer-contract" data-status="active">
+<h1 id="reference-section-references-reference-transfer-contract-md-title">Reference section: references/reference-transfer-contract.md</h1>
+<h3 id="reference-transfer-contract">Reference Transfer Contract</h3>
+<p>Use this reference when images, videos, audio, previous clips, final frames, or interface tags appear in a sequence.</p>
+<h4 id="exact-tag-rule">Exact Tag Rule</h4>
+<p>Preserve every user-supplied reference tag exactly. Never invent, normalize, translate, reformat, renumber, correct spacing, or change case in tags such as <code>@Image1</code>, <code>@Image 1</code>, <code>[Image1]</code>, <code>[Video 1]</code>, or interface-provided equivalents.</p>
+<h4 id="role-separation">Role Separation</h4>
+<p>Assign each reference one primary role:</p>
+<ul><li>image: identity, product, pose, costume, environment, first frame, or last frame;</li><li>video: source clip, motion, camera, timing, blocking, or continuity source;</li><li>audio: tempo, ambience, music phase, rhythm, delivery tone, or active dialogue source;</li><li>final frame: observed state or target endpoint.</li></ul>
+<p>State what transfers and what must not transfer. R2V and continuation work fail when identity, motion, camera, environment, and audio roles bleed together.</p>
+<h4 id="continuity-source-versus-motion-reference">Continuity Source Versus Motion Reference</h4>
+<p>A canonical identity reference controls immutable identity. An accepted previous clip or final frame controls transient opening state. A donor video can control motion or camera only when explicitly allowed. Do not let a motion reference overwrite character identity, wardrobe, product geometry, or accepted state.</p>
+<h4 id="multi-subject-selector">Multi-Subject Selector</h4>
+<p>When a reference contains multiple subjects, identify the intended subject by position, tag, role, or visible feature. Do not assume the central or largest subject is correct when the user has not said so.</p>
+<h4 id="transfer-and-ignore-clause">Transfer And Ignore Clause</h4>
+<p>Every role-bound reference should be expressed as:</p>
+<p><code>[ReferenceTag] controls [role] only; ignore [identity/environment/logo/audio/camera/motion] from that reference.</code></p>
+<p>Use only owned, licensed, public-domain, stock, self-recorded, or clearly authorized references for protected identity, voice, brand, logo, or performance transfer.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

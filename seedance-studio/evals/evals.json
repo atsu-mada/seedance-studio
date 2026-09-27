@@ -1,6 +1,6 @@
 {
-  "version": "6.1.0",
-  "updated": "2026-06-22",
+  "version": "7.2.0",
+  "updated": "2026-09-22",
   "cases": [
     {
       "id": "vague_idea_interview",
@@ -363,7 +363,7 @@
       "prompt": "Audit the front page for native Chinese, Japanese, and Korean readers.",
       "expected_output": "README links to full zh/ja/ko guides, active CJK vocab skills, and active Japanese/Korean/Chinese example skills.",
       "assertions": [
-        "front page links docs/README.zh.md docs/README.ja.md docs/README.ko.md",
+        "front page links README native-language notes for Chinese README native-language notes for Japanese README native-language notes for Korean",
         "front page exposes seedance-examples-ja and seedance-examples-ko",
         "does not rely on migrated legacy files for native reader support"
       ],
@@ -920,7 +920,7 @@
       ],
       "failure_mode": "Seedance syntax emitted for a non-Seedance model",
       "skills_expected_to_activate": [
-        "seedance-20"
+        "seedance-studio"
       ]
     },
     {
@@ -2536,6 +2536,74 @@
         "seedance-prompt",
         "seedance-camera",
         "seedance-lighting"
+      ]
+    },
+    {
+      "id": "storyboard_role_isolation",
+      "prompt": "Use an approved rough storyboard whose panels show a named character in a dramatic costume, neon lighting, dialogue balloons, and arrows. Keep the canonical character and accepted continuity state.",
+      "expected_output": "A role-separated Seedance send where the storyboard controls only rough blocking, subject placement, and camera flow.",
+      "assertions": [
+        "includes the exact storyboard sending phrase",
+        "canonical identity and accepted continuity state override storyboard",
+        "does not transfer storyboard identity costume brand dialogue audio lighting environment detail or style",
+        "does not render source-panel numbers or transition arrows in generated video"
+      ],
+      "failure_mode": "storyboard role bleed",
+      "skills_expected_to_activate": [
+        "seedance-prompt",
+        "seedance-characters",
+        "seedance-camera"
+      ]
+    },
+    {
+      "id": "storyboard_candidate_batch_approval_no_promotion",
+      "prompt": "Create a storyboard candidate batch; one candidate lacks authorization, another is pending approval, and another is rejected. Send the strongest candidate to Seedance now.",
+      "expected_output": "An isolated candidate record and a stop before human approval; no storyboard candidate is promoted.",
+      "assertions": [
+        "records candidate ID batch ID inputs prompt version dimensions hash provenance authorization risk reviewer selection and approval status",
+        "uses only isolated pending_approval approved or rejected candidate states",
+        "stops before human approval when required provenance or authorization is missing",
+        "requires explicit batch approval with approver timestamp and selected candidate IDs",
+        "pending and rejected candidates do not enter active references canonical state final prompts or parent sources",
+        "failed regeneration chooses exactly one allowed reason and preserves active assets"
+      ],
+      "failure_mode": "candidate promotion before full-batch approval",
+      "skills_expected_to_activate": [
+        "seedance-prompt",
+        "seedance-sequence"
+      ]
+    },
+    {
+      "id": "seedream_2_5_video_name_correction",
+      "prompt": "Seedream 2.5 makes 30-second videos. Write a 5,000-character Higgsfield prompt.",
+      "expected_output": "Corrects the video model name to Seedance 2.5 and separates the verified 30-second Higgsfield duration from an unverified Higgsfield prompt limit.",
+      "assertions": [
+        "normalizes video work from Seedream 2.5 to Seedance 2.5",
+        "states that Higgsfield documents up to 30 seconds",
+        "does not call 5000 characters a universal model limit",
+        "does not call 5000 characters a verified Higgsfield limit without active-surface evidence",
+        "treats requested length as an authoring target when the user explicitly asks for it"
+      ],
+      "failure_mode": "model-name confusion or surface-limit overclaim",
+      "skills_expected_to_activate": [
+        "seedance-prompt",
+        "seedance-sequence"
+      ]
+    },
+    {
+      "id": "leonardo_seedance_2_5_prompt_budget",
+      "prompt": "What are the duration and prompt limits for Seedance 2.5 on Leonardo.AI?",
+      "expected_output": "Provides the provider-specific prompt contract while keeping model and surface claims separate.",
+      "assertions": [
+        "identifies Leonardo.AI as the active surface",
+        "states a maximum 5000-character prompt for the documented Leonardo.AI route",
+        "does not transfer that limit to Higgsfield BytePlus or every Seedance host",
+        "recommends a small margin unless an exact boundary test is requested"
+      ],
+      "failure_mode": "provider-specific prompt budget generalized to the model family",
+      "skills_expected_to_activate": [
+        "seedance-pipeline",
+        "seedance-prompt"
       ]
     },
     {

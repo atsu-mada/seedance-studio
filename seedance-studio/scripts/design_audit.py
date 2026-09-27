@@ -6,6 +6,8 @@ import re
 import struct
 from pathlib import Path
 
+from knowledge_html import visible_text
+
 
 GALLERY_ASSETS = [
     "assets/hero-command-center.png",
@@ -83,32 +85,14 @@ def main() -> int:
             "assets/hero-global-filmmaker-mode.png",
             "assets/skill-os-infographic.png",
             "assets/skill-map-cinematic.png",
-            "## What This Skill Does",
-            "## Professional Filmmaker Scope",
-            "## Operating System At A Glance",
-            "## Visual Gallery",
-            "### Hero Shots",
-            "### Text-Rich Infographics",
-            "CDN video delivery map",
-            "What this skill can do",
-            "Professional QC stack",
-            "## Start Here",
-            "## Native Language Start",
-            "docs/README.zh.md",
-            "docs/README.ja.md",
-            "docs/README.ko.md",
-            "seedance-examples-ja",
-            "seedance-examples-ko",
-            "## Skill Map",
-            "api-workflow.md",
-            "pro-filmmaking-standards.md",
-            "delivery-qc.md",
-            "examples-by-mode.md",
-            "multilingual-community-examples.md",
+            "# Seedance Studio",
+            "## v7.0.0 Breaking Change",
+            "v7.2.0",
+            "## Capability Map",
+            "## Native Language Notes",
+            "## Reference Assets",
+            "## Longer Stories",
             "## Validation",
-            "## Design Standard",
-            "<picture>",
-            "prefers-color-scheme",
             "assets/hero-dark.svg",
             "assets/hero-light.svg",
             "assets/skill-map.svg",
@@ -122,21 +106,13 @@ def main() -> int:
             if rel not in text:
                 errors.append(f"README.md missing gallery asset `{rel}`")
 
-    redesign_doc = root / "docs" / "frontend-redesign.md"
-    if not redesign_doc.exists():
-        errors.append("missing docs/frontend-redesign.md")
+    design_reference = root / "references" / "frontend-design-system.html"
+    if not design_reference.exists():
+        errors.append("registered frontend-design-system.html missing")
     else:
-        doc_text = redesign_doc.read_text(encoding="utf-8").lower()
-        if "text-rich infographics" not in doc_text or "infographic-cdn-delivery-map.png" not in doc_text:
-            errors.append("docs/frontend-redesign.md missing text-rich gallery guidance")
-
-    design_system = root / "references" / "frontend-design-system.md"
-    if not design_system.exists():
-        errors.append("missing references/frontend-design-system.md")
-    else:
-        ds_text = design_system.read_text(encoding="utf-8").lower()
-        if "text-rich infographics" not in ds_text or "reject garbled" not in ds_text:
-            errors.append("references/frontend-design-system.md missing text-rich infographic quality rules")
+        design_text = visible_text(design_reference).lower()
+        if "text-rich infographics" not in design_text or "reject garbled" not in design_text:
+            errors.append("frontend-design-system.html missing text-rich infographic quality rules")
 
     for rel in CORE_BITMAP_ASSETS:
         check_png_asset(root, rel, "README visual", errors)

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/community-source-methodology.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-community-source-methodology" data-status="active">
+<h1 id="reference-section-references-community-source-methodology-md-title">Reference section: references/community-source-methodology.md</h1>
+<h3 id="community-source-methodology">Community Source Methodology</h3>
+<p>last_verified: 2026-05-30</p>
+<p>Use this when mining prompt corpora, forums, Reddit posts, Chinese guides, Russian guides, or wrapper documentation.</p>
+<h4 id="allowed-extraction">Allowed Extraction</h4>
+<ul><li>Prompt structure.</li><li>Timing syntax.</li><li>Camera, lighting, motion, audio, VFX, and constraint vocabulary.</li><li>Reference-role language.</li><li>Failure modes and safe repairs.</li><li>Source metadata: URL, author handle, language, date, and surface.</li></ul>
+<h4 id="disallowed-extraction">Disallowed Extraction</h4>
+<ul><li>Protected characters, franchises, exact scenes, studios, or songs as reusable examples.</li><li>Celebrity, public-figure, private-person, or voice imitation prompts.</li><li>Filter bypass or evasion instructions.</li><li>Wrapper pricing as general Seedance pricing.</li><li>Private-channel claims that cannot be rechecked.</li></ul>
+<h4 id="corpus-labels">Corpus Labels</h4>
+<table><thead><tr><th>Label</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td><code>safe-example-candidate</code></td><td>Can be rewritten into active docs with minor cleanup.</td></tr>
+<tr><td><code>safe-structure-only</code></td><td>Mine structure/vocab only; do not copy prompt content.</td></tr>
+<tr><td><code>ip-risk</code></td><td>Contains protected character, franchise, studio, exact scene, or song.</td></tr>
+<tr><td><code>real-person-risk</code></td><td>Contains real face, public figure, celebrity, or voice imitation risk.</td></tr>
+<tr><td><code>brand-risk</code></td><td>Contains brand/logo/product identity requiring authorization.</td></tr>
+<tr><td><code>violence-risk</code></td><td>Needs non-graphic staged-action rewrite or exclusion.</td></tr>
+<tr><td><code>low-quality</code></td><td>Too generic, incoherent, or slop-heavy to mine.</td></tr>
+</tbody>
+</table>
+<h4 id="transformation-rule">Transformation Rule</h4>
+<p>Raw community prompts should become original safe examples. Replace protected names with archetypes, named brands with user-owned/product placeholders, and real-person references with authorization-gated language.</p>
+<h4 id="sequence-example-rule">Sequence Example Rule</h4>
+<p>Do not copy commercial creators' continuation prompts as golden examples. Extract reusable structure only: actual ending, completed action, current clip job, reserved future action, reference-transfer boundary, and endpoint. Rewrite into original sequence examples with synthetic project IDs and clearly synthetic fixtures.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

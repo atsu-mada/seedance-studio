@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/api-workflow.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-api-workflow" data-status="active">
+<h1 id="reference-section-references-api-workflow-md-title">Reference section: references/api-workflow.md</h1>
+<h3 id="api-workflow">API Workflow</h3>
+<p>last_verified: 2026-06-20</p>
+<p>Use this reference for Seedance 2.0 operational planning on Volcengine, BytePlus, Runway, fal, provider/router surfaces, or wrappers. It is not a static API contract. Always recheck the active provider docs or console before implementation.</p>
+<h4 id="surface-gate">Surface Gate</h4>
+<table><thead><tr><th>Surface</th><th>Use when</th><th>Must recheck</th></tr></thead>
+<tbody>
+<tr><td>Volcengine Ark</td><td>China-facing official Ark workflows, model IDs, task lifecycle, first/last-frame roles, <code>return_last_frame</code>, web-search tools, and virtual portrait assets.</td><td>model ID, region, entitlement, schema, pricing, duration, resolution, face/reference policy</td></tr>
+<tr><td>BytePlus ModelArk</td><td>International BytePlus docs or console workflows.</td><td>JS-rendered pricing/model pages, account access, region, exact model ID, upload/file rules</td></tr>
+<tr><td>Runway</td><td>Runway web/API/MCP workflow with <code>seedance2</code>, hosted uploads, and Runway plan/region constraints.</td><td>duration, ratios, plan, region, SDK field support, audio-reference combination rules</td></tr>
+<tr><td>Provider/router APIs</td><td>EvoLink, OpenRouter, Kie.ai, PiAPI, LaoZhang, Runware, ModelsLab, AI/ML API, MuAPI, SeeGen, Segmind, or similar surfaces.</td><td>base URL, model ID, task endpoint, polling endpoint, callback/webhook support, billing unit, file hosting, reference schema, face policy, output URL lifetime, rights terms</td></tr>
+<tr><td>China-facing official surfaces</td><td>ByteDance Seed, Volcengine Ark, BytePlus ModelArk, Doubao, Jimeng/Jianying, CapCut/Jianying.</td><td>language/region, account tier, enterprise or individual access, identity verification, portrait/virtual-avatar flow, console entitlement, exact docs date</td></tr>
+<tr><td>Wrapper APIs</td><td>Fast prototyping through a third-party provider.</td><td>whether names, prices, moderation, duration, or face support are wrapper-specific</td></tr>
+</tbody>
+</table>
+<h4 id="async-task-lifecycle">Async Task Lifecycle</h4>
+<ol><li>Create the task with source-dated model ID, prompt, duration, ratio/size, resolution, and reference files.</li><li>Store task ID, provider, request date, model ID, and prompt version.</li><li>Poll or use SDK wait helpers until completed or failed.</li><li>Retrieve output URL(s), optional last frame, logs/errors, and moderation/failure reason when provided.</li><li>Save output plus metadata for repeatability.</li><li>Cancel, delete, or list tasks only through the active provider's current docs.</li></ol>
+<h4 id="request-checklist">Request Checklist</h4>
+<ul><li>Prompt says one visible beat, one camera move, physical light, sound intent, and constraints.</li><li>Mode is explicit: T2V, I2V, V2V, R2V, FLF2V, edit, or extend.</li><li>Reference roles are explicit and legal: first frame, last frame, identity, product, motion, camera, timing, audio, or style.</li><li>Audio references are paired with a text prompt and a valid image/video reference when the surface requires that combination.</li><li>First/last-frame requests do not silently mix incompatible video/audio reference modes unless the active docs allow it.</li><li>Real-person, face, portrait, and voice inputs have authorization and surface support.</li><li>Pricing, duration, resolution, region, quotas, and model IDs have a verification date.</li></ul>
+<h4 id="provider-notes">Provider Notes</h4>
+<p>Volcengine docs are the current source for <code>doubao-seedance-2-0-260128</code>, <code>doubao-seedance-2-0-fast-260128</code>, <code>doubao-seedance-2-0-mini-260615</code>, first/last-frame roles, and Ark task flow. The Mini ID was still trial-gated through June 22, 2026 in the official notice checked on June 20. Quote prices only with date and caveat.</p>
+<p>BytePlus docs are the current source for <code>dreamina-seedance-2-0-mini-260615</code> and the <code>dreamina-seedance-2.0-mini</code> pricing-row label. Treat those as BytePlus-specific; recheck Model Playground/API access, duration, resolution, and price before implementation.</p>
+<p>Runway docs are the current source for Runway's <code>seedance2</code> API surface, <code>runway://</code> uploads, duration, reference-count rules, and SDK caveats. Do not copy Runway field names into Volcengine examples or vice versa.</p>
+<p>Provider/router surfaces are integration conveniences, not source-of-truth model specs. As of 2026-06-20, the repo tracks EvoLink, OpenRouter, Kie.ai, PiAPI, LaoZhang, Runware, ModelsLab, AI/ML API, MuAPI, SeeGen, and Segmind as public pages or docs that mention Seedance 2.0 access. Use the active surface's own docs for model IDs and fields, and never merge schemas across providers.</p>
+<p>Chinese-language search results need classification before use. Official ByteDance/Volcengine/BytePlus/Doubao/Jimeng/Jianying pages can support China-facing surface guidance. Hosted workflows, Chinese blogs, pricing comparisons, and business-partner news can provide context, but they are not public API contracts unless they link to provider-owned API docs.</p>
+<p>BytePlus pages can be JavaScript-rendered. Do not infer live pricing or model IDs from incomplete static fetches.</p>
+<h4 id="error-and-risk-playbook">Error and Risk Playbook</h4>
+<table><thead><tr><th>Symptom</th><th>Likely cause</th><th>First repair</th></tr></thead>
+<tbody>
+<tr><td>403 or unavailable model</td><td>region, plan, entitlement, vendor licensing, or provider gate</td><td>check surface-specific access docs and account console</td></tr>
+<tr><td>audio-only request fails</td><td>active surface requires image/video plus prompt with audio</td><td>add valid visual reference and state audio role</td></tr>
+<tr><td>first/last frame rejected</td><td>incompatible mode mix or wrong role fields</td><td>use provider's first/last-frame field names and remove video/audio refs if required</td></tr>
+<tr><td>face/portrait upload blocked</td><td>real-person policy, verification, or asset-library requirement</td><td>use authorized virtual portrait path or original character rewrite</td></tr>
+<tr><td>output drifts after extension</td><td>weak last-frame continuity or too many changed variables</td><td>use returned last frame as next first frame and change one variable</td></tr>
+<tr><td>price estimate wrong</td><td>stale pricing page or wrapper-specific billing</td><td>recheck provider pricing page/console before quoting</td></tr>
+</tbody>
+</table>
+<h4 id="production-readiness">Production Readiness</h4>
+<p>Keep a run ledger with: provider, model ID, prompt, mode, references, duration, resolution, generated audio flag, task ID, output URL, last frame, verification date, and failure notes. This makes prompt repair possible and prevents stale source claims from leaking into user-facing guidance.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

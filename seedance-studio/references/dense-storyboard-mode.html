@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/dense-storyboard-mode.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-dense-storyboard-mode" data-status="active">
+<h1 id="reference-section-references-dense-storyboard-mode-md-title">Reference section: references/dense-storyboard-mode.md</h1>
+<h3 id="dense-storyboard-mode">Dense Storyboard Mode</h3>
+<p>Use this reference when a request contains many panels, storyboard beats, animation boards, or multi-shot descriptions.</p>
+<h4 id="classifier">Classifier</h4>
+<p>Choose <code>dense_multishot</code> only when the user explicitly wants cuts inside one generation and the active surface/profile supports that structure. Choose <code>phased_single_take</code> when the action should remain continuous. Do not combine "single continuous take" with hard shot labels.</p>
+<h4 id="dense-multishot-rules">Dense Multishot Rules</h4>
+<ul><li>Use shot labels.</li><li>Give each shot one action and one endpoint.</li><li>Keep continuity locks visible across shot boundaries.</li><li>Do not overload a short generation with too many locations, large actions, or character changes.</li><li>Later generation prompts remain provisional until the previous accepted clip is reviewed.</li></ul>
+<h4 id="continuous-take-rules">Continuous Take Rules</h4>
+<p>Use Beginning / Then / Finally. Do not use shot labels or hard cuts. Describe phases of one camera path, one geography, and one physical action chain.</p>
+<h4 id="2d-animation">2D Animation</h4>
+<p>For 2D, anime, or cel work, use animation-layout vocabulary: layers, parallax, holds, smear frames, impact frames, cel shadow, line boil, background pan, and compositing. Avoid photographic sensor, lens, bokeh, ISO, and shallow-focus language unless the user explicitly wants a hybrid simulated-camera style.</p>
+<h4 id="endpoint-discipline">Endpoint Discipline</h4>
+<p>Every dense storyboard beat must end in a completed visual state. If the endpoint is not visible, the next clip cannot inherit it safely.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

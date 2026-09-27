@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>事例：音声一致と口形同期は別の確認</title><link rel="stylesheet" href="../../assets/knowledge-base.css"></head>
+<body><nav><a href="../index.html">Seedance Studio knowledge index</a></nav><main id="cases-lipsync-review"><h1 id="title">事例：音声一致と口形同期は別の確認</h1>
+<p>過去の短い会話サンプルでは、生成完了、映像・音声ストリーム、実尺、元音声との音の一致、顔の安定と口形の変化が記録された。一方、実時間再生による厳密な口形同期の最終確認は残っていた。</p>
+<h2 id="separation">証拠を分ける</h2><table><thead><tr><th>確認</th><th>分かること</th><th>分からないこと</th></tr></thead><tbody><tr><td>元素材のSHA一致</td><td>同じ入力ファイルを使ったか</td><td>出力音声や口の同期</td></tr><tr><td>出力音声の比較</td><td>台詞・音が保持されたか</td><td>見える口との時間一致</td></tr><tr><td>静止画での口形変化</td><td>顔や口の見え方</td><td>時間に沿った自然な発話</td></tr><tr><td>実時間再生</td><td>可視の発話区間での同期、遅れ、声と話者の対応</td><td>確認していない区間の合格</td></tr></tbody></table>
+<h2 id="review">知覚レビュー</h2><p>参照タグ、話者、台詞、口が見える区間を対応付ける。発話の入りと終わり、休止、音と口のずれを実時間で確認し、遮蔽や小さすぎる口は評価不能として扱う。必要なら該当区間を繰り返すが、評価不能をpassへ変えない。</p>
+<p>ナレーションや画面外の声を、画面内人物の口へ無理に割り当てない。technical_qc=passでも、知覚的同期が未確認ならperceptual_review=pending、判断が割れるならuncertainを残す。</p>
+<p><a href="../audio-guide.html">音声ガイド</a> · <a href="../generation-handoff.html">生成状態の引継ぎ</a></p>
+</main></body></html>

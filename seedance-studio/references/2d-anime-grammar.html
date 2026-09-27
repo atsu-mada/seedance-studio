@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/2d-anime-grammar.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-2d-anime-grammar" data-status="active">
+<h1 id="reference-section-references-2d-anime-grammar-md-title">Reference section: references/2d-anime-grammar.md</h1>
+<h3 id="2d-anime-grammar-direct-the-medium-not-a-camera-rig">2D / Anime Grammar — direct the medium, not a camera rig</h3>
+<p><em>Seedance 2.0 renders stylized 2D and anime motion well, but live-action grammar degrades it: lens, depth-of-field, and sensor vocabulary pulls outputs toward photorealism or a fake tilt-shift look. Direct 2D work in animation-production language instead. Labels: [field] = practitioner-reported · [heuristic] = default to test. Craft guidance compiled 2026-06-11; contains no platform-availability claims.</em></p>
+<h4 id="core-rule-field">Core rule [field]</h4>
+<p>Name the medium first and keep every sentence inside the animation process: "hand-drawn 2D animation, cel-shaded characters over a painted background." Never use lens, bokeh, depth-of-field, focal-length, or camera-body vocabulary in a 2D prompt — it summons photoreal rendering.</p>
+<h4 id="layer-grammar-field">Layer grammar [field]</h4>
+<p>2D scenes read as stacked artwork layers, and the model responds to layer language:</p>
+<ul><li><strong>Cel over painted background:</strong> crisp cel-shaded subjects over a soft gouache or watercolor painted background.</li><li><strong>Background scroll / multiplane depth:</strong> "the painted background scrolls past" or "foreground silhouettes slide faster than the distant skyline" for parallax.</li><li><strong>Held background, animated subject:</strong> declare what stays still — held frames are a feature of the medium, not a failure.</li></ul>
+<h4 id="motion-grammar-field">Motion grammar [field]</h4>
+<ul><li><strong>Burst animation (sakuga) vs held frames:</strong> alternate high-effort fully animated bursts with held poses: "a burst of fluid full animation as she turns, then a held frame on her expression."</li><li><strong>Timing:</strong> "animated on twos" for classic cel cadence; "on ones" only for the showcase move. [heuristic]</li><li><strong>Impact frames:</strong> "a single high-contrast impact frame on the hit."</li><li><strong>Speed lines and smears:</strong> "speed lines streak the background during the dash," "her arm smears across the swing."</li><li><strong>Follow-through:</strong> hair, cloth, and coat tails keep settling after the body stops.</li></ul>
+<h4 id="camera-in-2d-field">Camera in 2D [field]</h4>
+<p>The "camera" is a rostrum over artwork: pan across the painted background, slow push-in on a held face, vertical tilt down the tower artwork. One motivated move per shot still applies. Avoid dolly, handheld shake, and lens-breathing realism wording.</p>
+<h4 id="light-and-color-field">Light and color [field]</h4>
+<p>Light is drawn, not rendered: "hard two-tone cel shadow," "rim light as a clean shape along the jaw," "specular drawn as a white wedge in the eye." Name palette and finish: "limited palette, warm paper texture," "flat color with painted light bloom."</p>
+<h4 id="sound-for-2d-heuristic">Sound for 2D [heuristic]</h4>
+<p>Stylized sound reads better than realistic foley: a whoosh on the smear, a sharp sting on the impact frame, room tone dropping out on the held frame.</p>
+<h4 id="style-safety-field">Style safety [field]</h4>
+<p>Describe technique, era, and palette — never a studio, franchise, or living artist. "1990s hand-painted TV-anime look with grainy film texture" is safe grammar; named-studio or franchise style requests route through <code>Capability section: seedance-copyright</code> and <code>Capability section: seedance-style</code>.</p>
+<h4 id="failure-fix-field">Failure → fix [field]</h4>
+<table><thead><tr><th>Symptom</th><th>Fix</th></tr></thead>
+<tbody>
+<tr><td>Output drifts photoreal or 3D-CG</td><td>remove lens and depth-of-field words; lead with "hand-drawn 2D cel animation"; name the painted background</td></tr>
+<tr><td>Motion feels floaty or rotoscoped</td><td>ask for snappy bursts "on twos," held frames between beats, smears on fast arcs</td></tr>
+<tr><td>Faces melt during fast action</td><td>put the speed into lines, smears, and background scroll instead of facial detail; cut to a held impact frame</td></tr>
+<tr><td>Style flickers between shots</td><td>repeat the exact medium line in every shot of a multi-shot prompt; keep one palette phrase constant</td></tr>
+</tbody>
+</table>
+<h4 id="sequence-boundary-heuristic">Sequence Boundary [heuristic]</h4>
+<p>For connected 2D clips, preserve character sheets, palette, line weight, layer roles, screen direction, and open motion. Use observed final layout from the accepted clip as the next opening layout. Do not switch to photographic lens or sensor language when writing continuation prompts.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

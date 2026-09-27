@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — seedance-recipes</title>
+<link rel="stylesheet" href="../../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="../index.html">Seedance Studio knowledge index</a></nav>
+<main id="capability-seedance-recipes" data-status="active">
+<h1 id="seedance-recipes-title">seedance-recipes</h1>
+<p>When sequence state is present, read the sequence state, continuity locks, and reserved beats before drafting or repairing this section.</p>
+<p>Use recipes as starting patterns, not rigid prompt templates. Pick the recipe that matches the user's outcome, then customize subject, action, camera, lighting, audio, and constraints. Recipes should preserve the one-beat discipline of a short clip.</p>
+<p>Load <code>Reference section: genre-guides</code> for genre patterns, <code>Reference section: examples-by-mode</code> when the user needs copy-ready examples, <code>Reference section: shot-list-continuity</code> for professional multi-shot sequences or commercials, and <code>Reference section: multilingual-community-examples</code> when the recipe should reflect Chinese/Russian/Japanese/Korean/Spanish community-style structures.</p>
+<h3 id="intent">Intent</h3>
+<p>A recipe is a head start, never a mold. The user wants the confidence of a proven shape with their own story inside it. Bend the recipe to the story every time; a user who feels templated has been failed even if the output is competent.</p>
+<h3 id="recipe-families">Recipe Families</h3>
+<table><thead><tr><th>Family</th><th>Best use</th><th>Core pattern</th></tr></thead>
+<tbody>
+<tr><td>Product</td><td>Ads, ecommerce, hero shots, material reveals.</td><td><code>product anchor + one material change + controlled camera + logo preservation</code></td></tr>
+<tr><td>Lifestyle</td><td>Human use, food, travel, social clips.</td><td><code>simple action + lived environment + handheld or natural light + ambient sound</code></td></tr>
+<tr><td>Drama</td><td>Emotion, dialogue, short narrative beats.</td><td><code>character tag + gesture + motivated camera + silence or sparse sound</code></td></tr>
+<tr><td>Music video</td><td>Beat sync, dance, stylized edits.</td><td><code>rhythm reference + visible beat changes + light pulses + clear character blocking</code></td></tr>
+<tr><td>Landscape</td><td>Establishing shots, nature, atmosphere.</td><td><code>slow camera + weather motion + layered depth + natural sound</code></td></tr>
+<tr><td>Commercial</td><td>Brand-safe polish and function.</td><td><code>problem/use/result beat + precise product constraint + clean light</code></td></tr>
+<tr><td>Animation</td><td>Original characters and stylized motion.</td><td><code>medium + shape language + palette + elastic or weighted motion</code></td></tr>
+<tr><td>VFX</td><td>Transformations, particles, weather, energy.</td><td><code>source + material behavior + interaction + dissipation endpoint</code></td></tr>
+<tr><td>First/last frame</td><td>In-between transitions, product state changes, character pose targets.</td><td><code>first frame + last frame + continuous transition + identity locks</code></td></tr>
+<tr><td>Commercial campaign</td><td>6/10/15/30s variants, vertical/social cutdowns, textless/localized masters.</td><td><code>hook + product proof + end state + cutdown matrix + delivery notes</code></td></tr>
+<tr><td>Short drama (短剧)</td><td>Fast-cut vertical mini-drama beats: setup, reversal, cliffhanger.</td><td><code>two or three labeled shots + one emotional reversal + held reaction close + cut on the sting</code></td></tr>
+<tr><td>Talking head (口播)</td><td>Presenter, explainer, livestream-style pitch to camera.</td><td><code>locked medium close-up + short quoted lines + minimal head motion + caption-safe framing + room tone</code></td></tr>
+<tr><td>Home / space tour</td><td>Walkthrough of a room, venue, or property.</td><td><code>single continuous take + steady forward path + light changes per zone + ambient sound only</code></td></tr>
+</tbody>
+</table>
+<h3 id="prompt-skeletons">Prompt Skeletons</h3>
+<p><strong>Product I2V:</strong> <code>[Image1] is the product reference; preserve logo, label, shape, and materials exactly. [One material or light change]. Camera: [single move]. Lighting: [physical source]. Sound: [ambient/SFX].</code></p>
+<p><strong>Drama T2V:</strong> <code>Character A [visible emotional action] in [specific setting]. Camera: [motivated framing]. Lighting: [motivated source]. Sound: [ambient or short dialogue]. End state: [changed expression/action].</code></p>
+<p><strong>Reference Motion:</strong> <code>[Video1] provides only [camera/action/timing] reference; do not transfer identity, costume, logo, or environment. New subject: [authorized/original subject]. [Action and endpoint].</code></p>
+<p><strong>First/Last Frame:</strong> <code>[Image1] is the first frame. [Image2] is the last frame. Preserve [identity/product/scene anchors]. Generate a continuous transition from [start state] to [end state]. Camera: [locked or one controlled move]. Sound: [ambient/SFX].</code></p>
+<p><strong>Animation:</strong> <code>Original [character archetype] [action] in [environment]. Style: [medium, line quality, texture, palette]. Motion: [rhythm]. Camera and sound: [simple support].</code></p>
+<h3 id="selection-rule">Selection Rule</h3>
+<p>If a user gives many goals, choose the recipe that protects the most fragile requirement. Product identity beats camera spectacle; lip-sync beats large head motion; character consistency beats complex choreography; first/last-frame target accuracy beats extra style changes; safety and authorization beat style mimicry.</p>
+<h3 id="sequence-state">Sequence State</h3>
+<p>When sequence state is present, recipes must inherit the story spine, current clip scope, continuity locks, exact reference tags, completed beats, and reserved future beats. A recipe can propose a clip map, but it must finalize only the current unresolved prompt and leave later prompts provisional until accepted footage is reviewed.</p>
+<h3 id="output-contract">Output Contract</h3>
+<p>Return one selected recipe, why it fits, the customized prompt skeleton, compact final prompt, and campaign/delivery notes when relevant.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

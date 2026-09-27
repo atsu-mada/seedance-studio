@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/prompt-compiler.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-prompt-compiler" data-status="active">
+<h1 id="reference-section-references-prompt-compiler-md-title">Reference section: references/prompt-compiler.md</h1>
+<h3 id="prompt-compiler">Prompt Compiler</h3>
+<p>The compiler turns internal project state into one natural-language Seedance prompt for the current clip only. JSON or YAML can organize planning, but the final prompt sent to Seedance stays readable prose unless the user explicitly asks for structured output.</p>
+<h4 id="inputs">Inputs</h4>
+<ul><li>project state;</li><li>current clip contract;</li><li>surface prompt profile;</li><li>reference transfer contract;</li><li>observed source state for continuations;</li><li>completed and reserved beats;</li><li>continuity locks and allowed changes;</li><li>prompt budget.</li></ul>
+<h4 id="compile-order">Compile Order</h4>
+<ol><li>Lineage: name <code>project_id</code>, <code>clip_id</code>, and parent only in the user-facing contract or capsule, not necessarily in the final prompt if it wastes prompt budget.</li><li>Source role: identify the active reference tags and what each controls.</li><li>Actual opening state: use observed footage for continuations and planned state only for first clips.</li><li>Current clip action: one narrative job with an endpoint.</li><li>Camera and motion phase: include inherited vectors when continuity matters.</li><li>Light, environment, style, and audio: include only state-critical or mood-critical clauses.</li><li>Exclusions: completed beats and reserved future beats.</li><li>Endpoint: the completed state this clip must reach.</li></ol>
+<h4 id="natural-language-prompt-rules">Natural-Language Prompt Rules</h4>
+<p>Do not emit internal JSON to Seedance. Do not include all future clips. Do not describe a planned ending as if it happened. Do not replay completed actions. Do not perform reserved later actions. Do not invent deterministic guarantees.</p>
+<p>Use clip-scope language:</p>
+<ul><li>"Begin with..." for observed opening state.</li><li>"Continue the same..." only when source footage exists.</li><li>"This clip only..." for the current narrative job.</li><li>"Stop when..." for endpoint control.</li><li>"Do not yet..." for reserved future beats.</li></ul>
+<h4 id="compression">Compression</h4>
+<p>When the prompt must shrink, preserve in this order:</p>
+<ol><li>Exact reference tags and role boundaries.</li><li>Actual opening state.</li><li>Current action and endpoint.</li><li>Continuity locks.</li><li>Completed beat exclusions.</li><li>Reserved beat exclusions.</li><li>Camera or open motion vector.</li><li>Audio phase.</li></ol>
+<p>Delete generic style boosters, duplicate adjectives, future story summary, background visible in references, secondary actions, and speculative internal notes first.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

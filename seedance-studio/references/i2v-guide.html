@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/i2v-guide.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-i2v-guide" data-status="active">
+<h1 id="reference-section-references-i2v-guide-md-title">Reference section: references/i2v-guide.md</h1>
+<h3 id="image-to-video-guide">Image-to-Video Guide</h3>
+<h4 id="core-rule">Core Rule</h4>
+<p>Prompt only what the image cannot show. A still image already contains subject identity, product form, wardrobe, palette, composition, and background. Re-describing those static details often causes drift. Add motion, camera, timing, transformation, lighting change, audio, and preservation constraints.</p>
+<h4 id="minimal-template">Minimal Template</h4>
+<p><code>[Image1] is the reference; preserve [identity/product/scene] exactly. Only [motion] changes. Camera: [one move]. Lighting: [source or transition]. Sound: [cue]. Constraint: [what must not change].</code></p>
+<h4 id="two-i2v-modes">Two I2V Modes</h4>
+<p>Field-observed from Chinese practice; decide the mode before writing.</p>
+<ul><li><strong>Hold mode</strong> (the image is the moment): distribute three or four natural micro-actions across the clip - a blink, a breath, hair drift, a slow gaze shift - and lock everything else with a double statement, positive plus negative: <code>she stays seated by the window; she does not stand, turn, or leave frame</code>. No camera move, or one slow push-in at most.</li><li><strong>React mode</strong> (something happens to the subject): expand one emotion into sub-beats with real time to land - <code>she registers the sound, her eyes widen, color rises in her face over two to three seconds</code>. Rushed emotions read as glitches; give the key beat at least two seconds. If the image is clearly mid-scene rather than a natural opening frame, anchor the start explicitly: <code>the clip begins exactly at this moment</code>.</li></ul>
+<h4 id="preservation-language">Preservation Language</h4>
+<p>Use precise locks for fragile anchors: <code>preserve face identity</code>, <code>preserve logo and label</code>, <code>preserve bottle shape and cap geometry</code>, <code>preserve outfit and hairstyle</code>, <code>preserve room layout</code>. Do not lock everything if the scene needs natural motion; lock only what must remain stable.</p>
+<h4 id="good-i2v-additions">Good I2V Additions</h4>
+<table><thead><tr><th>Add</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Micro-expression</td><td><code>subject blinks once and lowers their eyes</code></td></tr>
+<tr><td>Product light</td><td><code>thin highlight travels across the label</code></td></tr>
+<tr><td>Weather</td><td><code>rain streaks behind the subject; droplets bead on the surface</code></td></tr>
+<tr><td>Camera</td><td><code>slow dolly-in from current composition to tighter detail</code></td></tr>
+<tr><td>Atmosphere</td><td><code>dust catches the doorway beam and settles</code></td></tr>
+<tr><td>Audio</td><td><code>soft room tone, one key click at the endpoint</code></td></tr>
+</tbody>
+</table>
+<h4 id="failure-fixes">Failure Fixes</h4>
+<ul><li>If identity drifts: reduce new visual description and strengthen preservation constraints.</li><li>If camera jumps: use one camera move with start and endpoint.</li><li>If product warps: say preserved, static identity, no shape change, no transformation of the product.</li><li>If output is still: add one physical action and one time cue.</li><li>If background changes: preserve environment layout and animate only light, weather, or atmosphere.</li><li>If hands deform: simplify hand motion or keep hands outside the main action.</li></ul>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

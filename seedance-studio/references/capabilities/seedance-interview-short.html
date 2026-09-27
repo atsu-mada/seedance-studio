@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — seedance-interview-short</title>
+<link rel="stylesheet" href="../../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="../index.html">Seedance Studio knowledge index</a></nav>
+<main id="capability-seedance-interview-short" data-status="active">
+<h1 id="seedance-interview-short-title">seedance-interview-short</h1>
+<p>Use this when speed matters more than exhaustive creative discovery. The goal is to turn a vague idea into a compact director brief with no more than three questions, then route to prompt writing.</p>
+<h3 id="intent">Intent</h3>
+<p>The user here knows what they want and is asking you to respect their momentum. The soul of this skill is restraint: find the one missing piece that would sink the generation, ask only that, and get out of the way. Speed is the form their trust takes.</p>
+<h3 id="process">Process</h3>
+<p>Ask at most three questions, and only ask them if the answer materially changes the prompt. Assume no film background: ask in everyday words, give pickable options, and attach a default so "I don't know" never stalls the brief. Prioritize:</p>
+<ol><li>What happens in the video, and what is different at the end? <code>(not sure? I'll pick one simple action with a visible ending)</code></li><li>Is this one complete clip, connected clips, a longer scene to divide, a continuation of accepted footage, or are you unsure? <code>(not sure? I'll plan the whole story but only finalize the first prompt)</code></li><li>How must the complete story end, and do you have photos, clips, final frames, or sound that define the look, motion, or sound? <code>(none is fine; if continuing, I need the accepted clip or final frame)</code></li></ol>
+<p>If the user already supplied enough information, do not ask. Produce a brief immediately. If the user speaks production language fluently, drop the plain phrasing and ask in director terms.</p>
+<p>Even in fast mode, the brief states one motivated intention, not a generic "cinematic" look: name what the scene is doing and let the camera, light, and performance serve that. Load <code>Reference section: directing-engine</code> only when the right setup for the scene is genuinely unclear; otherwise apply its coherence rule inline.</p>
+<h3 id="compact-brief-pattern">Compact Brief Pattern</h3>
+<p><code>Mode: [T2V/I2V/V2V/R2V]. Subject: [anchor]. Beat: [before -&gt; action -&gt; final state]. Camera: [one move]. Light/style: [physical source and safe descriptor]. Sound: [dialogue/ambience/SFX/music/silence]. Constraints: [identity, IP, safety, product, prompt budget].</code></p>
+<h3 id="routing-rule">Routing Rule</h3>
+<p>Route to <code>Capability section: seedance-sequence</code> for connected clips, long scenes, unclear total duration, or continuation-ready planning; <code>Capability section: seedance-continuation</code> for accepted-footage continuation; <code>Capability section: seedance-prompt</code> for a full standalone production prompt; <code>Capability section: seedance-prompt-short</code> for a compact prompt; <code>Capability section: seedance-copyright</code> for IP/likeness risk; or <code>Capability section: seedance-troubleshoot</code> when the user starts from a bad result.</p>
+<h3 id="output-contract">Output Contract</h3>
+<p>Return one compact brief under 150 words, any missing high-impact question, and a recommended skill route. If the request is a sequence, include the complete story ending, likely clip count, current clip job, and the fact that future prompts stay provisional until accepted footage is reviewed.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

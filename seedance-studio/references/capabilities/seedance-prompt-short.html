@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — seedance-prompt-short</title>
+<link rel="stylesheet" href="../../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="../index.html">Seedance Studio knowledge index</a></nav>
+<main id="capability-seedance-prompt-short" data-status="active">
+<h1 id="seedance-prompt-short-title">seedance-prompt-short</h1>
+<p>When sequence state is present, read the sequence state, continuity locks, and reserved beats before drafting or repairing this section.</p>
+<p>Compress Seedance prompts without losing the production signal. A short prompt still needs mode, subject, action, camera, light, sound when useful, and constraints. Remove filler before removing physical details.</p>
+<p>When sequence state is present, compression must preserve continuity locks, exact reference tags, actual opening state, current clip action, endpoint, completed beat exclusions, and reserved future beats. Do not compress away the words that keep a continuation from replaying completed action or leaking future action.</p>
+<h3 id="intent">Intent</h3>
+<p>Compression is an act of judgment about what the user loves most. What survives the cut is the soul of their shot; everything else goes first. If the user would mourn a deleted word, it was never filler.</p>
+<h3 id="compression-priority">Compression Priority</h3>
+<p>Preserve in this order:</p>
+<ol><li>Reference tags and their role.</li><li>Subject or product identity.</li><li>Action verb and visible endpoint.</li><li>One camera move.</li><li>Physical light source or atmosphere.</li><li>Audio cue or silence instruction.</li><li>Safety, IP, or continuity constraint.</li><li>Sequence state clauses: actual opening state, continuity locks, completed beats, and reserved beats.</li></ol>
+<p>Delete generic adjectives, duplicate style labels, obvious background details, secondary camera moves, and secondary actions before deleting preservation constraints.</p>
+<p>For bilingual or mixed-language compression, load <code>Reference section: multilingual-community-examples</code>. Keep only the language mix that clarifies reference roles, dialogue, camera terms, or safe production constraints.</p>
+<h3 id="compact-templates">Compact Templates</h3>
+<table><thead><tr><th>Need</th><th>Template</th></tr></thead>
+<tbody>
+<tr><td>T2V</td><td><code>[Subject] [action and endpoint] in [scene]. Camera: [one move]. Light/style: [physical source]. Sound: [cue]. Constraint: [risk/continuity].</code></td></tr>
+<tr><td>I2V</td><td><code>[Image1] preserved; only [motion/light/camera] changes. Camera: [one move]. Sound: [cue]. Constraint: [what must not change].</code></td></tr>
+<tr><td>V2V</td><td><code>[Video1] controls [motion/camera/timing] only; new subject [anchor]. [Action]. Do not transfer [identity/scene/logo].</code></td></tr>
+<tr><td>Chinese</td><td><code>[Image1]为参考，严格保持[主体]不变；仅加入[动作/光线/镜头]。声音：[提示]。</code></td></tr>
+</tbody>
+</table>
+<h3 id="output-contract">Output Contract</h3>
+<p>Return one compact prompt, ideally 30-100 English words or an equivalent Chinese prompt when the user asks for Chinese or maximum compression. Include a one-line note only if something important was removed.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

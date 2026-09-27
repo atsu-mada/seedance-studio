@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — seedance-antislop</title>
+<link rel="stylesheet" href="../../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="../index.html">Seedance Studio knowledge index</a></nav>
+<main id="capability-seedance-antislop" data-status="active">
+<h1 id="seedance-antislop-title">seedance-antislop</h1>
+<p>Remove filler that hides missing visual decisions. A strong Seedance prompt uses observable nouns, verbs, camera moves, light sources, sound cues, and constraints. A weak prompt asks for excellence without saying what excellence looks or sounds like.</p>
+<h3 id="intent">Intent</h3>
+<p>Users reach for giant empty words precisely because they care intensely and don't know where to put it. The soul of de-slopping is conservation: every deleted "epic" must come back as a visible choice that holds the same caring. Strip a prompt without honoring the feeling that bloated it, and the user hears that their excitement was wrong.</p>
+<h3 id="visibility-test">Visibility Test</h3>
+<p>Every major phrase should be visible to a camera, measurable by a light meter, audible in the mix, or observable as motion. If a phrase cannot pass that test, replace it with production language.</p>
+<table><thead><tr><th>Filler</th><th>Ask what it means</th><th>Strong replacement pattern</th></tr></thead>
+<tbody>
+<tr><td>cinematic</td><td>What camera and light make it cinematic?</td><td><code>locked close-up, warm practical key, cool rim light</code></td></tr>
+<tr><td>epic</td><td>What is the scale or stake?</td><td><code>wide low-angle shot, tiny figure against storm wall</code></td></tr>
+<tr><td>beautiful</td><td>What color, texture, or light behavior?</td><td><code>pearl highlights on wet ceramic, soft window bounce</code></td></tr>
+<tr><td>dynamic</td><td>What moves, how fast, and where does it end?</td><td><code>fast lateral track ending on the hero label</code></td></tr>
+<tr><td>professional</td><td>What production setup?</td><td><code>clean commercial tabletop, controlled reflection, no clutter</code></td></tr>
+</tbody>
+</table>
+<h3 id="the-six-slop-classes">The Six Slop Classes</h3>
+<p>Classify before rewriting - each class has a different repair:</p>
+<ol><li><strong>Empty evaluators</strong> (<code>cinematic, epic, stunning</code>) - convert each to the one observable detail that earns it.</li><li><strong>Borrowed image-model tokens</strong> (<code>8K, masterpiece, trending on ArtStation</code>) - delete; quality and resolution are settings, not prose.</li><li><strong>Tag salad</strong> (comma keyword dumps ported from image prompting) - rewrite as shooting-brief prose: one sentence per element, with an action and a time axis.</li><li><strong>Negation slop</strong> (<code>no blur, no artifacts, no extra fingers</code>) - negation summons; describe what IS there instead, and keep negation only in the constraint slot.</li><li><strong>Adjective stacking</strong> (three synonyms for one quality) - pick the single detail that matters.</li><li><strong>Feel-suffix words</strong> (<code>电影感, 雰囲気のある, 감성적인, atmosférico, атмосферный, vibey</code>) - name the physical cause of the feeling; every language file in <code>references/vocab/</code> has a Slop Traps table for its own community's empty words.</li></ol>
+<h3 id="rewrite-pass">Rewrite Pass</h3>
+<p>First, underline all superlatives and vague style labels and classify each by slop class. Second, decide whether each word should become camera, light, motion, material, sound, or constraint language. Third, reduce duplicates. Fourth, keep the prompt within the character budget and preserve reference tags.</p>
+<h3 id="do-not-over-correct">Do Not Over-Correct</h3>
+<p>Do not remove useful genre language when it is paired with concrete direction. <code>Noir hallway with hard venetian-blind shadows</code> is useful; <code>dramatic cinematic noir vibes</code> is not. Keep terms that communicate medium, era, palette, or lens behavior.</p>
+<p>Load <code>Reference section: anti-slop-lexicon</code> for the slop-class taxonomy and extended replacement table, and <code>Capability section: seedance-vocab-en</code> with <a href="../vocab/en.html"><code>references/vocab/en.md</code></a> for the full function-organized English precision vocabulary. For non-English prompts, load the matching vocab file's Slop Traps table (<a href="../vocab/zh.html"><code>references/vocab/zh.md</code></a>, <code>ja.md</code>, <code>ko.md</code>, <code>es.md</code>, <code>ru.md</code>) - each language community has its own empty-quality words and decompositions.</p>
+<h3 id="output-contract">Output Contract</h3>
+<p>Return removed words, replacements grouped by camera/light/motion/sound/constraint, and the tightened prompt.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

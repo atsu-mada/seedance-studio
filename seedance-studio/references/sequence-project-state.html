@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/sequence-project-state.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-sequence-project-state" data-status="active">
+<h1 id="reference-section-references-sequence-project-state-md-title">Reference section: references/sequence-project-state.md</h1>
+<h3 id="sequence-project-state">Sequence Project State</h3>
+<p>Use this reference when a Seedance request becomes a multi-clip project. The project state is the source of truth; prompts are temporary compiled instructions for one generation.</p>
+<h4 id="operating-model">Operating Model</h4>
+<p>User idea -&gt; story spine -&gt; world and continuity bible -&gt; sequence plan -&gt; current clip contract -&gt; current clip prompt -&gt; generated take -&gt; observed take review -&gt; canon reconciliation -&gt; next clip contract -&gt; next prompt.</p>
+<p>Plan globally. Generate locally. Observe the real result. Update canon. Continue from actual accepted footage.</p>
+<h4 id="canonical-state">Canonical State</h4>
+<p>Keep canonical and transient state separate.</p>
+<p>Canonical references control identity and immutable design: character identity, product identity, wardrobe, product geometry, persistent props, location, and approved reference tags.</p>
+<p>Accepted previous footage controls transient opening state: pose, action phase, screen position, camera phase, environment arrangement, audio phase, open motion, and incomplete gestures.</p>
+<h4 id="required-project-fields">Required Project Fields</h4>
+<p>At minimum, a project state contains <code>schema_version</code>, <code>state_revision</code>, <code>project_id</code>, <code>project_mode</code>, <code>surface</code>, <code>clip_budget_sec</code>, <code>prompt_budget</code>, <code>story</code>, <code>world_bible</code>, <code>reference_registry</code>, <code>beats</code>, <code>clips</code>, <code>take_history</code>, <code>current_clip_id</code>, <code>canon_revision</code>, and <code>updated_at</code>.</p>
+<p>Story fields: <code>logline</code>, <code>story_promise</code>, <code>objective</code>, <code>initial_condition</code>, <code>final_outcome</code>, <code>target_duration_sec</code>, <code>tone</code>, and <code>medium</code>.</p>
+<p>Beat fields: <code>beat_id</code>, <code>description</code>, <code>narrative_function</code>, <code>status</code>, <code>assigned_clip_id</code>, and <code>dependencies</code>.</p>
+<p>Clip lineage fields: <code>clip_id</code>, <code>parent_clip_id</code>, <code>sequence_index</code>, <code>prompt_version</code>, <code>generation_mode</code>, <code>source_clip_tag</code>, <code>status</code>, <code>narrative_job</code>, <code>already_happened</code>, <code>this_clip_only</code>, <code>reserved_for_later</code>, <code>planned_start_state</code>, <code>planned_end_state</code>, <code>observed_start_state</code>, <code>observed_end_state</code>, <code>continuity_locks</code>, <code>allowed_changes</code>, <code>continuity_breaks</code>, <code>accepted_deviations</code>, <code>transition_in</code>, <code>transition_out</code>, <code>open_motion_vectors</code>, <code>handoff_requirements</code>, and <code>extension_depth</code>.</p>
+<h4 id="visual-state">Visual State</h4>
+<p>Track only what matters and do not invent unclear details.</p>
+<p>Characters: canonical identity ID, wardrobe, hair, position in world, position in frame, pose, action phase, emotional state, gaze, eyeline, travel direction, speed, and body orientation.</p>
+<p>Props: identity, owner, position, condition, motion, and interaction state.</p>
+<p>Environment: location, geography, background arrangement, time of day, weather, atmosphere, and persistent practical elements.</p>
+<p>Camera: shot size, height, angle, support, path, direction, speed, movement phase, subject relationship, focus state, exposure state, and endpoint.</p>
+<p>Lighting: key direction, intensity, color relationship, practical sources, and transition state.</p>
+<p>Audio: ambience, completed dialogue, active dialogue, music phase, SFX phase, active engine or environmental sounds, and audio reference ownership.</p>
+<p>Open motion: subject direction and speed, camera direction and speed, moving props, incomplete gestures, cloth or hair follow-through, vehicle movement, and pending impact recovery.</p>
+<p>Observation quality: <code>observation_confidence</code>, <code>uncertainties</code>, and <code>requires_user_confirmation</code>.</p>
+<h4 id="reconciliation">Reconciliation</h4>
+<p>When an accepted clip differs from plan:</p>
+<ol><li>Record the deviation.</li><li>Decide whether to accept as canon, repair, reject/regenerate, or re-anchor the next shot.</li><li>If accepted, update downstream planning.</li><li>Remove any beat unexpectedly completed.</li><li>Carry any incomplete planned beat into the next appropriate clip.</li><li>Never pretend the planned ending happened when it did not.</li></ol>
+<p>Rejected footage does not alter canon and cannot become a continuation parent.</p>
+<h4 id="project-state-capsule">Project State Capsule</h4>
+<p>Use a readable capsule for cross-session continuation. A new conversation cannot be assumed to possess hidden prior memory.</p>
+<p>Required fields:</p>
+<p>PROJECT ID: STORY GOAL: FINAL OUTCOME: SURFACE: REFERENCE TAGS: CANONICAL REFERENCES: ACCEPTED CLIPS: CURRENT ACTUAL STATE: OPEN MOTION: COMPLETED BEATS: NEXT CLIP JOB: CONTINUITY LOCKS: ALLOWED CHANGES: RESERVED FUTURE BEATS: EXTENSION DEPTH: UNRESOLVED UNCERTAINTIES:</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

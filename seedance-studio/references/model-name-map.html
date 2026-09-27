@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/model-name-map.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-model-name-map" data-status="active">
+<h1 id="reference-section-references-model-name-map-md-title">Reference section: references/model-name-map.md</h1>
+<h3 id="model-name-map">Model Name Map</h3>
+<p>last_verified: 2026-09-04</p>
+<p>Use this file when a user says "Seedance Pro", "Seedance V2", "Seedance V2 Mini", "Seed2.0 Pro", or wrapper-specific model names.</p>
+<h4 id="canonical-names">Canonical Names</h4>
+<table><thead><tr><th>Name</th><th>Meaning</th><th>Guidance</th></tr></thead>
+<tbody>
+<tr><td>Seedance 2.5</td><td>ByteDance's next-generation joint audio-video model</td><td>Canonical video-model name for the 30-second generation line. Verify the active surface before assuming duration choices, prompt limits, reference counts, resolution, editing, extension, or access.</td></tr>
+<tr><td><code>dreamina-seedance-2-5-260628</code></td><td>Seedance 2.5 model ID documented on BytePlus's enhanced video-generation surface</td><td>BytePlus documents 4–30 second generation for this ID. Use only on the corresponding BytePlus route and recheck the live schema.</td></tr>
+<tr><td>Higgsfield Seedance 2.5</td><td>Higgsfield-hosted creator surface</td><td>Higgsfield publicly documents up to 30 seconds. Its public model page did not state a prompt-character limit when checked on 2026-09-04; verify the active UI before promising 5,000 characters.</td></tr>
+<tr><td><code>bytedance/seedance-2.5</code></td><td>Leonardo.AI Seedance 2.5 REST model value</td><td>Leonardo.AI documents a maximum 5,000-character <code>prompt</code>. Keep that limit scoped to Leonardo.AI.</td></tr>
+<tr><td>Seedance 2.0</td><td>ByteDance Seed video generation model line</td><td>Correct public name for the v2 video model family. Use this as the default wording.</td></tr>
+<tr><td>Seedance 2.0 Fast</td><td>Faster Seedance 2.0 variant reported by official/product and wrapper surfaces</td><td>Use for draft, iteration, or low-latency discussion when the active surface exposes it. Recheck exact resolution, duration, and pricing.</td></tr>
+<tr><td>Seedance 2.0 Mini</td><td>Lighter official Seedance 2.0 series lane exposed on Volcengine, BytePlus, and Dreamina surfaces</td><td>Use only when the active surface exposes Mini. Treat <code>Seedance V2 Mini</code> as shorthand, not canonical wording. Recheck API availability, duration, resolution, pricing, and account gates live.</td></tr>
+<tr><td>Doubao Seedance 2.0</td><td>Volcengine/Doubao-flavored surface naming</td><td>Treat as a product/API surface label, not a different creative method.</td></tr>
+<tr><td><code>doubao-seedance-2-0-260128</code></td><td>Volcengine Ark model ID observed in May 29 tutorial</td><td>Useful for implementation examples only after rechecking the active console/docs. Do not treat as universal BytePlus/global availability.</td></tr>
+<tr><td><code>doubao-seedance-2-0-fast-260128</code></td><td>Volcengine Ark Fast model ID observed in May 29 tutorial</td><td>Use only when the active surface exposes the Fast variant and current pricing/limits are checked.</td></tr>
+<tr><td><code>doubao-seedance-2-0-mini-260615</code></td><td>Volcengine Ark Mini model ID observed in official docs on 2026-06-20</td><td>Use only on Volcengine after rechecking whether the June 15-June 22 trial-only gate has ended and API access is live.</td></tr>
+<tr><td><code>doubao-seedance-2-0-pro-260215</code></td><td>Volcengine Ark Pro model ID (reported 2026-06-14, not console-verified here)</td><td>Use only after rechecking the live Ark console. Do not confuse with the <code>doubao-seed-2-0-pro-*</code> LLM (see Non-Seedance section).</td></tr>
+<tr><td><code>dreamina-seedance-2-0-260128</code> / <code>-fast-260128</code></td><td>BytePlus ModelArk model IDs — the international counterpart of the Volcengine <code>doubao-</code> IDs (reported 2026-06-14)</td><td>BytePlus uses a <code>dreamina-</code> prefix where Volcengine uses <code>doubao-</code>. Same model family, different surface; recheck the live ModelArk docs before quoting.</td></tr>
+<tr><td><code>dreamina-seedance-2-0-mini-260615</code> / <code>dreamina-seedance-2.0-mini</code></td><td>BytePlus ModelArk Mini model ID and pricing-row label observed in official docs on 2026-06-20</td><td>Use only on BytePlus. The hyphenated ID and dotted pricing label are surface-specific; recheck API support, pricing, and 1080p support live before implementation.</td></tr>
+<tr><td><code>seedance2</code></td><td>Runway API model ID</td><td>Use only for Runway's API surface. Do not substitute for Volcengine/Doubao model IDs.</td></tr>
+<tr><td>fal Seedance 2.0 endpoints</td><td>fal's hosted Seedance 2.0 surface: <code>text-to-video</code>, <code>image-to-video</code>, <code>reference-to-video</code>, each with a <code>/fast</code> tier</td><td>Use fal endpoint naming only for the fal surface (verified 2026-06-09). Recheck endpoint IDs, resolution tiers, and per-second pricing live before quoting. Do not substitute for Volcengine, Doubao, or Runway model IDs.</td></tr>
+<tr><td><code>seedance-2.0-text-to-video</code></td><td>EvoLink model value shown on its public Seedance 2.0 page</td><td>Use only on EvoLink's API surface. Recheck image/reference/video modes, pricing, callback support, and face/reference policy before implementation.</td></tr>
+<tr><td><code>bytedance/seedance-2.0</code></td><td>OpenRouter model slug and related provider/router naming seen on public model pages</td><td>Use only for the provider/router surface that documents it. Recheck whether the route supports text-to-video, image-to-video, first/last-frame, or multimodal reference inputs before coding.</td></tr>
+<tr><td>PiAPI <code>seedance</code> with <code>seedance-2-preview</code> / <code>seedance-2-fast-preview</code></td><td>PiAPI task model and task-type pattern from its public Seedance docs</td><td>Use only with PiAPI's generic task API. Recheck current task types, less-restriction variants, asset-library requirements, and pricing before quoting.</td></tr>
+<tr><td>Runware <code>bytedance:seedance@2.0</code> / <code>bytedance:seedance@2.0-fast</code></td><td>Runware model IDs visible in public model docs</td><td>Use only on Runware. Recheck exact operation support because provider pages can group text, image, video, audio, edit, and extend differently.</td></tr>
+<tr><td>LaoZhang <code>/seedance/api/v3</code> routes</td><td>LaoZhang provider-specific Seedance API surface</td><td>Use only when the user targets LaoZhang. Recheck endpoint paths, model values, auth, and task lifecycle in current LaoZhang docs.</td></tr>
+<tr><td>Kie.ai, ModelsLab, AI/ML API, MuAPI, SeeGen, Segmind Seedance routes</td><td>Provider-specific wrapper or router names</td><td>Treat as provider-specific labels, not canonical names. Recheck live docs and account access before implementation, especially for face/reference handling and output rights.</td></tr>
+<tr><td>Seedance V2</td><td>Community shorthand</td><td>Normalize to Seedance 2.0 unless the user is clearly referring to a wrapper-specific model. If the user says <code>Seedance V2 Mini</code>, normalize to Seedance 2.0 Mini only after checking the active surface.</td></tr>
+<tr><td>Seedance 2.0 Pro</td><td>Ambiguous community shorthand</td><td>Do not assume this is an official video-model name. Ask which surface, or normalize to Seedance 2.0 / Fast with a caveat.</td></tr>
+<tr><td>Seed2.0 Pro</td><td>Separate Seed/Doubao naming seen outside the Seedance video model line</td><td>Do not confuse with Seedance 2.0 video generation.</td></tr>
+<tr><td>Seedance 1.5 Pro</td><td>Earlier Seedance generation</td><td>Useful for historical comparison only. Do not mix its limits with Seedance 2.0.</td></tr>
+</tbody>
+</table>
+<h4 id="answer-pattern">Answer Pattern</h4>
+<p>If the user says "Seedance 2.0 Pro", answer:</p>
+<p><code>I will treat this as Seedance 2.0 unless you mean a specific wrapper's Pro label. Official public video-model wording is Seedance 2.0 and, on some surfaces, Seedance 2.0 Fast. Seed2.0 Pro is a different naming lane and should not be used as the Seedance video model name without source confirmation.</code></p>
+<p>If the user says "Seedance V2 Mini", answer:</p>
+<p><code>I will treat this as Seedance 2.0 Mini only if the active surface exposes the Mini lane. Official source-visible examples are Volcengine's doubao-seedance-2-0-mini-260615 and BytePlus ModelArk's dreamina-seedance-2-0-mini-260615; API access, pricing, duration, and resolution are surface-specific and need a live recheck.</code></p>
+<h4 id="non-seedance-models-do-not-confuse">Non-Seedance Models (Do Not Confuse)</h4>
+<p>These are NOT Seedance and should not trigger Seedance-specific syntax, specs, or surfaces. Versions verified 2026-06-14; recheck before quoting.</p>
+<table><thead><tr><th>Name</th><th>What it actually is</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td>Seedream (e.g. Seedream 5.0 Pro)</td><td>ByteDance's <strong>image</strong> generation model</td><td>Same vendor, near-identical name (Seedr<strong>ea</strong>m vs Seed<strong>a</strong>nce). Highest confusion risk. Not video. If a user says “Seedream 2.5” while discussing 30-second video, confirm or normalize to Seedance 2.5.</td></tr>
+<tr><td>Doubao-Seed-2.0 (<code>doubao-seed-2-0-pro-*</code>)</td><td>ByteDance's <strong>LLM</strong> on Volcengine</td><td>Shares the Ark surface and the "Seed" lineage but is a language model, not Seedance video.</td></tr>
+<tr><td>Doubao-Seed-2.0 Mini (<code>doubao-seed-2-0-mini-*</code>)</td><td>ByteDance's <strong>Seed/Doubao</strong> model naming lane, not Seedance video</td><td>Do not confuse this with <code>doubao-seedance-2-0-mini-260615</code>. The missing <code>ance</code> matters.</td></tr>
+<tr><td>Sora 2 (OpenAI)</td><td>Competing video model</td><td>Note: OpenAI announced Sora's sunset — app closed ~Apr 2026, API ending ~Sept 2026. Not Seedance.</td></tr>
+<tr><td>Veo 3.1 (Google)</td><td>Competing video model (family: 3.1 / Fast / Lite)</td><td>"Veo 3" is the prior gen. Not Seedance.</td></tr>
+<tr><td>Kling 3.0 (Kuaishou)</td><td>Competing video model ("Omni" = its multimodal variants)</td><td>Not Seedance.</td></tr>
+<tr><td>Runway Gen-4.5</td><td>Runway's own video model line</td><td>Distinct from Runway <em>hosting</em> Seedance 2.0 via its API. Not Seedance.</td></tr>
+<tr><td>Hailuo / Vidu / Luma Ray3 / Pika / Wan</td><td>Other competing video models</td><td>Not Seedance.</td></tr>
+</tbody>
+</table>
+<p>For these, offer general filmmaking craft only — never Seedance reference tags, shot grammar, or surface-specific settings.</p>
+<h4 id="wrapper-names">Wrapper Names</h4>
+<p>Third-party wrappers may expose names such as <code>doubao-seedance-2.0</code>, <code>doubao-seedance-2.0-fast</code>, OpenRouter-style slugs, PiAPI task types, Runware IDs, or provider-prefixed variants. These can be useful for implementation, but they are not the repo's source of truth for official naming.</p>
+<p>Do not quote current BytePlus Seedance 2.0 pricing or model IDs from JavaScript-rendered pricing pages unless the value has been verified in a current official page or console. Volcengine prices can be cited only with source date, model, surface, currency, and a recheck warning.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

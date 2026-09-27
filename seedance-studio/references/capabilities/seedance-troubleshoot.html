@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — seedance-troubleshoot</title>
+<link rel="stylesheet" href="../../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="../index.html">Seedance Studio knowledge index</a></nav>
+<main id="capability-seedance-troubleshoot" data-status="active">
+<h1 id="seedance-troubleshoot-title">seedance-troubleshoot</h1>
+<p>When sequence state is present, read the sequence state, continuity locks, and reserved beats before drafting or repairing this section.</p>
+<p>If the take is partially good rather than failed, route to <code>Reference section: retake-protocol</code> triage first - most takes deserve a verdict, not a rewrite. Diagnose failure before rewriting. Do not simply add more adjectives. Identify whether the failure came from mode mismatch, overload, ambiguity, fragile identity, unsafe wording, unsupported platform behavior, or missing preservation constraints.</p>
+<p>When the diagnostic tree has no row for the failure, load <code>Reference section: model-mechanics</code> and diagnose by mechanism: attention dilution, prior conflict, summoned negation, broken trajectory, compounding error, conditioning conflict, capacity starvation, or an overloaded audio-video joint constraint. Load <code>Reference section: field-observed-tips</code>, <code>Reference section: reference-workflow</code>, and <code>Reference section: api-workflow</code> when the failure involves continuation, edit/extend, source clips, audio references, or platform-specific errors. Load <code>Reference section: shot-list-continuity</code> for multi-shot drift and <code>Reference section: delivery-qc</code> for final-client or delivery failures. When sequence state is present, load <code>Reference section: failure-atlas</code>, <code>Reference section: continuation-handoff</code>, and <code>Reference section: continuity-qc</code>; diagnose against continuity locks, completed beats, exact reference tags, and reserved future beats.</p>
+<h3 id="intent">Intent</h3>
+<p>A failed generation feels personal - the user showed the machine their idea and the machine returned something broken. The soul of this skill is rescue without blame: name the mechanism, never the user; save the idea, not just the prompt. They should leave with a fix and their confidence intact.</p>
+<h3 id="diagnostic-tree">Diagnostic Tree</h3>
+<table><thead><tr><th>Symptom</th><th>Likely cause</th><th>First repair</th></tr></thead>
+<tbody>
+<tr><td>Product or face changes</td><td>I2V prompt re-described visible identity or overloaded motion.</td><td>Add preservation constraints; remove duplicate static detail.</td></tr>
+<tr><td>Camera jumps</td><td>Several incompatible moves or no endpoint.</td><td>Choose one move with start and finish.</td></tr>
+<tr><td>Generic output</td><td>Hollow style words and weak action.</td><td>Replace with physical action, source light, material, and sound.</td></tr>
+<tr><td>Motion ignored</td><td>Static prompt or no visible consequence.</td><td>Add actor, verb, timing, and changed end state.</td></tr>
+<tr><td>Lip-sync poor</td><td>Moving head/camera, long dialogue, unassigned speaker.</td><td>Lock framing, shorten line, assign speaker.</td></tr>
+<tr><td>VFX noisy</td><td>Effect has no source, physics, or dissipation.</td><td>Add source, material, path, interaction, and endpoint.</td></tr>
+<tr><td>Prompt blocked</td><td>Protected IP, real-person, graphic, or bypass-like wording.</td><td>Rewrite intent in safe production language without evasion.</td></tr>
+<tr><td>Extension quality degrades</td><td>No last-frame anchor or too many new variables across continuations.</td><td>Use returned last frame as first frame and change one variable.</td></tr>
+<tr><td>Audio reference ignored</td><td>Competing video sound, no visual beat mapping, or unsupported combo.</td><td>Mute competing video and map one visible event to the beat.</td></tr>
+<tr><td>Text/logos break</td><td>Small text asked to move or be redrawn.</td><td>Keep text static, centered, and protected; animate light around it.</td></tr>
+<tr><td>Client QC fails</td><td>Prompt output treated as final delivery without post/QC.</td><td>Route to delivery preflight, post fix, or regenerate only the failing shot.</td></tr>
+<tr><td>Continuation assumed planned ending</td><td>Previous clip was not reviewed or observed_end_state was ignored.</td><td>Replace opening with actual observed end state.</td></tr>
+<tr><td>Previous action restarted</td><td>Completed beat was not marked already_happened.</td><td>Add completed beat exclusion.</td></tr>
+<tr><td>Future beat leaked</td><td>Reserved beat entered the current prompt.</td><td>Remove future beat and stop earlier.</td></tr>
+<tr><td>Identity reference conflicts with continuity source</td><td>Source clip controlled transient state and identity at once.</td><td>Re-anchor identity from canonical reference.</td></tr>
+<tr><td>Screen direction reset</td><td>Axis relation was not locked or intentionally reset.</td><td>Preserve screen direction or declare new-shot axis reset.</td></tr>
+<tr><td>Open motion lost</td><td>Subject or camera vector was not inherited.</td><td>Carry motion vector into the opening sentence.</td></tr>
+<tr><td>Camera phase restarted</td><td>Parent camera endpoint was not recorded.</td><td>Start from observed camera phase.</td></tr>
+<tr><td>Prop state contradicted</td><td>Owner, position, or condition was missing.</td><td>Add prop state handoff.</td></tr>
+<tr><td>Audio phase restarted</td><td>Completed dialogue or music phase was not logged.</td><td>Continue or intentionally change the audio phase.</td></tr>
+</tbody>
+</table>
+<h3 id="repair-process">Repair Process</h3>
+<p>First quote the failing phrase or missing element. Then name the root cause. Next, remove conflicts rather than adding complexity. Recommend one primary repair variable rather than adding more adjectives. Finally, produce one conservative retry prompt and one optional creative variant only if the user wants exploration.</p>
+<h3 id="conservative-retry-pattern">Conservative Retry Pattern</h3>
+<p><code>[Reference role if any]. Preserve [identity/product/environment] exactly. One visible action: [specific verb and consequence]. Camera: [single move]. Lighting: [physical source]. Sound: [ambient/SFX/dialogue]. Constraints: [what must not change].</code></p>
+<h3 id="escalation-rules">Escalation Rules</h3>
+<p>If the same error repeats, split the scene into shorter clips, reduce characters, simplify hand or face motion, use stronger reference role mapping, or change the mode. For unstable text/logos, keep them static, centered, and protected; do not ask the model to redraw small text during motion.</p>
+<p>For edit/extend failures, preserve the source clip first and change only the failing layer. If a surface supports returned last frames, use that still as the next first-frame anchor before extending.</p>
+<h3 id="output-contract">Output Contract</h3>
+<p>Return root cause, evidence from the prompt or result, repaired prompt, and one conservative retry variant.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

@@ -48,7 +48,7 @@ def should_scan(path: Path, root: Path) -> bool:
         return False
     if any(rel.startswith(prefix) for prefix in IGNORE_PREFIXES):
         return False
-    return path.suffix == ".md"
+    return path.suffix in {".md", ".html"}
 
 
 def main() -> int:
@@ -68,13 +68,16 @@ def main() -> int:
                 if phrase in text:
                     findings.append((path.relative_to(root).as_posix(), phrase, reason))
 
-    migrated_root = root / "references" / "migrated"
-    if migrated_root.exists():
-        for path in migrated_root.rglob("*.md"):
-            text = path.read_text(encoding="utf-8", errors="ignore")
-            for phrase, reason in RISK_PHRASES.items():
-                if phrase in text:
-                    archived_findings.append((path.relative_to(root).as_posix(), phrase, reason))
+    for path in root.rglob("*"):
+        if not path.is_file() or path.suffix != ".html":
+            continue
+        rel = path.relative_to(root).as_posix()
+        if not rel.startswith("references/guides/historical-"):
+            continue
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        for phrase, reason in RISK_PHRASES.items():
+            if phrase in text:
+                archived_findings.append((rel, phrase, reason))
 
     if archived_findings:
         print("Archived migrated warnings:")

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — seedance-vocab-ko</title>
+<link rel="stylesheet" href="../../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="../index.html">Seedance Studio knowledge index</a></nav>
+<main id="capability-seedance-vocab-ko" data-status="active">
+<h1 id="seedance-vocab-ko-title">seedance-vocab-ko</h1>
+<p>Use Korean cinematic vocabulary when the user asks for Korean prompt wording, bilingual delivery, compact translation, or production vocabulary for camera, lighting, action, VFX, audio, and constraints. Preserve reference tags exactly: <code>[Image1]</code>, <code>[Video1]</code>, and <code>[Audio1]</code> must not be translated.</p>
+<h3 id="intent">Intent</h3>
+<p>Korean users bring 감성 - a feeling-culture with exacting visual taste. The soul here is making 감성 physical: every mood word the user offers returns as light, framing, and timing they can recognize as exactly what they felt.</p>
+<h3 id="usage-rule">Usage Rule</h3>
+<p>Translate the production intention rather than every English word. Keep the Korean prompt compact and concrete: subject, action, camera, light, sound, and preservation constraint.</p>
+<table><thead><tr><th>Function</th><th>Korean wording</th></tr></thead>
+<tbody>
+<tr><td>Camera</td><td><code>천천히 돌리 인</code>, <code>측면 트래킹 샷</code>, <code>고정된 중간 샷</code>, <code>로우 앵글</code>, <code>클로즈업</code></td></tr>
+<tr><td>Lighting</td><td><code>역광</code>, <code>부드러운 창문 빛</code>, <code>따뜻한 실용 조명</code>, <code>차가운 달빛</code>, <code>림 라이트</code></td></tr>
+<tr><td>Motion</td><td><code>천천히 돌아선다</code>, <code>프레임을 빠르게 가로지른다</code>, <code>물방울이 아래로 흐른다</code>, <code>연기가 얇게 퍼진다</code></td></tr>
+<tr><td>Audio</td><td><code>조용한 환경음</code>, <code>짧은 대사</code>, <code>부드러운 금속음</code>, <code>음악 없음</code></td></tr>
+<tr><td>Constraints</td><td><code>로고, 라벨, 형태를 정확히 유지한다</code></td></tr>
+</tbody>
+</table>
+<h3 id="compact-pattern">Compact Pattern</h3>
+<p><code>[Image1]은 참조 이미지이며 얼굴/제품 형태/로고를 정확히 유지한다. 변화는 [동작/조명/카메라]만 적용한다. 카메라: [한 가지 움직임]. 사운드: [음향 지시].</code></p>
+<h3 id="de-slop-rule">De-Slop Rule</h3>
+<p>When the prompt leans on <code>영화같은</code>, <code>감성적인</code>, <code>분위기 있는</code>, <code>웅장한</code>, or <code>고퀄리티</code>, load the Slop Traps table in <a href="../vocab/ko.html"><code>references/vocab/ko.md</code></a> and decompose each into the physical elements that produce it - 카메라 동사+속도+시점, 광원+방향+행동.</p>
+<h3 id="output-contract">Output Contract</h3>
+<p>Return Korean prompt wording, optional English gloss when useful, and unchanged reference tags.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

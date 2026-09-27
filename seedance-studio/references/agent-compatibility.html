@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/agent-compatibility.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-agent-compatibility" data-status="active">
+<h1 id="reference-section-references-agent-compatibility-md-title">Reference section: references/agent-compatibility.md</h1>
+<h3 id="agent-compatibility">Agent Compatibility</h3>
+<p>last_verified: 2026-06-12</p>
+<p>Use this file when reviewing whether this repository is shaped correctly as an Agent Skill package. This is about packaging and agent behavior, not Seedance model capability.</p>
+<h4 id="current-agent-skill-shape">Current Agent-Skill Shape</h4>
+<p>Codex's current Agent Skills documentation describes a skill as a directory with a required <code>SKILL.md</code> file plus optional <code>scripts/</code>, <code>references/</code>, <code>assets/</code>, and <code>agents/</code> folders. It also describes progressive disclosure: the agent sees the name, description, and path first, then loads the full <code>SKILL.md</code> only when the skill matches the task.</p>
+<p>This repository follows that pattern:</p>
+<table><thead><tr><th>Agent-skill expectation</th><th>Repository location</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>Root skill metadata and routing</td><td><code>SKILL.md</code></td><td>Present</td></tr>
+<tr><td>Task-specific sub-skills</td><td><code>skills/*/SKILL.md</code></td><td>Present</td></tr>
+<tr><td>Dense reference material</td><td><code>references/*.md</code></td><td>Present</td></tr>
+<tr><td>Validation and maintenance scripts</td><td><code>scripts/*.py</code></td><td>Present</td></tr>
+<tr><td>README-facing visual resources</td><td><code>assets/*</code></td><td>Present</td></tr>
+<tr><td>Codex UI metadata</td><td><code>agents/openai.yaml</code></td><td>Present</td></tr>
+<tr><td>Behavioral evals</td><td><code>evals/evals.json</code></td><td>Present</td></tr>
+<tr><td>CI validation</td><td><code>.github/workflows/validate-skills.yml</code></td><td>Present</td></tr>
+<tr><td>Local Codex installer</td><td><code>scripts/install_codex_skill.py</code></td><td>Present</td></tr>
+</tbody>
+</table>
+<h4 id="compatibility-rules">Compatibility Rules</h4>
+<ul><li>Keep every active <code>description</code> in third-person activation wording so tools can match it from a shortened skill list.</li><li>Keep the root <code>SKILL.md</code> small. Route to sub-skills and references instead of copying long tables into the root.</li><li>Keep volatile facts in dated references such as <code>api-status.md</code> and <code>source-registry.md</code>.</li><li>Keep generated bitmap images inside <code>assets/</code> if they are referenced by README.</li><li>Keep <code>agents/openai.yaml</code> aligned with the root skill name and make the default prompt invoke Codex's <code>$&lt;seedance-studio&gt;</code> form; Claude Code uses <code>/seedance-studio</code>.</li><li>Use <code>scripts/install_codex_skill.py --force</code> to install or refresh the local user-level Codex copy at <code>$CODEX_HOME/skills/seedance-studio</code> or <code>~/.codex/skills/seedance-studio</code>. This legacy installer is copy-only and rejects shared canonical destinations.</li><li>Keep scripts deterministic and local. They should validate structure, schema, design, and source metadata without requiring private credentials.</li><li>Do not store API keys, account cookies, or private prompt corpora in the skill package.</li></ul>
+<h4 id="cross-agent-matrix">Cross-Agent Matrix</h4>
+<p>Verified 2026-06-12 from each agent's public docs; install paths are volatile - recheck the active client before promising behavior. Install this repository as ONE root skill (<code>seedance-studio</code>); sub-skills and references load by relative path from the root.</p>
+<table><thead><tr><th>Agent</th><th>Skills location</th><th>Install route</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Claude Code / claude.ai</td><td><code>.claude/skills/</code> (workspace), managed skills</td><td>copy or marketplace</td><td>Origin platform of the SKILL.md shape.</td></tr>
+<tr><td>Codex</td><td><code>.agents/skills/</code> upward scan + user/system dirs</td><td><code>scripts/install_codex_skill.py --force</code></td><td><code>agents/openai.yaml</code> supplies UI metadata.</td></tr>
+<tr><td>Google Antigravity</td><td><code>.agents/skills/</code> (workspace), <code>~/.gemini/antigravity-cli/skills/</code> (global)</td><td>copy the folder, restart the session</td><td>Same directory convention as Codex workspaces; SKILL.md + scripts/references/assets shape matches this repo.</td></tr>
+<tr><td>OpenClaw</td><td>workspace <code>skills/</code>, <code>~/.openclaw/skills/</code> (global)</td><td><code>openclaw skills install</code> (git/local expect <code>SKILL.md</code> at source root - this repo qualifies)</td><td>ClawHub is the public registry (<code>clawhub</code> CLI to publish). Every skill here already carries <code>openclaw:</code> metadata.</td></tr>
+<tr><td>Hermes Agent (Nous Research)</td><td>project <code>skills/</code>, <code>~/.hermes/skills/</code></td><td><code>hermes skills install</code> (runs a security scan)</td><td>Activates on the frontmatter <code>description</code> - this repo's third-person activation wording is exactly what it matches.</td></tr>
+<tr><td>Gemini CLI / Cursor / Windsurf / Copilot</td><td><code>.gemini/</code>, <code>.cursor/</code>, <code>.windsurf/</code>, <code>.github/</code> + <code>skills/</code></td><td>copy the folder</td><td>Treat as installation targets, not separate source trees.</td></tr>
+</tbody>
+</table>
+<h4 id="cross-client-notes">Cross-Client Notes</h4>
+<p>Different agent clients scan different local paths. Codex documentation says Codex scans <code>.agents/skills</code> locations from the current directory upward, plus user/admin/system skill locations. A repository root with <code>SKILL.md</code> has the right skill-folder shape, but it is not automatically discovered as a repository skill unless installed under a scanned skill directory or packaged through the relevant plugin/distribution path. Other agent clients may use <code>.claude/skills</code>, <code>.gemini/skills</code>, <code>.github/skills</code>, <code>.cursor/skills</code>, or <code>.windsurf/skills</code>. Treat those as installation targets, not separate source trees.</p>
+<p>Runway MCP is a separate agent connector surface. It can expose Seedance 2.0 through Runway inside MCP-compatible agents, but it does not make this repository a Runway plugin and does not change Codex skill installation rules.</p>
+<h4 id="source-signals">Source Signals</h4>
+<ul><li>OpenAI Codex Agent Skills docs: https://developers.openai.com/codex/skills</li><li>OpenAI Codex Plugins docs: https://developers.openai.com/codex/plugins</li><li>OpenAI Academy plugins and skills explainer: https://openai.com/academy/codex-plugins-and-skills/</li><li>OpenAI skills catalog: https://github.com/openai/skills</li><li>Agent Skills open standard overview: https://agentskills.io/</li><li>Google Antigravity skills docs: https://antigravity.google/docs/cli-plugins and https://codelabs.developers.google.com/getting-started-with-antigravity-skills</li><li>OpenClaw skills docs: https://docs.openclaw.ai/tools/skills</li><li>Hermes Agent skills docs: https://hermes-agent.nousresearch.com/docs/user-guide/features/skills</li><li>Runway MCP announcement: https://runwayml.com/news/mcp</li></ul>
+<h4 id="do-not-claim">Do Not Claim</h4>
+<ul><li>Do not claim every agent client can install directly from this repository URL.</li><li>Do not claim ClawHub or any registry lists this skill unless it has actually been published there.</li><li>Do not claim every client honors the same metadata fields beyond <code>name</code> and <code>description</code>.</li><li>Do not claim this repository provides a live Seedance API wrapper. It is an agent-skill workflow and reference package.</li><li>Do not claim that an agent has hidden cross-session memory of a sequence project. Use the Project State Capsule to restore story goal, final outcome, accepted clips, current actual state, open motion, completed beats, next clip job, continuity locks, allowed changes, reserved future beats, extension depth, and unresolved uncertainties.</li></ul>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>

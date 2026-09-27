@@ -1,4 +1,4 @@
-# CODEOWNERS — seedance-20 skill library
+# CODEOWNERS — seedance-studio skill library
 # https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 #
 # All files owned by Iamemily2050 (@iamemily2050)
@@ -9,12 +9,6 @@
 
 # Root skill
 /SKILL.md                                  @Emily2040
-
-# All sub-skills
-/skills/                                   @Emily2040
-
-# References
-/references/                               @Emily2040
 
 # Repo metadata
 /LICENSE                                   @Emily2040

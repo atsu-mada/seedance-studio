@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seedance Studio — Reference section: references/progressive-disclosure.md</title>
+<link rel="stylesheet" href="../assets/knowledge-base.css">
+</head>
+<body data-status="active"><nav><a href="index.html">Seedance Studio knowledge index</a></nav>
+<main id="reference-progressive-disclosure" data-status="active">
+<h1 id="reference-section-references-progressive-disclosure-md-title">Reference section: references/progressive-disclosure.md</h1>
+<h3 id="progressive-disclosure-plan">Progressive Disclosure Plan</h3>
+<p>The root skill should route. Sub-skills should decide. References should carry dense tables and volatile facts.</p>
+<table><thead><tr><th>Content</th><th>Location</th><th>Load condition</th></tr></thead>
+<tbody>
+<tr><td>Routing, high-level rules</td><td><code>SKILL.md</code></td><td>Always</td></tr>
+<tr><td>Prompt construction</td><td><code>Capability section: seedance-prompt</code></td><td>Prompt-writing tasks</td></tr>
+<tr><td>Platform/API facts</td><td><a href="api-status.html"><code>references/api-status.md</code></a></td><td>Platform or API tasks</td></tr>
+<tr><td>Vocabulary lists</td><td>Language skills + references</td><td>Translation/compression tasks</td></tr>
+<tr><td>Safety and IP</td><td><code>seedance-copyright</code> + <code>platform-constraints</code></td><td>Protected identity or safety-sensitive tasks</td></tr>
+<tr><td>Long examples</td><td><code>seedance-examples-zh</code> or future <code>examples/</code></td><td>User asks for examples</td></tr>
+</tbody>
+</table>
+<p>Do not move large databases back into active sub-skill bodies.</p>
+<h4 id="v6-sequence-disclosure">V6 Sequence Disclosure</h4>
+<p>Root <code>SKILL.md</code> owns only the Sequence Gate and invariants. <code>SKILL.md</code> capability section <code>seedance-sequence</code> owns global planning and current-clip compilation. <code>SKILL.md</code> capability section <code>seedance-continuation</code> owns accepted-footage continuation and re-anchoring. Dense state details live in <a href="sequence-project-state.html"><code>references/sequence-project-state.md</code></a>, <a href="continuation-handoff.html"><code>references/continuation-handoff.md</code></a>, and <a href="prompt-compiler.html"><code>references/prompt-compiler.md</code></a>.</p>
+</main>
+<footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>
+</body>
+</html>
