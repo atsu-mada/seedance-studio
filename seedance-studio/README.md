@@ -81,19 +81,35 @@ Accepted observed state overrides planned state. Rejected footage is not canon.
 
 ## Install
 
-Replace `<verified-cpython-3.14>` with a CPython 3.14 executable (for example `python3.14`), and run from this `seedance-studio/` directory:
+Get this fork (not the upstream `Emily2040/seedance-2.0`, which installs the unchanged `seedance-20` skill) and change into this package directory:
+
+```bash
+git clone https://github.com/atsu-mada/seedance-studio.git
+cd seedance-studio/seedance-studio
+```
+
+Replace `<verified-cpython-3.14>` with a CPython 3.14 executable (for example `python3.14`), and run from this `seedance-studio/` directory.
+
+Claude Code (personal skills, invoked as `/seedance-studio`):
+
+```bash
+<verified-cpython-3.14> scripts/install_codex_skill.py --dest ~/.claude/skills --force
+```
+
+Codex (invoked as `$<seedance-studio>`):
 
 ```bash
 <verified-cpython-3.14> scripts/install_codex_skill.py --force
 ```
 
 This is a legacy copy-only installer. It copies this package into
-`$CODEX_HOME/skills/seedance-studio` when `CODEX_HOME` is set, otherwise into
+`<dest>/seedance-studio`; without `--dest` it uses
+`$CODEX_HOME/skills/seedance-studio` when `CODEX_HOME` is set, otherwise
 `~/.codex/skills/seedance-studio`. Shared canonical skill destinations are
 rejected, and the installer never performs a shared canonical deployment. A
 shared canonical root is protected only when you set `AGENT_SKILLS_ROOT`.
 
-Restart Codex after installation.
+Restart Claude Code or Codex after installation.
 
 ## Validation
 

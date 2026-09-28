@@ -1,5 +1,14 @@
 > [!NOTE]
-> **seedance-studio — an agent skill for Seedance 2.5 prompts (Claude Code / Codex).** Install from [`seedance-studio/`](seedance-studio/README.md).
+> **seedance-studio — an agent skill for Seedance 2.5 prompts (Claude Code / Codex).** Install from [`seedance-studio/`](seedance-studio/README.md#install):
+>
+> ```bash
+> git clone https://github.com/atsu-mada/seedance-studio.git
+> cd seedance-studio/seedance-studio
+> python3.14 scripts/install_codex_skill.py --dest ~/.claude/skills --force   # Claude Code
+> python3.14 scripts/install_codex_skill.py --force                           # Codex
+> ```
+>
+> The [Install](#install) section further down documents the unchanged upstream `seedance-20` skill, not this fork.
 >
 > **Fork notice.** This is a modified fork maintained by [atsu-mada](https://github.com/atsu-mada) (ATSUFUMI KASHIMA) of [Emily2040/seedance-2.0](https://github.com/Emily2040/seedance-2.0) by Emily / Iamemily2050. All original work and the MIT license remain credited to Emily2040.
 > The upstream skill below is unchanged. The fork adds [`seedance-studio/`](seedance-studio/README.md): a consolidated single-entrypoint derivative (v7.2.0, based on upstream v6.1.0) with an HTML knowledge base, Seedance 2.5 guidance, and extra providers. See [`seedance-studio/CHANGELOG.md`](seedance-studio/CHANGELOG.md). It is not an official upstream release.
@@ -481,6 +490,11 @@ Start with the [quickstart](docs/QUICKSTART.md),
 [retake protocol](references/retake-protocol.md).
 
 ## Install
+
+> [!IMPORTANT]
+> This section installs the unchanged upstream `seedance-20` skill from
+> `Emily2040/seedance-2.0`. To install this fork's `seedance-studio` skill, follow
+> [`seedance-studio/README.md`](seedance-studio/README.md#install) instead.
 
 Get a local copy, then run the installer from that folder. This example selects
 Codex user scope; other clients are in the table below.
