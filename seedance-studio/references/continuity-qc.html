@@ -17,6 +17,9 @@
 <h4 id="warn-unless-declared">Warn Unless Declared</h4>
 <p>Warn on unexplained changes in pose, frame position, screen direction, motion vector, camera phase, focus state, lighting phase, emotional state, ambience, music phase, or active dialogue.</p>
 <p>Allow changes only when declared under transition, allowed changes, accepted deviation, intentional axis reset, or intentional next shot.</p>
+<h4 id="spatial-anchor-continuity">Spatial Anchor Continuity (technique T3) [field]</h4>
+<p>One physical object stays one object in one place. When the camera moves, the object's <em>screen</em> position changes, but it must not be re-introduced from somewhere else in the world, duplicated, or swapped for a new copy.</p>
+<ul><li>Name the anchor once with its world position: <code>the lighthouse stays on the headland to the left of the boat for the whole clip</code>.</li><li>Describe camera motion relative to the anchor: <code>as the camera pans right with the boat, the lighthouse slides left and out of frame</code>. Do not describe the anchor as moving when only the camera moves.</li><li>If the anchor leaves frame and must return, return it where the camera path puts it, not where the composition would look best.</li><li>Review check: follow the anchor frame by frame across camera moves and cuts; a jump to a new world position is a hard fail unless it is declared.</li></ul>
 <h4 id="boundary-check">Boundary Check</h4>
 <p>Before a successor prompt ships, verify:</p>
 <ul><li>predecessor accepted status;</li><li>successor <code>parent_clip_id</code>;</li><li>predecessor <code>observed_end_state</code>;</li><li>successor <code>planned_start_state</code>;</li><li>completed beats excluded;</li><li>future beats excluded;</li><li>exact tags preserved;</li><li>current prompt covers only current clip.</li></ul>

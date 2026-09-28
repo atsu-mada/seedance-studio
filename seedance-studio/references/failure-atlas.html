@@ -10,7 +10,7 @@
 <main id="reference-failure-atlas" data-status="active">
 <h1 id="reference-section-references-failure-atlas-md-title">Reference section: references/failure-atlas.md</h1>
 <h3 id="failure-atlas">Failure Atlas</h3>
-<p>Use this reference when sequence or continuation output fails.</p>
+<p>Use this reference when sequence or continuation output fails, or when a single take shows one of the performance or reference-transfer failures below.</p>
 <table><thead><tr><th>Symptom</th><th>Likely cause</th><th>Primary repair variable</th></tr></thead>
 <tbody>
 <tr><td>Continuation begins from planned ending</td><td>Parent observed state was not reviewed.</td><td>Replace opening with observed end state.</td></tr>
@@ -25,8 +25,19 @@
 <tr><td>Extension quality degrades</td><td>Extension depth and drift were ignored.</td><td>Re-anchor or create intentional next shot.</td></tr>
 <tr><td>Reference roles contaminate</td><td>Transfer/ignore clauses were absent.</td><td>Split reference roles and exclusions.</td></tr>
 <tr><td>Event density is too high</td><td>Several beats were compiled into one prompt.</td><td>Reassign future beats to later clips.</td></tr>
+<tr><td>Extreme close-up shows a blank, fixed stare</td><td>Performance was left unspecified for the beat (technique T6).</td><td>State the expression and its change for each beat.</td></tr>
+<tr><td>Previz placeholder shapes appear in the output</td><td>The previz reference transferred appearance, not only camera and timing (technique T5).</td><td>Limit the video reference to camera, timing, and positions; state the real form.</td></tr>
 </tbody>
 </table>
+<h4 id="emotional-beat-performance">Emotional beat performance (technique T6) [field]</h4>
+<p><strong>Symptom:</strong> in extreme close-ups and tight close-ups, faces tend to come back neutral and still: a blank stare that reads as eerie rather than moved. The tighter the frame, the more a missing performance shows.</p>
+<p><strong>Repair:</strong> give each beat its own expression, not one mood word for the whole clip. Name the emotion, one visible micro-action, and how it changes by the end of the beat. Keep one change per beat so the face has time to play it.</p>
+<p><code>0–3s: extreme close-up, her eyes widen slightly and her breath catches, lips parting. 3–6s: her brows soften, eyes glisten, and a small unsure smile starts at one corner of the mouth. Ends on the smile held, gaze still on the light.</code></p>
+<p>Pair with the <a href="cinematography-shot-language.html#shot-size-use">shot-size cautions</a>: close shots need a small, specific action, not a large one.</p>
+<h4 id="proxy-shape-transfer">Proxy-shape transfer from previz (technique T5) [field]</h4>
+<p><strong>Symptom:</strong> symbols used in previz or blocking references (glowing spheres for characters, boxes for buildings, flat unlit colors, grid floors) show up literally in the generated video.</p>
+<p><strong>Cause:</strong> a video reference with no narrow role transfers appearance along with motion.</p>
+<p><strong>Repair:</strong> give the previz reference one role (camera path, timing, and subject positions only) and write the real form in plain words next to it: <code>the figures remain human-shaped, not glowing orbs</code>; <code>the buildings are brick houses, not grey boxes</code>. Put identity and look in image references or text. See the <a href="reference-workflow.html#previz-driven-r2v-structure">previz-driven R2V structure</a>.</p>
 <section lang="ja"><h2 id="observed-versus-cause">観測と原因を分ける</h2><p>人物消失、場所変化、VFXの減衰は観測できる症状。参照競合や状態リセットは原因仮説であり、確認前に確定しない。開始・中盤・終端を調べ、修正後も実際に比較する。<a href="cases/street-continuity.html">場所の連続性の事例</a>を参照。</p></section>
 </main>
 <footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>

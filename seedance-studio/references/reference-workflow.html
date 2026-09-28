@@ -65,6 +65,24 @@
 <p><code>[Image1] controls product identity. [Video1] controls camera pace only. [Audio1] controls tempo only. Preserve the subject from [Image1]; do not copy characters, logos, music, voice, or environment from [Video1]/[Audio1].</code></p>
 <h4 id="sequence-transfer-template">Sequence Transfer Template</h4>
 <p><code>[Video 1] is the accepted previous clip and controls only the actual opening state, camera phase, motion phase, ambience, and environment arrangement. @Image 1 controls canonical identity. Preserve both tags exactly. Do not copy unrelated identity, costume, logo, or future action from any reference.</code></p>
+<h4 id="previz-driven-r2v-structure">Previz-Driven R2V Prompt Structure [field]</h4>
+<p>Field-observed structure (2026-09) for reference-to-video jobs driven by a block previz video. It keeps the previz in its one role and gives the model timed events with end states. Use it only in R2V mode; on surfaces where first/last-frame keyframes are exclusive with references, a keyframe job cannot carry the previz.</p>
+<ul><li><code>[参照の役割]</code> (reference roles): one line per reference. <code>@Video 1</code> is the previz and carries only camera path, timing, and subject positions, never colors, shapes, boxes, spheres, or lighting. Identity and look come from image references or text.</li><li><code>[狙い]</code> (intent): one or two sentences on what the shot is for and what the viewer should feel.</li><li><code>[出来事]</code> (events): contiguous time ranges that add up to the job duration. Each range has one action and an explicit end state (<code>終了状態</code>) that the next range starts from.</li><li><code>[固定]</code> (locks): what must not change: real forms of previz proxies (see <a href="failure-atlas.html#proxy-shape-transfer">proxy-shape transfer</a>), identity, materials, no on-screen text, cut or no-cut.</li><li>Preserve the reference tags exactly as the active surface shows them.</li></ul>
+<pre><code class="language-text">[参照の役割]
+@Video 1 はプレビズ。カメラの動き・タイミング・被写体の位置だけを参照し、色・形・箱や球などの仮形状・ライティングは参照しない。
+@Image 1 は少女の外見（顔・髪・服）を固定する。
+@Image 2 は紙細工の町の美術と質感を決める。
+
+[狙い]
+朝の紙細工の町。少女が放った紙飛行機を追い、町の広さに気づく瞬間を描く。
+
+[出来事]
+0–4秒：屋根の上の少女が紙飛行機を放つ。終了状態：飛行機は画面右上へ離れ、少女は見上げている。
+4–9秒：カメラは飛行機を追って上昇し、町全体が見える高さまで引く。終了状態：町の全景、飛行機は中央の小さな点。
+9–12秒：飛行機が朝日を横切る。終了状態：逆光の飛行機のシルエットがほぼ静止している。
+
+[固定]
+少女は人の形のまま（光る球にしない）。町は紙の質感。文字・ロゴなし。カットなしの1回の連続した動き。</code></pre>
 <section lang="ja"><h2 id="reference-inheritance">継承属性と競合仮説</h2><p>参照ごとに、継承する人物同一性・場所の形状・効果の接続点と、継承しない背景・画角・状態を明記する。全カテゴリを毎ショットへ機械的に添付しない。競合は観測した症状と仮説を分け、<a href="cases/street-continuity.html">一変数の比較</a>で調べる。</p></section>
 </main>
 <footer>Static local reference. Verify volatile provider claims against the registered sources.</footer>

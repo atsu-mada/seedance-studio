@@ -37,6 +37,16 @@
 <tr><td>scary childlike doll</td><td>antique toy prop in an eerie room, no real child</td></tr>
 </tbody>
 </table>
+<h4 id="moderation-safe-rewording">Moderation-Safe Rewording (technique T8) [field]</h4>
+<p>Benign scenes are sometimes blocked because a verb describes physical contact, penetration, or destruction, even when the event is gentle or symbolic. Keep the event and its meaning; replace only the physical verb with a soft visual metaphor that shows what the viewer should actually see. This is a clarity repair for a misread benign prompt. It is not a way to disguise harmful content, and it does not apply to scenes that are actually violent, sexual, or harmful.</p>
+<table><thead><tr><th>Verb class</th><th>Risky wording</th><th>Gentle metaphor</th></tr></thead>
+<tbody>
+<tr><td>Penetration / entering a body</td><td>the light enters his body · 光が彼の体に入り込む</td><td>the light overlaps his silhouette and melts into him · 光が彼の輪郭に重なり、溶け込んでいく</td></tr>
+<tr><td>Destruction</td><td>the tower collapses and explodes · 塔が崩れ落ち、爆発する</td><td>the tower unravels into drifting, glowing paper confetti · 塔がほどけて、光る紙吹雪になって舞い上がる</td></tr>
+<tr><td>Forceful contact</td><td>the wave smashes into the girl · 波が少女に叩きつけられる</td><td>the wave washes over the girl and passes, leaving her standing · 波が少女を包み込み、そのまま通り過ぎていく</td></tr>
+</tbody>
+</table>
+<ul><li>Describe the visible result (overlap, dissolve, drift, wrap) instead of the physical act (pierce, enter, break, hit).</li><li>Change one clause per retry, so the blocked phrase can be found.</li><li>Field observation (2026-09, one surface): a blocked job was not charged and passed after one such rewording. Charging and moderation behavior are surface-specific; the operator skill for the active suite owns the retry procedure.</li></ul>
 <h4 id="multilingual-clarity">Multilingual Clarity</h4>
 <p>Language mixing is allowed when it makes a safe prompt clearer:</p>
 <ul><li>Keep technical camera terms in English when they are more precise: <code>locked medium shot</code>, <code>35mm lens</code>, <code>slow dolly-in</code>.</li><li>Keep Chinese role binding when it is shorter: <code>@图1锁定主体身份</code>, <code>@视频1仅参考运镜</code>.</li><li>Keep dialogue in the speaker language, and keep safety/ownership constraints explicit.</li><li>Do not translate unsafe content into another language as a workaround.</li><li>If a prompt still fails, change the risky creative surface instead of only changing language.</li></ul>

@@ -87,7 +87,7 @@ def main() -> int:
             "assets/skill-map-cinematic.png",
             "# Seedance Studio",
             "## v7.0.0 Breaking Change",
-            "v7.2.0",
+            "v7.3.0",
             "## Capability Map",
             "## Native Language Notes",
             "## Reference Assets",
