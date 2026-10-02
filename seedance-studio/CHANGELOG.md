@@ -2,7 +2,21 @@
 
 All notable changes to this project are documented here.
 
-Current active release: **7.2.0**. Older entries below are preserved as release history, not active version guidance.
+Current active release: **7.3.0**. Older entries below are preserved as release history, not active version guidance.
+
+## [7.3.0] — 2026-09-28
+
+### Added
+
+- Added Magnific as a field-observed Seedance 2.5 surface (observed 2026-09; verify live) in the platform-surface matrix, API status, and source registry: MCP access, reference-to-video with image, video, and audio references, first/last-frame keyframes exclusive with references, 480p/720p, and 22–24 second single jobs.
+- Added suite-operator routing: this skill stays suite-neutral and hands execution to operator skills such as `magnific-operator` through the generation handoff.
+- Added the sixth retake verdict, frame-matched partial regenerate (technique T7), with procedure, caveats, and an observed relative-cost note.
+- Added generalized techniques: shared color/texture match transition (T1) and scale-reveal pull-back (T2) in cinematography shot language, spatial-anchor continuity (T3) in continuity QC, proxy-shape transfer (T5) and emotional beat performance (T6) in the failure atlas, and moderation-safe rewording (T8) with Japanese and English examples in filter-safe vocabulary.
+- Added the previz-driven R2V prompt structure (`[参照の役割]` / `[狙い]` / `[出来事]` / `[固定]`) to the reference workflow.
+
+### Changed
+
+- Registered the new sections in the knowledge index, operating-loop load map, and knowledge map; bumped the package version to 7.3.0. Eval and benchmark fixtures are unchanged.
 
 ## [7.2.0] — 2026-09-22
 

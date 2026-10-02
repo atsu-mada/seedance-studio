@@ -1,9 +1,9 @@
 ---
 name: seedance-studio
-description: "This skill should be used when creating, improving, or troubleshooting Seedance 2.x video on any surface - Dreamina, Jimeng, CapCut, Doubao, Volcengine/Ark, BytePlus, Higgsfield, Leonardo.AI, Runway Seedance routes, fal, or third-party provider/router surfaces - including text/image/video/reference-to-video prompts, first/last frame, dialogue, lip-sync and audio, IP-safe rewrites, API, pricing and model-ID questions, and zh/ja/ko/es/ru prompt work. Not for non-Seedance models or image-only prompting."
+description: "This skill should be used when creating, improving, or troubleshooting Seedance 2.x video on any surface - Dreamina, Jimeng, CapCut, Doubao, Volcengine/Ark, BytePlus, Higgsfield, Magnific, Leonardo.AI, Runway Seedance routes, fal, or third-party provider/router surfaces - including text/image/video/reference-to-video prompts, first/last frame, dialogue, lip-sync and audio, IP-safe rewrites, API, pricing and model-ID questions, and zh/ja/ko/es/ru prompt work. Not for non-Seedance models or image-only prompting."
 license: MIT
 metadata:
-  version: "7.2.0"
+  version: "7.3.0"
   user-invocable: true
   tags: [seedance, video, workflow]
   breaking_change: "Moved the consolidated knowledge surface to registered static HTML documents; the skill remains one single entrypoint."
@@ -20,7 +20,7 @@ Follow the operating loop in [`references/operating-loop.html`](references/opera
 ### Mandatory gates
 
 1. **Intake gate:** identify the user's goal, production phase, target surface, mode, duration, aspect ratio, references, audio needs, deliverables, and safety or IP risks. If intake exposes a safety, IP, likeness, or evasion concern, route to the safety gate before planning.
-2. **Source gate:** before platform, model, API, pricing, or availability claims, load the `api-status` and `source-registry` reference documents. For Runway, Volcengine, fal, provider/router, or China-facing details, also load the platform-surface matrix.
+2. **Source gate:** before platform, model, API, pricing, or availability claims, load the `api-status` and `source-registry` reference documents. For Runway, Volcengine, fal, Magnific, provider/router, or China-facing details, also load the platform-surface matrix. When a creative suite is driven by an operator skill (for example `magnific-operator`), this skill writes the suite-neutral prompt and hands execution to that skill through the generation handoff.
 3. **Professional gate:** for film, advertising, campaign, client delivery, localization, color, sound, subtitles, post, QC, or multi-shot work, load professional-filmmaking standards before drafting.
 4. **Sequence gate:** classify the request as `standalone_clip` or `sequence_project` before choosing a mode. Connected clips, continuation, extension, long stories, campaigns, dense action or dialogue, and ideas that exceed one reliable generation are sequence work. Sequence work must load sequence, project-state, continuation-handoff, prompt-compiler, and continuity-QC guidance.
 5. **Mode gate:** choose T2V, I2V, V2V, R2V, FLF2V, edit, verified native extend, or troubleshoot before writing prose. Surface-specific availability must be checked against the current source record.
@@ -31,7 +31,7 @@ Follow the operating loop in [`references/operating-loop.html`](references/opera
 10. **Direction gate:** before drafting a scene, load the directing engine, identify the scene function and one intention, and derive one coherent camera, lens, light, blocking, performance, and sound setup.
 11. **Prompt gate:** route to interview, prompt, short-prompt, sequence, continuation, or the relevant domain capability. Final prompts remain natural language unless structured output is explicitly requested.
 12. **Quality gate:** run the anti-slop and directing-coherence checks. Confirm one visible beat, one primary camera move, physically motivated light, sound intent, continuity anchors, constraints, delivery caveats, and source-date caveats.
-13. **Repair gate:** when a take returns, use the retake protocol to choose keep, fix in post, edit, re-roll, or rewrite. Change one variable per retake and diagnose the cause before adding adjectives.
+13. **Repair gate:** when a take returns, use the retake protocol to choose keep, fix in post, edit, re-roll, rewrite, or a frame-matched partial regenerate of a flawed head or tail. Change one variable per retake and diagnose the cause before adding adjectives.
 
 ### Sequence invariants
 
@@ -63,7 +63,7 @@ Use the exact existing schemas, examples, evals, golden prompts, source registry
 
 ## Version and claim boundary
 
-`7.2.0` is the local HTML knowledge reorganization version. It does not claim to be an upstream Seedance release or the latest provider version. Volatile model, surface, pricing, API, and policy statements remain source-gated and date-labeled in the registered references.
+`7.3.0` is a local knowledge update on top of the 7.2.0 HTML reorganization: it adds field-observed suite-surface notes, suite-operator routing, and generalized production techniques. It does not claim to be an upstream Seedance release or the latest provider version. Volatile model, surface, pricing, API, and policy statements remain source-gated and date-labeled in the registered references.
 
 ## Validation contract
 

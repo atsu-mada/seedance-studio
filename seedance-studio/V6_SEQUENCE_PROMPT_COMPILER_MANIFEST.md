@@ -5,7 +5,7 @@ This file preserves the historical manifest slot used by the validation suite. T
 ## Current Release
 
 - Active package name: `seedance-studio`.
-- Active package version: `7.2.0`.
+- Active package version: `7.3.0`.
 - Active user-invocable skills: 1.
 - Legacy compatibility aliases: none.
 - Former sub-skills: migrated one-to-one into `references/capabilities/*.html` and routed by `SKILL.md`.

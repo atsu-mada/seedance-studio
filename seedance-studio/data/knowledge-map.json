@@ -13,10 +13,12 @@
         "## Table of Contents",
         "## Capability Sections",
         "## Integrated Reference Sections",
-        "## Integrated Native-Language Docs"
+        "## Integrated Native-Language Docs",
+        "New section: Suite surfaces and generalized techniques (7.3.0)"
       ],
       "source_refs": [
-        "migration-contract"
+        "migration-contract",
+        "field-observed-2026-09"
       ],
       "status": "active"
     },
@@ -118,10 +120,12 @@
         "#### Claim Boundaries",
         "#### Known Limit Categories",
         "#### Real-Person, Portrait, and Voice Rule",
-        "#### Primary Sources To Recheck"
+        "#### Primary Sources To Recheck",
+        "New section: Magnific Seedance 2.5 — Field-Observed Surface (observed 2026-09)"
       ],
       "source_refs": [
-        "legacy-skill-7.1.0"
+        "legacy-skill-7.1.0",
+        "field-observed-2026-09"
       ],
       "status": "active"
     },
@@ -731,11 +735,14 @@
         "#### Shot Size Use",
         "#### Camera Movement Grammar",
         "#### Blocking and Coverage",
-        "#### Professional Avoid List"
+        "#### Professional Avoid List",
+        "New section: Match Transition by Shared Color or Texture Field (technique T1)",
+        "New section: Scale Reveal Pull-Back (technique T2)"
       ],
       "source_refs": [
         "legacy-skill-7.1.0",
-        "V3"
+        "V3",
+        "field-observed-2026-09"
       ],
       "status": "active"
     },
@@ -803,10 +810,12 @@
         "### Continuity QC",
         "#### Hard-Fail Without Explanation",
         "#### Warn Unless Declared",
-        "#### Boundary Check"
+        "#### Boundary Check",
+        "New section: Spatial Anchor Continuity (technique T3)"
       ],
       "source_refs": [
-        "legacy-skill-7.1.0"
+        "legacy-skill-7.1.0",
+        "field-observed-2026-09"
       ],
       "status": "active"
     },
@@ -975,11 +984,14 @@
       "anchor": "reference-failure-atlas",
       "legacy_sections": [
         "### Reference section: references/failure-atlas.md",
-        "### Failure Atlas"
+        "### Failure Atlas",
+        "New section: Emotional beat performance (technique T6)",
+        "New section: Proxy-shape transfer from previz (technique T5)"
       ],
       "source_refs": [
         "legacy-skill-7.1.0",
-        "V4"
+        "V4",
+        "field-observed-2026-09"
       ],
       "status": "active"
     },
@@ -1008,10 +1020,12 @@
         "### Reference section: references/filter-vocab.md",
         "### Filter-Safe Vocabulary",
         "#### False-Positive Reduction",
-        "#### Multilingual Clarity"
+        "#### Multilingual Clarity",
+        "New section: Moderation-Safe Rewording (technique T8)"
       ],
       "source_refs": [
-        "legacy-skill-7.1.0"
+        "legacy-skill-7.1.0",
+        "field-observed-2026-09"
       ],
       "status": "active"
     },
@@ -1310,10 +1324,12 @@
         "### Soul",
         "### Operating Loop",
         "### Sequence Gate",
-        "### Load Map"
+        "### Load Map",
+        "New load-map rows: suite operator routing, partial regenerate, previz-driven R2V"
       ],
       "source_refs": [
-        "legacy-skill-7.1.0"
+        "legacy-skill-7.1.0",
+        "field-observed-2026-09"
       ],
       "status": "active"
     },
@@ -1344,10 +1360,13 @@
         "#### China-Facing Search Note",
         "#### Surface-Specific Claims",
         "#### Real-Person Rule",
-        "#### V2V, R2V, and FLF2V Boundary"
+        "#### V2V, R2V, and FLF2V Boundary",
+        "New row: Magnific Seedance 2.5 (field-observed 2026-09)",
+        "New section: Suite Operator Routing"
       ],
       "source_refs": [
-        "legacy-skill-7.1.0"
+        "legacy-skill-7.1.0",
+        "field-observed-2026-09"
       ],
       "status": "active"
     },
@@ -1488,12 +1507,14 @@
         "##### Approved Send Pattern",
         "#### Motion Transfer",
         "#### Template",
-        "#### Sequence Transfer Template"
+        "#### Sequence Transfer Template",
+        "New section: Previz-Driven R2V Prompt Structure"
       ],
       "source_refs": [
         "legacy-skill-7.1.0",
         "V3",
-        "V4"
+        "V4",
+        "field-observed-2026-09"
       ],
       "status": "active"
     },
@@ -1528,10 +1549,12 @@
         "#### Cost awareness [internal]",
         "#### The shot log [internal]",
         "#### Sequence Canon [internal]",
-        "#### When the answer is \"don't generate\""
+        "#### When the answer is \"don't generate\"",
+        "New section: Partial regenerate — frame-matched splice (technique T7)"
       ],
       "source_refs": [
-        "legacy-skill-7.1.0"
+        "legacy-skill-7.1.0",
+        "field-observed-2026-09"
       ],
       "status": "active"
     },
@@ -1583,10 +1606,12 @@
         "### Source Registry",
         "#### Evidence Labels",
         "#### Primary Source Hierarchy",
-        "#### Required Claim Patterns"
+        "#### Required Claim Patterns",
+        "New row: Magnific Seedance 2.5 (field-observed 2026-09)"
       ],
       "source_refs": [
-        "legacy-skill-7.1.0"
+        "legacy-skill-7.1.0",
+        "field-observed-2026-09"
       ],
       "status": "active"
     },

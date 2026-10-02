@@ -10,7 +10,7 @@ from pathlib import Path
 from knowledge_html import load_knowledge_map, validate_registered_html
 
 EXPECTED_SKILL_NAME = "seedance-studio"
-EXPECTED_VERSION = "7.2.0"
+EXPECTED_VERSION = "7.3.0"
 
 FORBIDDEN_DIRECTORIES = ["skills", "docs"]
 

@@ -1,10 +1,15 @@
 # Seedance Studio
 
-**Seedance Studio** is the local v7.2.0 single-entrypoint operating guide for source-gated Seedance 2.x production. Detailed guidance is served from the registered static HTML knowledge base.
+**Seedance Studio** is the local v7.3.0 single-entrypoint operating guide for source-gated Seedance 2.x production. Detailed guidance is served from the registered static HTML knowledge base.
 
 Use `$<seedance-studio>` in Codex or `/seedance-studio` in Claude Code for Seedance 2.0 and Seedance 2.5 video work: prompt writing, prompt budgeting, connected clip planning, continuation, first/last-frame workflows, image/video/audio references, dialogue and lip-sync, professional delivery planning, API/provider guidance, multilingual prompt wording, safety rewrites, and failed-output troubleshooting.
 
 Duration and prompt limits remain surface-specific. The skill records Seedance 2.5's verified 30-second model capability while keeping provider prompt budgets separate.
+
+## v7.3.0 suite surfaces and production techniques
+
+- Magnific is recorded as a field-observed Seedance 2.5 surface (observed 2026-09; verify live), and execution on operator-driven suites is routed to operator skills such as `magnific-operator`.
+- The retake protocol adds a sixth verdict, frame-matched partial regenerate, and the knowledge base adds generalized techniques for match transitions, scale reveals, spatial-anchor continuity, previz proxy-shape transfer, per-beat close-up performance, moderation-safe rewording, and a previz-driven R2V prompt structure.
 
 ## v7.2.0 HTML knowledge migration
 
